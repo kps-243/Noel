@@ -4,7 +4,7 @@
 
 
 
-add_action('init', 'CPT_gab', 10);
+add_action('init', 'cpt_recette', 10);
 add_action('init', 'TAX_gab', 10);
 
 
@@ -19,8 +19,8 @@ add_action('init', 'TAX_gab', 10);
 // ---------------------------------------- CUSTOM POST TYPES
 //
 
-if (!function_exists('CPT_gab')):
-	function CPT_gab() {
+if (!function_exists('cpt_recette')):
+	function cpt_recette() {
 
 		// Interface
 		$labels = array(
@@ -88,7 +88,7 @@ if (!function_exists('CPT_gab')):
 
 	};
 else:
-	echo '<h1>----- ERREUR ----- function CPT_gab existe déjà</h1>';
+	echo '<h1>----- ERREUR ----- function cpt_recette existe déjà</h1>';
 endif;
 
 
