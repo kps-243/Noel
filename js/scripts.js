@@ -1,15 +1,23 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+    // git init
     // git remote add origin https://github.com/kps-243/Noel.git
     // git checkout -b nom_de_ma_branch_nouvelle
-    
+    // git add .
+    // git commit -m "Test ajout de memory"
+    // git push --set-upstream origin memory
+
+
+
     const classcarte = document.querySelectorAll('.carte');
     let duo= [];
     let paires=0;
     let retournees = [];
+
     // Il faut initialiser les paires randoms et stocker leur url
     // A faire plus tard boucle et randoms
     let associations = randomAssociations();
+    
 
 
 
@@ -45,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function() {
                             retourneCarte(duo);
                             duo = []
                           }, 1500);
-                        
                     }
                 } 
             });
@@ -71,53 +78,23 @@ function retourneCarte(liste){
     document.getElementById(liste[1]).style.backgroundImage = "url('./images/motif.webp')";
 }
 
+
 function randomAssociations(){
-       
     let liste = {};
-    let dejaPris = [];
     
     // Création des urls
-    let urlsName = ["gift","teddy","ornament"]
-    for (u=0; u<urlsName.length; u++){
-        urlsName[u] = "url('./images/"+urlsName[u]+".jpg)"
-    }
+    let urlsName = ["gift","teddy","ornament","flocon","houx","reindeer","santa","sapin"]
+    
+    for (u=0; u<urlsName.length; u++)        urlsName[u] = "url('./images/"+urlsName[u]+".webp"
+    urlsName = urlsName.concat(urlsName);
 
-    // Liste randomisé
-    // Tant que les 8 URLs ne sont pas associées aux 16 cartes
-    // while (dejaPris.length<16){
-
+    // Choix random puis associé
         for (i=1; i<=16; i++){
             a = Math.floor(Math.random() * (urlsName.length - 0) + 0);
-
-            //Si le chiffre random n'est pas déjà pris alors
-            if (!liste.hasOwnProperty(a)){
-                liste[a] = urlsName[a];
-                dejaPris.push(a);
-                console.log(a+" "+liste[a]);
-            }
-        // }
-
-
-        
-   
-   
-    // 1 : "url('./images/gift.jpg')", 
-    // 2 : "url('./images/gift.jpg')",
-    // 3 : "url('./images/sapin.jpeg')",
-    // 4 : "url('./images/sapin.jpeg')",
-    // 5 : "url('./images/teddy.jpg')",
-    // 6 : "url('./images/teddy.jpg')",
-    // 7 : "url('./images/santa.webp')",
-    // 8 : "url('./images/santa.webp')",
-    // 9 : "url('./images/reindeer.webp')",
-    // 10 : "url('./images/reindeer.webp')",
-    // 11 : "url('./images/houx.webp')",
-    // 12 : "url('./images/houx.webp')",
-    // 13 : "url('./images/ornament.jpg')",
-    // 14 : "url('./images/ornament.jpg')",
-    // 15 : "url('./images/flocon.webp')",
-    // 16 : "url('./images/flocon.webp')"
-    };
+            
+            liste[i] = urlsName[a];
+            urlsName.splice(a,1);
+        }    
 
     return liste;
 }
