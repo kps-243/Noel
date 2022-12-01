@@ -1,0 +1,43 @@
+
+
+
+
+
+// Fonctions
+
+@mixin anim ( $prop: all ) {
+	transition: $prop $easing ease;
+}// @mixin anim ( $prop: all ) {
+
+@mixin centrer() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}// @mixin centrer() {
+
+@mixin flex( $direction: row, $wrap: nowrap, $justify-content: flex-start, $align-items: stretch, $align-content: stretch ) {
+	// @include flex($direction, $wrap, $justify-content, $align-items, $align-content);
+	display: flex;
+	// flex-direction: @row | row-reverse | column | column-reverse;
+	flex-direction: $direction;
+	// flex-wrap: @nowrap | wrap | wrap-reverse;
+	flex-wrap: $wrap;
+	// justify-content: @flex-start | flex-end | center | space-between | space-around | space-evenly;
+	justify-content: $justify-content;
+	// align-items: flex-start | flex-end | center | baseline | @stretch;
+	align-items: $align-items;
+	// align-content: flex-start | flex-end | center | space-between | space-around | @stretch;
+	align-content: $align-items;
+}// @mixin flex( $direction: row, $wrap: nowrap, $justify-content: flex-start, $align-items: stretch, $align-content: stretch ) {
+
+
+
+
+
+
+
+
+
+
+// Styles

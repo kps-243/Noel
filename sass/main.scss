@@ -1,0 +1,49 @@
+
+
+
+
+
+/*
+
+cd Dropbox/htdocs/ ***** NOM DU SITE ***** /wp-content/themes/ ***** NOM DU THEME *****
+ls
+sass --watch sass/main.scss:css/main.css --style compressed
+
+*/
+
+
+
+
+
+
+
+
+
+
+/* ---------- INIT */
+
+@import '_init/webfonts';
+@import '_init/variables';
+@import '_init/mixins';
+
+
+
+
+
+/* ---------- BALISES HTML COMMUNES */
+
+@import '_commun/structure';
+
+
+
+
+
+/* ---------- PAGES - structure */
+
+@import '_pages/homepage';
+@import '_pages/taxonomy';
+@import '_pages/single';
+
+//* {
+//	background-color: rgba( 0, 255, 0, 0.1 );// ----- LAYOUT DEBUG
+//}
