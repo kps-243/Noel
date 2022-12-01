@@ -19,7 +19,7 @@ html, body{
     margin: 0px 5px;
 }
 
-.carte{
+.carte, .card{
     height: 20vh;
     width: 20vh;
 
