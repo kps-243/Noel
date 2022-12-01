@@ -4,7 +4,7 @@
 
 
 
-add_action('init', 'Recette_gab', 10);
+add_action('init', 'CPT_gab', 10);
 add_action('init', 'TAX_gab', 10);
 
 
@@ -19,26 +19,26 @@ add_action('init', 'TAX_gab', 10);
 // ---------------------------------------- CUSTOM POST TYPES
 //
 
-if (!function_exists('Recette_gab')):
-	function Recette_gab() {
+if (!function_exists('CPT_gab')):
+	function CPT_gab() {
 
 		// Interface
 		$labels = array(
 			'name'											=> _x('Recettes', 'Post Type General Name',				'slug_gab_cpt'),
-			'singular_name'							=> _x('Recette', 'Post Type Singular Name',				'slug_gab_cpt'),
-			'menu_name'									=> __('Recettes',																	'slug_gab_cpt'),
+			'singular_name'							=> _x('cpt_recette', 'Post Type Singular Name',				'slug_gab_cpt'),
+			'menu_name'									=> __('Recette',																	'slug_gab_cpt'),
 			'name_admin_bar'						=> __('Recette',																	'slug_gab_cpt'),
 			'archives'									=> __('Archives Recettes',												'slug_gab_cpt'),
 			'attributes'								=> __('Attributs Recettes',												'slug_gab_cpt'),
-			'parent_item_colon'					=> __('CPT parent :',													'slug_gab_cpt'),
-			'all_items'									=> __('Tous les Recettes',												'slug_gab_cpt'),
+			'parent_item_colon'					=> __('Recette parent :',													'slug_gab_cpt'),
+			'all_items'									=> __('Toutes les recettes',												'slug_gab_cpt'),
 			'add_new_item'							=> __('Ajouter une recette',												'slug_gab_cpt'),
 			'add_new'										=> __('Ajouter',															'slug_gab_cpt'),
 			'new_item'									=> __('Nouvelle recette',													'slug_gab_cpt'),
 			'edit_item'									=> __('Éditer la recette',												'slug_gab_cpt'),
 			'update_item'								=> __('Mettre à jour la recette',									'slug_gab_cpt'),
 			'view_item'									=> __('Voir la recette',													'slug_gab_cpt'),
-			'view_items'								=> __('Voir les Recettes',												'slug_gab_cpt'),
+			'view_items'								=> __('Voir les recettes',												'slug_gab_cpt'),
 			'search_items'							=> __('Rechercher une recette',										'slug_gab_cpt'),
 			'not_found'									=> __('Introuvable',													'slug_gab_cpt'),
 			'not_found_in_trash'				=> __('Introuvable dans la corbeille',				'slug_gab_cpt'),
@@ -48,9 +48,9 @@ if (!function_exists('Recette_gab')):
 			'use_featured_image'				=> __('Use as featured image',								'slug_gab_cpt'),
 			'insert_into_item'					=> __('Insert into item',											'slug_gab_cpt'),
 			'uploaded_to_this_item'			=> __('Uploaded to this item',								'slug_gab_cpt'),
-			'items_list'								=> __('Liste de Recettes',												'slug_gab_cpt'),
-			'items_list_navigation'			=> __('Naviguer dans la liste de Recettes',				'slug_gab_cpt'),
-			'filter_items_list'					=> __('Filtrer la liste de Recettes',							'slug_gab_cpt'),
+			'items_list'								=> __('Liste de CPTs',												'slug_gab_cpt'),
+			'items_list_navigation'			=> __('Naviguer dans la liste de recettes',				'slug_gab_cpt'),
+			'filter_items_list'					=> __('Filtrer la liste de recettes',							'slug_gab_cpt'),
 		);
 		$rewrite = array(
 			'slug'											=> 'slug_gab_cpt',
@@ -88,7 +88,7 @@ if (!function_exists('Recette_gab')):
 
 	};
 else:
-	echo '<h1>----- ERREUR ----- function Recette_gab existe déjà</h1>';
+	echo '<h1>----- ERREUR ----- function CPT_gab existe déjà</h1>';
 endif;
 
 
