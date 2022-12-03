@@ -1,0 +1,38 @@
+#jeusapin{
+
+    section{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-flow: wrap row;
+        justify-content: space-between;
+        gap: 20%;
+        margin-left: 100px;
+
+        div{
+            width: 100px;
+            height: 540px;
+            display: flex;
+            flex-flow: wrap row;
+            justify-content: center;
+        }
+
+        .bouton{
+            width: 60px;
+            height: 60px;
+            margin-top: 50px;
+            border : 2px solid black;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            transform-origin: center;
+        }
+
+        .bouton:hover{
+            transform: scale(1.1);
+            border : 3px solid black;
+        }
+
+    }
+
+}
