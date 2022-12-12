@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -39,3 +40,46 @@ sass --watch sass/main.scss:css/main.css --style compressed
 
 /* ---------- PAGES - structure */
 
+=======
+
+
+
+
+
+/*
+
+cd Dropbox/htdocs/ ***** NOM DU SITE ***** /wp-content/themes/ ***** NOM DU THEME *****
+ls
+sass --watch sass/main.scss:css/main.css --style compressed
+
+*/
+
+
+
+
+
+
+
+
+
+
+/* ---------- INIT */
+
+@import url('_init/webfonts.css');
+@import url('_init/variables.css');
+
+
+
+
+
+/* ---------- BALISES HTML COMMUNES */
+
+@import url('_commun/structure.css');
+
+
+
+
+
+/* ---------- PAGES - structure */
+
+>>>>>>> 357867fe839b69e3c38f830314e67d444cbfb998
