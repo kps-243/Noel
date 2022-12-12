@@ -1,0 +1,41 @@
+
+
+
+
+
+/*
+
+cd Dropbox/htdocs/ ***** NOM DU SITE ***** /wp-content/themes/ ***** NOM DU THEME *****
+ls
+sass --watch sass/main.scss:css/main.css --style compressed
+
+*/
+
+
+
+
+
+
+
+
+
+
+/* ---------- INIT */
+
+@import url('_init/webfonts.css');
+@import url('_init/variables.css');
+
+
+
+
+
+/* ---------- BALISES HTML COMMUNES */
+
+@import url('_commun/structure.css');
+
+
+
+
+
+/* ---------- PAGES - structure */
+
