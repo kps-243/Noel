@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Titres";
+  src: url("../../fonts/caveatbrush-regular-webfont.woff2") format("woff2"), url("../../fonts/caveatbrush-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  margin: 0;
+  padding: 0;
+}
+html body {
+  margin: -21px 0 0 0;
+  padding: 0;
+}
+html body #laby {
+  background-image: url("../../images/png/SAE301-lieu-grotte.png");
+  min-width: 100vw;
+  min-height: 100vh;
+  background-size: cover;
+  margin: 0;
+  position: relative;
+}
+html body h1 {
+  font-family: "Titres";
+  font-size: 3rem;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 70px;
+  margin-left: 32vw;
+  color: rgb(226, 242, 247);
+}
+html body .img {
+  height: 250px;
+  position: absolute;
+  bottom: 10px;
+  margin-left: 250px;
+}
+html body canvas {
+  margin-left: 505px;
+  bottom: 170px;
+}/*# sourceMappingURL=laby.css.map */
