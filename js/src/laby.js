@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
     Iclef.src = "././images/png/clef.png";
     const Evictoire = document.querySelector('#victoire');
 
+
+
     var clef = 0;
     var victoire = 1;
 
@@ -34,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
             } else if (event.code === 'ArrowDown') {
                 // vérifie si le mouvement vers le bas est valide
                 if (maze[playerY + 1][playerX] == 2) {
-                    clef=1;
+                    clef = 1;
                     playerY++;
                 }
                 else if (maze[playerY + 1][playerX] == 0) {
@@ -56,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }
         }
-        else{
+        else {
             Evictoire.classList.remove('caché');
         }
     });
@@ -69,17 +71,20 @@ document.addEventListener('DOMContentLoaded', function () {
                     ctx.fillStyle = '#58b3f4';
                     ctx.fillRect(x * cellSizeX, y * cellSizeY, cellSizeX, cellSizeY);
                 }
-                if (maze[y][x] === 3 && clef==1) {
+                if (maze[y][x] === 3 && clef == 1) {
                     maze[y][x] = 0;
                 }
-                if (maze[y][x] === 3 && clef==0) {
+                if (maze[y][x] === 3 && clef == 0) {
                     ctx.fillStyle = 'orange';
                     ctx.fillRect(x * cellSizeX, y * cellSizeY, cellSizeX, cellSizeY);
                 }
-                if (maze[y][x] === 2) {
-                    Iclef.onload = () => {
-                        ctx.drawImage(Iclef, x, y, Iclef.width * 5, Iclef.height * 5);
-                    }
+                if (maze[y][x] === 2 && clef == 0) {
+                    ctx.arc(x * cellSizeX + cellSizeX / 2, y * cellSizeY + cellSizeY / 2, 4, 0, 2 * Math.PI);
+                    ctx.fillStyle = 'orange';
+                    ctx.fill();
+                    // Iclef.onload = () => {
+                    //     ctx.drawImage(Iclef, x, y);
+                    // }
                 }
             }
         }
@@ -119,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function update() {
         // mettez à jour les éléments du jeu ici (par exemple, la position des ennemis)
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-      }
+    }
 
     // définissez la fonction de rendu qui sera exécutée à chaque frame
     function render() {
@@ -128,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
         drawPlayer();
     }
 
-    function loop(){
+    function loop() {
         update();
         render();
     }
