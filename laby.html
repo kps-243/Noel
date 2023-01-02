@@ -5,15 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/_pages/laby.css">
-    <title>Jeu sapin</title>
+    <title>La grotte gelée</title>
 </head>
 <body>
     <main id="laby">
         <h1>La grotte gelée</h1>
-        <!-- <canvas id="laby" class="img"></canvas> -->
-        <img class="img" src="./images/svg/charlotte.svg" alt="Charlotte la marmotte">
+
+        <div id="victoire" class="caché">
+            <h2>Victoire !</h2>
+            <button id="btn">Recommencer</button>
+        </div>
+
+        <canvas id="jeu"></canvas>
+
+        <img id="romain" src="./images/svg/romain.svg" alt="Romain le lapin">
     </main>
 
-    <script src="jeusapin.js"></script>
+    <script src="./js/src/laby.js"></script>
 </body>
 </html>
