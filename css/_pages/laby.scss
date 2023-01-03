@@ -42,6 +42,27 @@ html{
                 color: rgb(226, 242, 247);
             }
 
+            #retour{
+                @include Police();
+                text-decoration: none;
+                font-size: 2rem;
+                padding: 1%;
+                border-radius: 10px;
+                cursor: pointer;
+                color: whitesmoke;
+                border: none;
+                background-color: #918e8e;
+                position: absolute;
+                top: 25px;
+                left: 25px;
+                transition: transform 0.2s ease;
+            }
+
+            #retour:hover{
+                background-color: #7c7979;
+                transform: scale(1.05);
+            }
+
             div{
                 position: absolute;
                 display: flex;
