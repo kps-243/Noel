@@ -1,0 +1,16 @@
+<<<<<<< HEAD
+{
+  "name": "Nom du site",
+  "icons": [
+    { "src": "/favicons/192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/favicons/512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+=======
+{
+  "name": "Nom du site",
+  "icons": [
+    { "src": "/favicons/192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/favicons/512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+>>>>>>> 357867fe839b69e3c38f830314e67d444cbfb998
+}

@@ -1,79 +1,185 @@
-#jeusapin{
+@font-face {
+    font-family: 'Titres';
+    src: url('../../fonts/caveatbrush-regular-webfont.woff2') format('woff2'),
+         url('../../fonts/caveatbrush-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
-    section{
-        width: 40%;
-        height: 100%;
-        display: flex;
-        flex-flow: wrap row;
-        justify-content: space-between;
-        gap: 20%;
-        margin-left: 100px;
+@mixin Police{
+    font-family : 'Titres';
+    text-align: center;
+    text-transform: uppercase;
+}
 
-        div{
-            width: 100px;
-            height: 540px;
-            display: flex;
-            flex-flow: wrap row;
-            justify-content: center;
+html{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    body{
+        margin: 0;
+        padding: 0;
+
+        #jeusapin{
+            background-image: url('../../images/png/interieur-lieu-sapin.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            max-height: 100vh;
+            min-width: 100vw;
+            max-width: 100vw;
+
+            h1{
+                @include Police();
+                color: rgb(255, 230, 230);
+                font-size:  3rem;
+                padding-top: 50px;
+                margin: 0;
+                pointer-events: none;
+            }
+
+            #retour{
+                @include Police();
+                text-decoration: none;
+                font-size: 2rem;
+                padding: 1%;
+                border-radius: 10px;
+                cursor: pointer;
+                color: whitesmoke;
+                border: none;
+                background-color: #918e8e;
+                position: absolute;
+                top: 25px;
+                left: 25px;
+                transition: transform 0.2s ease;
+            }
+
+            #retour:hover{
+                background-color: #7c7979;
+                transform: scale(1.05);
+            }
+        
+            #jeu{
+                width: 30%;
+                display: flex;
+                flex-flow: wrap row;
+                justify-content: space-between;
+                gap: 20%;
+                margin: 100px 0 0 900px;
+                position: absolute;
+                z-index: 5;
+                background-color: rgba(255, 255, 255, 0.381);
+                border-radius: 10px;
+        
+                div{
+                    width: 100px;
+                    height: 540px;
+                    display: flex;
+                    flex-flow: wrap row;
+                    justify-content: center;
+                }
+        
+                .bouton{
+                    width: 60px;
+                    height: 60px;
+                    margin-top: 50px;
+                    border : 2px solid black;
+                    border-radius: 50px;
+                    cursor: pointer;
+                    transition: transform 0.3s ease;
+                    transform-origin: center;
+                }
+        
+                .bouton:hover{
+                    transform: scale(1.1);
+                    border : 3px solid black;
+                }
+        
+            }
+
+            #sapin{
+                position: absolute;
+                // background-color: red;
+                margin: 110px 0 0 850px;
+
+                img{
+                    min-height: 650px;
+                    pointer-events: none;
+                }
+            }
+
+            #curseur{
+                z-index: 6;
+                width: 40px;
+                height: 40px;
+                cursor: none;
+                border-radius: 50%;
+                border: 2px dashed transparent;
+                position: absolute;
+                display: none;
+                pointer-events: none;
+                animation : Anim2 2s infinite alternate;
+            }
+        
+            // .expand{
+            //     animation : Anim2 .5s;
+            // }
+        
+            @keyframes Anim2 {
+                0%{
+                    transform: scale(1);
+                }
+                50%{
+                    transform: scale(1.3);
+                }
+                100%{
+                    transform: scale(1);
+                }
+            }
+        
+            #orgueil{
+
+                p{
+                    background-image: url('../../images/png/bulleDialogue.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    width: 200px;
+                    position: absolute;
+                    top: 260px;
+                    left: 650px;
+                    padding: 33px 0px 100px 6px;
+                }
+
+                img{
+                    height: 400px;
+                    position: absolute;
+                    margin: 350px 0 0 525px;
+                    pointer-events: none;
+                }
+        
+                #rejouer{
+                    @include Police();
+                    font-size: 2rem;
+                    padding: 1%;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    color: whitesmoke;
+                    border: none;
+                    background-color: #881e22;
+                    position: absolute;
+                    display: none;
+                    top: 320px;
+                    left: 475px;
+                    transition: transform 0.2s ease;
+                }
+
+                #rejouer:hover{
+                    background-color: #781b1e;
+                    transform: scale(1.05);
+                }
+            }
         }
 
-        .bouton{
-            width: 60px;
-            height: 60px;
-            margin-top: 50px;
-            border : 2px solid black;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-            transform-origin: center;
-        }
-
-        .bouton:hover{
-            transform: scale(1.1);
-            border : 3px solid black;
-        }
-
-    }
-    #curseur{
-        width: 40px;
-        height: 40px;
-        cursor: none;
-        border-radius: 50%;
-        border: 2px dashed red;
-        position: absolute;
-        display: none;
-        pointer-events: none;
-        animation : Anim2 2s infinite alternate;
-    }
-
-    // .expand{
-    //     animation : Anim2 .5s;
-    // }
-
-    @keyframes Anim2 {
-        0%{
-            transform: scale(1);
-        }
-        50%{
-            transform: scale(1.3);
-        }
-        100%{
-            transform: scale(1);
-        }
-    }
-
-    #rejouer{
-        position: absolute;
-        width: 100px;
-        height: 50px;
-        top: 300px;
-        left: 1000px;
-    }
-
-    #dialogue{
-        display: none;
-        position: absolute;
-        top: 200px;
-        left: 90vw  ;
     }
 }

@@ -1,20 +1,78 @@
-#jeusapin section {
-  width: 40%;
-  height: 100%;
+@font-face {
+  font-family: "Titres";
+  src: url("../../fonts/caveatbrush-regular-webfont.woff2") format("woff2"), url("../../fonts/caveatbrush-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+html body {
+  margin: 0;
+  padding: 0;
+}
+html body #jeusapin {
+  background-image: url("../../images/png/interieur-lieu-sapin.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  max-height: 100vh;
+  min-width: 100vw;
+  max-width: 100vw;
+}
+html body #jeusapin h1 {
+  font-family: "Titres";
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(255, 230, 230);
+  font-size: 3rem;
+  padding-top: 50px;
+  margin: 0;
+  pointer-events: none;
+}
+html body #jeusapin #retour {
+  font-family: "Titres";
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 1%;
+  border-radius: 10px;
+  cursor: pointer;
+  color: whitesmoke;
+  border: none;
+  background-color: #918e8e;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  transition: transform 0.2s ease;
+}
+html body #jeusapin #retour:hover {
+  background-color: #7c7979;
+  transform: scale(1.05);
+}
+html body #jeusapin #jeu {
+  width: 30%;
   display: flex;
   flex-flow: wrap row;
   justify-content: space-between;
   gap: 20%;
-  margin-left: 100px;
+  margin: 100px 0 0 900px;
+  position: absolute;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.381);
+  border-radius: 10px;
 }
-#jeusapin section div {
+html body #jeusapin #jeu div {
   width: 100px;
   height: 540px;
   display: flex;
   flex-flow: wrap row;
   justify-content: center;
 }
-#jeusapin section .bouton {
+html body #jeusapin #jeu .bouton {
   width: 60px;
   height: 60px;
   margin-top: 50px;
@@ -24,16 +82,25 @@
   transition: transform 0.3s ease;
   transform-origin: center;
 }
-#jeusapin section .bouton:hover {
+html body #jeusapin #jeu .bouton:hover {
   transform: scale(1.1);
   border: 3px solid black;
 }
-#jeusapin #curseur {
+html body #jeusapin #sapin {
+  position: absolute;
+  margin: 110px 0 0 850px;
+}
+html body #jeusapin #sapin img {
+  min-height: 650px;
+  pointer-events: none;
+}
+html body #jeusapin #curseur {
+  z-index: 6;
   width: 40px;
   height: 40px;
   cursor: none;
   border-radius: 50%;
-  border: 2px dashed red;
+  border: 2px dashed transparent;
   position: absolute;
   display: none;
   pointer-events: none;
@@ -62,16 +129,40 @@
     transform: scale(1);
   }
 }
-#jeusapin #rejouer {
+html body #jeusapin #orgueil p {
+  background-image: url("../../images/png/bulleDialogue.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 200px;
   position: absolute;
-  width: 100px;
-  height: 50px;
-  top: 300px;
-  left: 1000px;
+  top: 260px;
+  left: 650px;
+  padding: 33px 0px 100px 6px;
 }
-#jeusapin #dialogue {
-  display: none;
+html body #jeusapin #orgueil img {
+  height: 400px;
   position: absolute;
-  top: 200px;
-  left: 90vw;
+  margin: 350px 0 0 525px;
+  pointer-events: none;
+}
+html body #jeusapin #orgueil #rejouer {
+  font-family: "Titres";
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 1%;
+  border-radius: 10px;
+  cursor: pointer;
+  color: whitesmoke;
+  border: none;
+  background-color: #881e22;
+  position: absolute;
+  display: none;
+  top: 320px;
+  left: 475px;
+  transition: transform 0.2s ease;
+}
+html body #jeusapin #orgueil #rejouer:hover {
+  background-color: #781b1e;
+  transform: scale(1.05);
 }/*# sourceMappingURL=jeusapin.css.map */
