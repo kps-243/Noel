@@ -1,0 +1,5 @@
+
+:root{
+    --cursor: url(./../images/png/cursor.png) 2 2, default;
+    --cursorPointer: url(./../images/png/cursor-pointer.png) 2 2, pointer;
+}

@@ -1,0 +1,131 @@
+@import url('./import.css');
+
+html, body{
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+
+    background-image: url(./../images/png/6-back.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    overflow: hidden;
+
+    cursor: var(--cursor); 
+}
+#retour{
+  height: auto;
+  width: auto;
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  position: absolute;
+
+}
+#game{
+  width:145vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Hugo{
+  width:30vh;
+  z-index: 1;
+  bottom: 0px;
+  align-self:flex-end;
+}
+
+.memory{
+    margin: auto;
+
+    display: flex;
+    justify-content:center;
+    align-items:center;
+
+    width: 50vw;
+    height: 100vh;
+    gap: 10px;
+}
+
+.col-carte{
+    flex-wrap: wrap;
+    margin: 0px 15px;
+}
+
+
+#win{
+    display: none;
+    position: absolute;
+    text-align: center;
+    border: 1px solid black;
+    background-color: #FFC700;
+    padding: 50px;
+}
+
+
+.scene {
+  background-color: transparent;
+
+    height: 20vh;
+    width: 20vh;
+    perspective: 1000px;
+
+    /* transform: rotateY(180deg); */
+  }
+  .card{
+    height: 100%;
+    width: 100%;
+
+    margin: 35px 0px;
+
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+  }
+
+
+
+
+  .col-carte .scene:first-child .card{
+    margin-top: 0px;
+  }
+  .card__face--front, .card__face--back {
+    border: 5px solid #FFC700;
+    border-radius: 20px;
+    
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* Safari */
+  }
+
+  .card__face--front {
+
+    background-image: url(./../images/autres/motif.webp);
+    background-size:cover;
+    background-position: center;
+
+    border-radius: 20px;
+  }
+  
+  .card__face--front:hover {
+    cursor: var(--cursorPointer); 
+  }
+
+
+  .card__face--back {
+
+    background-image: url(./../images/autres/motif.webp);
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-color: white;
+
+    transform: rotateY( 180deg );
+  }
+
+  .card.is-flipped {
+    transform: rotateY(180deg);
+  }

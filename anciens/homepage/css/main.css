@@ -1,7 +1,7 @@
 
 @import url('./colors.css');
-@import url('./import.css');
-@import url('./fonts.css');
+@import url('./../../communs/css/import.css');
+@import url('./../../communs/css/fonts.css');
 
 
 html,body {
@@ -37,7 +37,7 @@ body::after {
   z-index: -1;
   opacity: 0.4;
 
-  background-image: url(./../images/png/flocons.png);
+  background-image: url(./../images/flocons.png);
 }
 
 /* main{
