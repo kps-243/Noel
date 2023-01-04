@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'Titres';
+    src: url('../fonts/Caveat-brush/caveatbrush-regular-webfont.woff2') format('woff2'),
+         url('../fonts/Caveat-brush/caveatbrush-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin Police{
+    font-family : 'Titres';
+    text-align: center;
+    text-transform: uppercase;
+} 
+
+$bleu: #0f4163;
+
+html{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    body{
+        margin: -21px 0 0 0;
+        padding: 0;
+        #laby{
+            background-image: url('../images/png/interieur-grotte.png');
+            min-width: 100vw;
+            min-height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            position: relative;
+            display: flex;
+            flex-flow: wrap column;
+            justify-content: center;
+            align-items: center;
+            height: 102vh;
+
+            h1{
+                @include Police();
+                font-size: 3rem;
+                padding-top: 70px;
+                color: rgb(226, 242, 247);
+            }
+
+            #retour{
+                @include Police();
+                text-decoration: none;
+                font-size: 2rem;
+                padding: 1%;
+                border-radius: 10px;
+                cursor: pointer;
+                color: whitesmoke;
+                border: none;
+                background-color: #918e8e;
+                position: absolute;
+                top: 25px;
+                left: 25px;
+                transition: transform 0.2s ease;
+            }
+
+            #retour:hover{
+                background-color: #7c7979;
+                transform: scale(1.05);
+            }
+
+            div{
+                position: absolute;
+                display: flex;
+                flex-flow: wrap column;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.2s ease;
+                
+                h2{
+                    @include Police();
+                    font-size: 5rem;
+                    color: $bleu;
+                }
+
+                button{
+                    @include Police();
+                    border: none;
+                    font-size: 2rem;
+                    padding: 5%;
+                    border-radius: 10px;
+                    color: whitesmoke;
+                    cursor: pointer;
+                    background-color: $bleu;
+                    transition: transform 0.2s ease;
+                }
+
+                button:hover{
+                    background-color: #0c344f;
+                    transform: scale(1.05);
+                }
+            }
+
+            #romain{
+                height: 400px;
+                margin: -25vh 0 0 -60vw;
+            }
+            canvas{
+                width: 500px;
+                height: 500px;
+                background-color: #fff;
+                border-radius: 15px;
+                border-bottom: 10px solid #58b3f4;
+            }
+        }
+    }
+}
+
+.caché{
+    opacity: 0;
+    transition: all 0.2s ease;
+}

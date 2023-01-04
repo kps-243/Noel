@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     'use strict';
 
+    var jeu = 0;
+
     function alea(tab) { //Mélange d'un tableau
         let i, j, tmp;
         for (i = tab.length - 1; i > 0; i--) {
@@ -30,17 +32,17 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function couleur() { //Association de deux boutons par la couleur
-        btn1.style.backgroundColor = 'red';
-        btn21.style.backgroundColor = 'red';
+        btn1.style.backgroundColor = '#ff0200';
+        btn21.style.backgroundColor = '#ff0200';
 
-        btn2.style.backgroundColor = 'blue';
-        btn22.style.backgroundColor = 'blue';
+        btn2.style.backgroundColor = '#2f39ec';
+        btn22.style.backgroundColor = '#2f39ec';
 
-        btn3.style.backgroundColor = 'green';
-        btn23.style.backgroundColor = 'green';
+        btn3.style.backgroundColor = '#4af305';
+        btn23.style.backgroundColor = '#4af305';
 
-        btn4.style.backgroundColor = 'yellow';
-        btn24.style.backgroundColor = 'yellow';
+        btn4.style.backgroundColor = '#ffe701';
+        btn24.style.backgroundColor = '#ffe701';
     }
 
     //Déclaration de deux tableaux
@@ -83,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
     btn1.addEventListener('click', () => {
         actif = 1;
         curseur.style.display = "block";
-        bordure = 'red';
+        bordure = '#ff0200';
     });
 
     btn21.addEventListener('click', () => {
@@ -97,14 +99,14 @@ document.addEventListener('DOMContentLoaded', function () {
             actif = 0;
         }
         if (victoire == 4) {
-            document.querySelector('#victoire').style.display = 'block';
+            document.querySelector('#rejouer').style.display = 'block';
         }
     });
 
     btn2.addEventListener('click', () => {
         actif = 2;
         curseur.style.display = "block";
-        bordure = 'blue';
+        bordure = '#2f39ec';
     });
 
     btn22.addEventListener('click', () => {
@@ -118,14 +120,14 @@ document.addEventListener('DOMContentLoaded', function () {
             actif = 0;
         }
         if (victoire == 4) {
-            document.querySelector('#victoire').style.display = 'block';
+            document.querySelector('#rejouer').style.display = 'block';
         }
     });
 
     btn3.addEventListener('click', () => {
         actif = 3;
         curseur.style.display = "block";
-        bordure = 'green';
+        bordure = '#4af305';
     });
 
     btn23.addEventListener('click', () => {
@@ -139,14 +141,14 @@ document.addEventListener('DOMContentLoaded', function () {
             actif = 0;
         }
         if (victoire == 4) {
-            document.querySelector('#victoire').style.display = 'block';
+            document.querySelector('#rejouer').style.display = 'block';
         }
     });
 
     btn4.addEventListener('click', () => {
         actif = 4;
         curseur.style.display = "block";
-        bordure = 'yellow';
+        bordure = '#ffe701';
     });
 
     btn24.addEventListener('click', () => {
@@ -160,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
             actif = 0;
         }
         if (victoire == 4) {
-            document.querySelector('#victoire').style.display = 'block';;
+            document.querySelector('#dialogue').style.display = 'block';;
         }
     });
 
@@ -195,33 +197,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //Mélange à nouveau les boutons lorsqu'on clique sur 'Rejouer'
     rejouer.addEventListener("click", () => {
-        //Déclaration de deux tableaux
-        tab = [1, 2, 3, 4];
-        tab2 = [4, 3, 2, 1];
-
-        //Mélange des tableaux
-        assoc = alea(tab);
-        assoc2 = alea(tab2);
-
-        // Ajout du préfixe devant les éléments des tableaux
-
-        assoc = prefix(assoc, 0);
-        assoc2 = prefix(assoc2, 1);
-
-        // Déclaration des variables en les associant à leur sélecteur HTML aléatoire
-
-        btn1 = document.querySelector(assoc[0]); btn2 = document.querySelector(assoc[1]); btn3 = document.querySelector(assoc[2]); btn4 = document.querySelector(assoc[3]); btn21 = document.querySelector(assoc2[0]); btn22 = document.querySelector(assoc2[1]); btn23 = document.querySelector(assoc2[2]); btn24 = document.querySelector(assoc2[3]);
-
-        //Réinitialisation de la taille des boutons
-        btn1.style.transform = "scale(1)"; btn2.style.transform = "scale(1)"; btn3.style.transform = "scale(1)"; btn4.style.transform = "scale(1)"; btn21.style.transform = "scale(1)"; btn22.style.transform = "scale(1)"; btn23.style.transform = "scale(1)"; btn24.style.transform = "scale(1)";
-
-        //Réinitialisation de la bordure des boutons
-        btn1.style.border = "2px solid black"; btn2.style.border = "2px solid black"; btn3.style.border = "2px solid black"; btn4.style.border = "2px solid black"; btn21.style.border = "2px solid black"; btn22.style.border = "2px solid black"; btn23.style.border = "2px solid black"; btn24.style.border = "2px solid black";
-        
-        //ajout des couleurs sur les boutons
-        couleur();
-
-        victoire = 0;
+        this.location.reload();
     });
 
 });
