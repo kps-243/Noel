@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // git checkout -b nom_de_ma_branch_nouvelle
     // git add .
     // git commit -m "Test ajout de memory"
-    // git push (--set-upstream origin memory)
+    // git push --set-upstream origin memory
 
     // git pull https://github.com/kps-243/Noel.git POUR TOUT RECUPERER
 
@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
             let aCharacter = document.getElementById(animal.id);
             // console.log(aCharacter);
-    
 
             const cssObj = window.getComputedStyle(aCharacter, null);
             let left = cssObj.getPropertyValue("left");

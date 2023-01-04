@@ -1,0 +1,16 @@
+@import url('./import.css');
+
+html, body{
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+
+    background-image: url(./../images/png/2-back.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    overflow: hidden;
+
+    cursor: var(--cursor); 
+}

@@ -40,10 +40,6 @@ body::after {
   background-image: url(./../images/png/flocons.png);
 }
 
-/* main{
-  display: flex;
-  justify-content: center;
-} */
 
 .abri:hover > .animaux{
   transform-origin: center;
@@ -75,6 +71,17 @@ body::after {
   z-index: 2;
 }
 
+#allTheMap{
+  height: 100vh;
+  width: auto;
+
+  display:block ;
+  margin-left: auto;
+  margin-right: auto;
+
+  pointer-events: none; 
+}
+
 .map{
   height: 100vh;
   width: auto;
@@ -85,6 +92,14 @@ body::after {
 
   pointer-events: none; 
 }
+
+
+#map-sapin{
+  top: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
 
 .animaux, .lieux{
   position: absolute;
