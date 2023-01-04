@@ -6,6 +6,8 @@
     font-style: normal;
 }
 
+@import url('./import.css');
+
 @mixin Police{
     font-family : 'Titres';
     text-align: center;
@@ -16,6 +18,7 @@ html{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    cursor: var(--cursor);
 
     body{
         margin: 0;
@@ -45,7 +48,7 @@ html{
                 font-size: 2rem;
                 padding: 1%;
                 border-radius: 10px;
-                cursor: pointer;
+                cursor: var(--cursorPointer);
                 color: whitesmoke;
                 border: none;
                 background-color: #918e8e;
@@ -86,7 +89,7 @@ html{
                     margin-top: 50px;
                     border : 2px solid black;
                     border-radius: 50px;
-                    cursor: pointer;
+                    cursor: var(--cursorPointer);
                     transition: transform 0.3s ease;
                     transform-origin: center;
                 }
@@ -163,7 +166,7 @@ html{
                     font-size: 2rem;
                     padding: 1%;
                     border-radius: 10px;
-                    cursor: pointer;
+                    cursor: var(--cursorPointer);
                     color: whitesmoke;
                     border: none;
                     background-color: #881e22;
