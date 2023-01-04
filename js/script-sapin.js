@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //Mélange à nouveau les boutons lorsqu'on clique sur 'Rejouer'
     rejouer.addEventListener("click", () => {
-        this.location.reload();
+        window.location.reload();
     });
 
 });
