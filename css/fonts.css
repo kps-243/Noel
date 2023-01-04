@@ -1,7 +1,14 @@
 @font-face {
     font-family: "Titres";
-    src: url("./../fonts/HVD_Comic_Serif_Pro/HVD_Comic_Serif_Pro.woff2") format("woff2"),
-           url("./../fonts/HVD_Comic_Serif_Pro/HVD_Comic_Serif_Pro.woff") format("woff");
+    src: url("./../fonts/CaveatBrush/CaveatBrush-Regular.woff2") format("woff2"),
+           url("./../fonts/CaveatBrush/CaveatBrush-Regular.woff") format("woff");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Textes";
+    src: url("./../fonts/Quicksand/Quicksand-Regular.woff2") format("woff2"),
+           url("./../fonts/Quicksand/Quicksand-Regular.woff") format("woff");
     font-weight: 300;
 }
 

@@ -1,0 +1,11 @@
+@keyframes sapinsAnim {
+    0% {transform: rotate(-0.2deg);}
+    75% {transform: rotate(0.2deg);}
+    100% {transform: rotate(-0.2deg);}
+  }
+
+  @keyframes texteAnim {
+    0% {font-size: 4vh;}
+    50% {font-size: 4.3vh;}
+    100% {font-size: 4vh;}
+  }
