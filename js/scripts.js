@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // git push --set-upstream origin memory
     // git merge <nom-branche>
 
+    // git pull origin ProdCachee
     // git pull https://github.com/kps-243/Noel.git POUR TOUT RECUPERER
 
    
