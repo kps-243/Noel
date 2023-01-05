@@ -136,9 +136,10 @@ body::after {
   font-family: 'Titres';
   font-size: 4vh;
 
-  animation-name: texteAnim;
+  /* animation-name: texteAnim;
   animation-duration: 1.5s;
-  animation-iteration-count: infinite; 
+  animation-delay: 0.55s;
+  animation-iteration-count: infinite;  */
 
   z-index: 3;
 }

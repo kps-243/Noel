@@ -1,6 +1,11 @@
 @import url('./import.css');
 @import url('./colors.css');
 
+:root {
+    --primary:#E72E57;
+    --secondary: #FF8CA6;
+}
+
 
 html, body{
     margin: 0px;
@@ -15,10 +20,12 @@ html, body{
     overflow: hidden;
 
     cursor: var(--cursor); 
+    font-size: 18px;
 }
 
 h2{
-    color: var(--rose);
+    color: var(--primary);
+    font-size: 2rem;
 }
 
 .listenoel {
@@ -43,14 +50,40 @@ h2{
 
 .bulle {
     background-color:white;
-    padding: 20px;
+    padding: 22px;
+    padding-left: 25px;
+    border: 1px solid black;
+    border-radius: 20px;
 
     position: absolute;
-    left: 45vw;
+    left: 40%;
+    bottom: 20vh;
+    width: 35%;
 
     font-family: 'Textes';
+
+    box-sizing: content-box;
+    height: auto;
 }
 
 #text1 {
+    float: left;
+}
 
+.suivant {
+    background-color: #E72E57;
+    color: transparent;
+    border-radius: 50px;
+    border: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    float:right;
+
+    color: white;
+
+    /* top: 50%;
+    transform: translateY(-50%); */
+
+    cursor: var(--cursorPointer);
 }

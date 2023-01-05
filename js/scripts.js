@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // git add .
     // git commit -m "Test ajout de memory"
     // git push --set-upstream origin memory
+    // git merge <nom-branche>
 
     // git pull https://github.com/kps-243/Noel.git POUR TOUT RECUPERER
 
