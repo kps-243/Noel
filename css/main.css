@@ -120,8 +120,6 @@ body::after {
 .animaux, .lieux{
   position: absolute;
   transition: transform 0.5s cubic-bezier(.07,.91,.23,1.49);
-
-  /* left: 20; */
 }
 .map::selection, .animaux::selection, .lieux::selection{
   background: transparent;
@@ -155,22 +153,30 @@ body::after {
   top:4vh;
   left:24vh;
   width: 27vh;
+
+  animation-delay: 0s;
 }
 #lapin{
   top:10vh;
   left:33vh;
   width: 6vh;
+
+  animation-delay: 0s;
 }
 
 #musee-des-souvenirs{
   top:5vh;
   left:77vh;
   width: 26vh;
+
+  animation-delay: 1s;
 }
 #blaireau{
   top:15vh;
   left: 81vh;
   width: 6vh;
+
+  animation-delay: 1s;
 }
 
 
@@ -178,11 +184,15 @@ body::after {
   top:5vh;
   left:159vh;
   width: 21vh;
+
+  animation-delay: 2s;
 }
 #manchot{
   top:13vh;
   left: 176vh;
   width: 6vh;
+
+  animation-delay: 2s;
 }
 
 
@@ -190,11 +200,15 @@ body::after {
   top:30vh;
   left:41vh;
   width: 36vh;
+
+  animation-delay: 3s;
 }
 #renard{
   top:49vh;
   left: 72vh;
   width: 10vh;
+
+  animation-delay: 3s;
 }
 
 
@@ -202,11 +216,15 @@ body::after {
   top:31vh;
   left:96vh;
   width: 17vh;
+
+    animation-delay: 4s;
 }
 #ecureuil{
   top:51vh;
   left: 107vh;
   width: 6vh;
+
+    animation-delay: 4s;
 }
 
 
@@ -214,16 +232,22 @@ body::after {
   top:41vh;
   left:157vh;
   width: 30vh;
+
+  animation-delay: 5s;
 }
 #mamourse{
   top:68.5vh;
   left: 184vh;
   width: 7vh;
+
+  animation-delay: 5s;
 }
 #ourson{
   top:73vh;
   left: 180vh;
   width: 4vh;
+
+  animation-delay: 5s;
 }
 
 
@@ -231,11 +255,15 @@ body::after {
   top:57vh;
   left:32vh;
   width: 18vh;
+
+  animation-delay: 6s;
 }
 #renne{
   top:83vh;
   left: 31vh;
   width: 7vh;
+
+  animation-delay: 6s;
 }
 
 
@@ -243,12 +271,17 @@ body::after {
   top:59vh;
   left:112vh;
   width: 19vh;
+
+  animation-delay: 7s;
 }
 #marmotte{
   top:91vh;
   left: 107vh;
   width: 7vh;
+
+  animation-delay: 7s;
 }
+
 @media (min-width: 1024px) {
   body{
     height: 100vh;
@@ -267,6 +300,10 @@ body::after {
 
   body::after{
     display: none;
+  }
+
+  .animaux, .lieux{
+    animation: maisonsAnim 8s infinite ease-in-out;
   }
 
 }
@@ -326,7 +363,10 @@ body::after {
     animation-iteration-count: infinite; 
   
     z-index: 100;
-    
   }
+
+
+
+
 }
 

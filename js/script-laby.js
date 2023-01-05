@@ -8,11 +8,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const Iclef = new Image();
     Iclef.src = "./images/png/clef.png";
     const Evictoire = document.querySelector('#victoire');
+    const suivant = document.querySelector('#suivant');
+    const bulle = document.querySelector('#bulle');
 
 
 
     var clef = 0;
     var victoire = 0;
+    var dialogue = 0;
 
     let playerX = 1; // position initiale du joueur en x
     let playerY = 0; // position initiale du joueur en y
@@ -26,40 +29,50 @@ document.addEventListener('DOMContentLoaded', function () {
         maze[12][4] = 3;
     });
 
+    suivant.addEventListener('click', () => {
+        
+        if (dialogue == 0) {
+            canvas.classList.remove('caché');
+            dialogue = 1;
+        }
+    });
+
     document.addEventListener('keydown', (event) => {
-        if (victoire == 0) {
-            if (event.code === 'ArrowUp') {
-                // vérifie si le mouvement vers le haut est valide
-                if (maze[playerY - 1][playerX] !== 1) {
-                    playerY--;
-                }
-            } else if (event.code === 'ArrowDown') {
-                // vérifie si le mouvement vers le bas est valide
-                if (maze[playerY + 1][playerX] == 2) {
-                    clef = 1;
-                    playerY++;
-                }
-                else if (maze[playerY + 1][playerX] == 0) {
-                    playerY++;
-                }
-            } else if (event.code === 'ArrowLeft') {
-                // vérifie si le mouvement vers la gauche est valide
-                if (maze[playerY][playerX - 1] == 4) {
-                    victoire = 1;
-                    playerX--;
-                }
-                else if (maze[playerY][playerX - 1] == 0) {
-                    playerX--;
-                }
-            } else if (event.code === 'ArrowRight') {
-                // vérifie si le mouvement vers la droite est valide
-                if (maze[playerY][playerX + 1] !== 1) {
-                    playerX++;
+        if (dialogue !== 0) {
+            if (victoire == 0) {
+                if (event.code === 'ArrowUp') {
+                    // vérifie si le mouvement vers le haut est valide
+                    if (maze[playerY - 1][playerX] !== 1) {
+                        playerY--;
+                    }
+                } else if (event.code === 'ArrowDown') {
+                    // vérifie si le mouvement vers le bas est valide
+                    if (maze[playerY + 1][playerX] == 2) {
+                        clef = 1;
+                        playerY++;
+                    }
+                    else if (maze[playerY + 1][playerX] == 0) {
+                        playerY++;
+                    }
+                } else if (event.code === 'ArrowLeft') {
+                    // vérifie si le mouvement vers la gauche est valide
+                    if (maze[playerY][playerX - 1] == 4) {
+                        victoire = 1;
+                        playerX--;
+                    }
+                    else if (maze[playerY][playerX - 1] == 0) {
+                        playerX--;
+                    }
+                } else if (event.code === 'ArrowRight') {
+                    // vérifie si le mouvement vers la droite est valide
+                    if (maze[playerY][playerX + 1] !== 1) {
+                        playerX++;
+                    }
                 }
             }
-        }
-        else {
-            Evictoire.classList.remove('caché');
+            else {
+                Evictoire.classList.remove('caché');
+            }
         }
     });
 

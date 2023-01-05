@@ -9,3 +9,9 @@
     50% {font-size: 4.3vh;}
     100% {font-size: 4vh;}
   }
+
+  @keyframes maisonsAnim {
+    0% { transform: scale(1);}
+    10% { transform: scale(1.2);}
+    20% { transform: scale(1);}
+  }
