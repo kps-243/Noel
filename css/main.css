@@ -109,19 +109,19 @@ body::after {
   z-index: 2;
 
   filter: brightness(1.35);
-/* 
-  animation-name: sapinsAnim;
-  animation-duration: 2s;
-  animation-iteration-count: infinite; */
+}
+#map-front{
+  height: 100vh;
+  position: absolute;
 
+  top:0px;
+  z-index: 3;
 }
 
 
 .animaux, .lieux{
   position: absolute;
   transition: transform 0.5s cubic-bezier(.07,.91,.23,1.49);
-
-  /* left: 20; */
 }
 .map::selection, .animaux::selection, .lieux::selection{
   background: transparent;
@@ -146,7 +146,7 @@ body::after {
   animation-delay: 0.55s;
   animation-iteration-count: infinite;  */
 
-  z-index: 3;
+  z-index: 5;
 }
 
 
@@ -155,22 +155,30 @@ body::after {
   top:4vh;
   left:24vh;
   width: 27vh;
+
+  animation-delay: 0s;
 }
 #lapin{
   top:10vh;
   left:33vh;
   width: 6vh;
+
+  animation-delay: 0s;
 }
 
 #musee-des-souvenirs{
   top:5vh;
   left:77vh;
   width: 26vh;
+
+  animation-delay: 1s;
 }
 #blaireau{
   top:15vh;
   left: 81vh;
   width: 6vh;
+
+  animation-delay: 1s;
 }
 
 
@@ -178,11 +186,15 @@ body::after {
   top:5vh;
   left:159vh;
   width: 21vh;
+
+  animation-delay: 2s;
 }
 #manchot{
   top:13vh;
   left: 176vh;
   width: 6vh;
+
+  animation-delay: 2s;
 }
 
 
@@ -190,11 +202,15 @@ body::after {
   top:30vh;
   left:41vh;
   width: 36vh;
+
+  animation-delay: 3s;
 }
 #renard{
   top:49vh;
   left: 72vh;
   width: 10vh;
+
+  animation-delay: 3s;
 }
 
 
@@ -202,11 +218,15 @@ body::after {
   top:31vh;
   left:96vh;
   width: 17vh;
+
+    animation-delay: 4s;
 }
 #ecureuil{
   top:51vh;
   left: 107vh;
   width: 6vh;
+
+    animation-delay: 4s;
 }
 
 
@@ -214,28 +234,39 @@ body::after {
   top:41vh;
   left:157vh;
   width: 30vh;
+
+  animation-delay: 5s;
 }
 #mamourse{
   top:68.5vh;
   left: 184vh;
   width: 7vh;
+
+  animation-delay: 5s;
 }
 #ourson{
   top:73vh;
   left: 180vh;
   width: 4vh;
+
+  animation-delay: 5s;
 }
 
 
 #royaume-des-lettres{
-  top:57vh;
+  top:58vh;
   left:32vh;
   width: 18vh;
+
+  animation-delay: 6s;
 }
 #renne{
   top:83vh;
   left: 31vh;
   width: 7vh;
+  z-index: 4;
+
+  animation-delay: 6s;
 }
 
 
@@ -243,12 +274,17 @@ body::after {
   top:59vh;
   left:112vh;
   width: 19vh;
+
+  animation-delay: 7s;
 }
 #marmotte{
   top:91vh;
   left: 107vh;
   width: 7vh;
+
+  animation-delay: 7s;
 }
+
 @media (min-width: 1024px) {
   body{
     height: 100vh;
@@ -258,7 +294,7 @@ body::after {
   }
 }
 
-@media (max-width: 1024px){
+@media (max-width: 920px){
   #logo{
     top: 5px;
     left: 5px;
@@ -269,64 +305,11 @@ body::after {
     display: none;
   }
 
+  .animaux, .lieux{
+    animation: maisonsAnim 8s infinite ease-in-out;
+  }
+
 }
 
-@media (orientation: portrait) and (max-width: 1024px) {
 
-  html {
-    margin: 0;
-    height: 100vh; 
-    width: 100vw;
-
-    overflow: hidden;
-  }
-
-  body{
-    margin: 0;
-    height: 100vh; 
-    width: 100vw;
-    overflow: hidden;
-  }
-
-  body::after{
-    display: none;
-  }
-
-  main{
-    display: none;
-  }
-
-  #allTheMap {
-    width: 100vw;
-    height: 100vh;
-
-    overflow: hidden;
-  }
-
-  #tourne {
-    display: block;
-
-    position:fixed;
-    top: 0;
-    left: 0;
-  
-    width: 100vw;
-    height: 100vh;
-  
-    background-color: #222;
-    color: antiquewhite;
-    box-shadow: 10px 10px 50px black inset;
-
-    text-align: center;
-    line-height: 100vh;
-    word-wrap: break-word;
-
-    animation-name: texteAnim;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite; 
-  
-    z-index: 100;
-    
-  }
-}
 

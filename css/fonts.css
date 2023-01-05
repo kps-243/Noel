@@ -10,8 +10,15 @@
     src: url("./../fonts/Quicksand/Quicksand-Regular.woff2") format("woff2"),
            url("./../fonts/Quicksand/Quicksand-Regular.woff") format("woff");
     font-weight: 300;
+    font-size: 18px;
 }
 
-/* @font-face {
-
-} */
+@media (max-width: 920px){
+    @font-face {
+        font-family: "Textes";
+        src: url("./../fonts/Quicksand/Quicksand-Regular.woff2") format("woff2"),
+               url("./../fonts/Quicksand/Quicksand-Regular.woff") format("woff");
+        font-weight: 300;
+        font-size: 16px;
+    }
+}

@@ -129,3 +129,27 @@ html, body{
   .card.is-flipped {
     transform: rotateY(180deg);
   }
+
+  @media (max-width: 920px){
+    .col-carte{
+      margin:0px 1px;
+    }
+
+    .scene{
+      width: 20vh;
+      height: 20vh;
+    }
+
+    .card{
+      margin: 15px 0px;
+    }
+/* 
+    .card.is-flipped{
+      margin-left:3px;
+    } */
+
+    .card__face--front,.card__face--back{
+      box-sizing: border-box;
+      border: 3px solid #EBA749;
+    }
+  }

@@ -50,7 +50,6 @@ html body #laby article h3 {
 }
 html body #laby article i {
   color: #1a1e4a;
-  font-size: 2rem;
 }
 html body #laby article::before {
   content: "";
