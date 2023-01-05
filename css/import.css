@@ -26,7 +26,43 @@
     
 }
 
-i{
+.bulle{
+    position: absolute;
+    z-index: 3;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 1% 1.4%;
+}
+
+.bulle > h3{
+    font-family : 'Titres';
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 0.95em;
+}
+
+.bulle > p{
+    font-family: 'Textes';
+}
+
+.bulle > i{
+    margin-top: 0;
     display: inline-block;
     cursor: var(--cursorPointer);
+}
+
+.bulle > #preced{
+    display: none;
+}
+
+.bulle > #suivant{
+    margin-left: 85%;
+}
+
+.bulle > #suivant::after{
+    content: "Suivant";
+    font-family: 'Titres';
+    font-size: 0.6em;
+    margin: 3px 0 0 -95px;
+    position: absolute;
 }

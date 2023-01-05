@@ -53,57 +53,14 @@ html{
             }
 
             article{
-                position: absolute;
-                z-index: 3;
-                background-color: #fff;
-                border-radius: 25px;
-                padding: 1% 1.4%;
 
                 h3{
-                    @include Police();
-                    text-align: left;
                     color: #90aedc;
-                    margin: 0;
-                    font-size: 0.95em;
-                }
-                
-                p{
-                    // font-size: 1.3rem;
-                    font-family: 'Textes';
                 }
 
                 i{
-                    margin-top: 0;
                     color: #90aedc;
                     font-size: 2rem;
-                }
-
-                #preced{
-                    display: none;
-                }
-
-                #suivant{
-                    margin-left: 85%;
-                }
-
-                #suivant::after{
-                    content: "Suivant";
-                    font-family: 'Titres';
-                    font-size: 0.6em;
-                    margin: 3px 0 0 -95px;
-                    position: absolute;
-                }
-
-                button{
-                    @include Police();
-                    border-radius: 50px;
-                    margin-left: 70%;
-                    font-size: 1rem;
-                    border: none;
-                    background-color: #90aedc;
-                    padding: 3% 5%;
-                    color: white;
-                    cursor: var(--cursorPointer);
                 }
             }
 

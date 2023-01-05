@@ -45,55 +45,12 @@ html body #laby h1 {
   margin-top: 0;
   color: rgb(226, 242, 247);
 }
-html body #laby article {
-  position: absolute;
-  z-index: 3;
-  background-color: #fff;
-  border-radius: 25px;
-  padding: 1% 1.4%;
-}
 html body #laby article h3 {
-  font-family: "Titres";
-  text-align: center;
-  text-transform: uppercase;
-  text-align: left;
   color: #90aedc;
-  margin: 0;
-  font-size: 0.95em;
-}
-html body #laby article p {
-  font-family: "Textes";
 }
 html body #laby article i {
-  margin-top: 0;
   color: #90aedc;
   font-size: 2rem;
-}
-html body #laby article #preced {
-  display: none;
-}
-html body #laby article #suivant {
-  margin-left: 85%;
-}
-html body #laby article #suivant::after {
-  content: "Suivant";
-  font-family: "Titres";
-  font-size: 0.6em;
-  margin: 3px 0 0 -95px;
-  position: absolute;
-}
-html body #laby article button {
-  font-family: "Titres";
-  text-align: center;
-  text-transform: uppercase;
-  border-radius: 50px;
-  margin-left: 70%;
-  font-size: 1rem;
-  border: none;
-  background-color: #90aedc;
-  padding: 3% 5%;
-  color: white;
-  cursor: var(--cursorPointer);
 }
 html body #laby div {
   position: absolute;
