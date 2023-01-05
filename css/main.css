@@ -2,6 +2,7 @@
 @import url('./colors.css');
 @import url('./import.css');
 @import url('./fonts.css');
+@import url('./animation.css');
 
 
 html,body {
@@ -79,7 +80,9 @@ body::after {
   margin-left: auto;
   margin-right: auto;
 
-  pointer-events: none; 
+  pointer-events: none;
+
+  /* overflow: hidden; */
 }
 
 .map{
@@ -95,9 +98,18 @@ body::after {
 
 
 #map-sapin{
-  top: 0;
+  height: 100vh;
   position: absolute;
-  overflow: hidden;
+
+  top:0px;
+  z-index: 2;
+
+  filter: brightness(1.35);
+/* 
+  animation-name: sapinsAnim;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; */
+
 }
 
 
@@ -105,7 +117,7 @@ body::after {
   position: absolute;
   transition: transform 0.5s cubic-bezier(.07,.91,.23,1.49);
 
-  left: 20;
+  /* left: 20; */
 }
 .map::selection, .animaux::selection, .lieux::selection{
   background: transparent;
@@ -116,111 +128,118 @@ body::after {
   text-align: center;
 
   color:white;
-  text-shadow: 1px 1px 7px black;
+	text-shadow: -1px 1px 5px #000,
+				  1px 1px 5px #000,
+				  1px -1px 0 #000,
+				  -1px -1px 0 #000;
 
   font-family: 'Titres';
-  font-size: 2.4vh;
+  font-size: 4vh;
 
-  z-index: 1;
+  animation-name: texteAnim;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite; 
+
+  z-index: 3;
 }
 
 
 
 #grotte-gelee{
   top:4vh;
-  left:6vh;
+  left:24vh;
   width: 27vh;
 }
 #lapin{
   top:10vh;
-  left: 15vh;
+  left:33vh;
   width: 6vh;
 }
 
 #musee-des-souvenirs{
   top:5vh;
-  left:59vh;
+  left:77vh;
   width: 26vh;
 }
 #blaireau{
   top:15vh;
-  left: 63vh;
+  left: 81vh;
   width: 6vh;
 }
 
 
 #igloo-de-la-photo{
   top:5vh;
-  left:141vh;
+  left:159vh;
   width: 21vh;
 }
 #manchot{
   top:13vh;
-  left: 158vh;
+  left: 176vh;
   width: 6vh;
 }
 
 
 #maison-de-la-creation{
   top:30vh;
-  left:23vh;
+  left:41vh;
   width: 36vh;
 }
 #renard{
   top:49vh;
-  left: 54vh;
+  left: 72vh;
   width: 10vh;
 }
 
 
 #sapin-de-noel{
   top:31vh;
-  left:78vh;
+  left:96vh;
   width: 17vh;
 }
 #ecureuil{
   top:51vh;
-  left: 89vh;
+  left: 107vh;
   width: 6vh;
 }
 
 
 #palais-de-la-gourmandise{
-  top:40vh;
-  left:138vh;
-  width: 31vh;
+  top:41vh;
+  left:157vh;
+  width: 30vh;
 }
 #mamourse{
   top:68.5vh;
-  left: 166vh;
+  left: 184vh;
   width: 7vh;
 }
 #ourson{
   top:73vh;
-  left: 162vh;
+  left: 180vh;
   width: 4vh;
 }
 
 
 #royaume-des-lettres{
   top:57vh;
-  left:14vh;
+  left:32vh;
   width: 18vh;
 }
 #renne{
   top:83vh;
-  left: 13vh;
+  left: 31vh;
   width: 7vh;
 }
 
 
 #tour-du-bric-a-brac{
   top:59vh;
-  left:94vh;
+  left:112vh;
   width: 19vh;
 }
 #marmotte{
   top:91vh;
-  left: 89vh;
+  left: 107vh;
   width: 7vh;
 }

@@ -1,5 +1,26 @@
+@import url(./fonts.css);
 
 :root{
     --cursor: url(./../images/png/cursor.png) 2 2, default;
     --cursorPointer: url(./../images/png/cursor-pointer.png) 2 2, pointer;
+}
+
+.Victoire {
+
+}
+
+.Retour {
+    
+}
+
+.Titre {
+    font-family: 'Titres';
+    font-size: 8vh;
+    position: absolute;
+    white-space: nowrap;
+    
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
 }

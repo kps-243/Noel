@@ -20,27 +20,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // CHANGEMENT LEFT ANIMAUX QUAND PORTRAIT
 
-    let h_img = 630;
-    let w_img = 1120
+    let h_img = 1404;
+    let w_img = 2496;
 
     let largeur = window.innerWidth;
     let hauteur = window.innerHeight;
 
+    let widthImageNow = w_img*hauteur/h_img;
 
     window.onresize = handle;
 
-    function handle(evnt){
-        // alert("l'événement resize a été déclenché." );
-        return true;
-      }
-
+    const background = document.getElementById('background');
+ 
       
-    if (h_img*largeur/w_img > hauteur) {
+    if (background.offsetWidth < largeur) {
         console.log("format PORTAIT");
 
-        let widthImageNow = w_img*hauteur/h_img;
-        let moreOnTheLeft = (largeur-widthImageNow)/2;
-
+        let moreOnTheLeft = (largeur-background.offsetWidth)/2;
 
         // Pour les animaux
         const animaux = document.querySelectorAll('.animaux');
@@ -75,6 +71,16 @@ document.addEventListener("DOMContentLoaded", function() {
             aPlace.style.left = left+ moreOnTheLeft +"px";
         })
 
+        // Pour les layers
+        let mapSapin = document.getElementById('map-sapin');
+
+            console.log(widthImageNow);
+
+            mapSapin.style.width = background.offsetWidth+"px";
+            mapSapin.style.top = "50%";
+            mapSapin.style.left = "50%";
+            mapSapin.style.transform = "translate(-50%, -50%)";
+            console.log(mapSapin.style.width);
 
     } else {
         console.log("format PAYSAGE");
@@ -122,10 +128,15 @@ function custom(event,element){
     el.style.display = "block";
 
     el.style.top = event.clientY + "px";
-    el.style.left = event.clientX + 50 + document.scrollingElement.scrollLeft + "px";
+    el.style.left = event.clientX + 35 + document.scrollingElement.scrollLeft + "px";
 }
 
 function leave(element){
     let el = document.getElementById(element);
     el.style.display = "none";
+}
+
+function handle(evnt){
+        location.reload();
+    return true;
 }
