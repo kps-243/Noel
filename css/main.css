@@ -264,155 +264,69 @@ body::after {
     left: 5px;
     width: 70px;
   }
+
+  body::after{
+    display: none;
+  }
+
 }
 
 @media (orientation: portrait) and (max-width: 1024px) {
 
-   html, body{
+  html {
     margin: 0;
     height: 100vh; 
     width: 100vw;
-    min-height: -webkit-fill-available;
-    min-width: -webkit-fill-available;
-    overflow:hidden;
 
-    
+    overflow: hidden;
+  }
+
+  body{
+    margin: 0;
+    height: 100vh; 
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  body::after{
+    display: none;
+  }
+
+  main{
+    display: none;
+  }
+
+  #allTheMap {
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
   }
 
   #tourne {
     display: block;
 
-      position:fixed;
-      top: 0;
-      left: 0;
-    
-      width: 100%;
-      height: 100%;
-    
-      background-color: #222;
-      color: antiquewhite;
-    
-      z-index: 100;
-    
-  }
-
-
-  /* body{
-    margin: 0; 
+    position:fixed;
+    top: 0;
+    left: 0;
+  
     width: 100vw;
-    overflow-y: visible;
-    overflow-x: hidden;
-  }
+    height: 100vh;
+  
+    background-color: #222;
+    color: antiquewhite;
+    box-shadow: 10px 10px 50px black inset;
 
-  .map, #map-sapin, #allTheMap{
-    height: 100vw;
-    width: auto;
-  }
+    text-align: center;
+    line-height: 100vh;
+    word-wrap: break-word;
 
-  #logo{
-    top: 5px;
-    left: 5px;
-    width: 70px;
-  }
-
-  #grotte-gelee{
-    top:4vw;
-    left:24vw;
-    width: 27vw;
-  }
-  #lapin{
-    top:10vw;
-    left:33vw;
-    width: 6vw;
-  }
+    animation-name: texteAnim;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite; 
   
-  #musee-des-souvenirs{
-    top:5vw;
-    left:77vw;
-    width: 26vw;
+    z-index: 100;
+    
   }
-  #blaireau{
-    top:15vw;
-    left: 81vw;
-    width: 6vw;
-  }
-  
-  
-  #igloo-de-la-photo{
-    top:5vw;
-    left:159vw;
-    width: 21vw;
-  }
-  #manchot{
-    top:13vw;
-    left: 176vw;
-    width: 6vw;
-  }
-  
-  
-  #maison-de-la-creation{
-    top:30vw;
-    left:41vw;
-    width: 36vw;
-  }
-  #renard{
-    top:49vw;
-    left: 72vw;
-    width: 10vw;
-  }
-  
-  
-  #sapin-de-noel{
-    top:31vw;
-    left:96vw;
-    width: 17vw;
-  }
-  #ecureuil{
-    top:51vw;
-    left: 107vw;
-    width: 6vw;
-  }
-  
-  
-  #palais-de-la-gourmandise{
-    top:41vw;
-    left:157vw;
-    width: 30vw;
-  }
-  #mamourse{
-    top:68.5vw;
-    left: 184vw;
-    width: 7vw;
-  }
-  #ourson{
-    top:73vw;
-    left: 180vw;
-    width: 4vw;
-  }
-  
-  
-  #royaume-des-lettres{
-    top:57vw;
-    left:32vw;
-    width: 18vw;
-  }
-  #renne{
-    top:83vw;
-    left: 31vw;
-    width: 7vw;
-  }
-  
-  
-  #tour-du-bric-a-brac{
-    top:59vw;
-    left:112vw;
-    width: 19vw;
-  }
-  #marmotte{
-    top:91vw;
-    left: 107vw;
-    width: 7vw;
-  } */
-
- 
 }
+
