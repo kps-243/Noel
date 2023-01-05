@@ -1,14 +1,22 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "Titres";
-  src: url("../fonts/Caveat-brush/caveatbrush-regular-webfont.woff2") format("woff2"), url("../fonts/Caveat-brush/caveatbrush-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+@import url(./fonts.css);
+@import url("./import.css");
+@import url("https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css");
+.caché {
+  opacity: 0;
 }
+.caché #btn {
+  cursor: var(--cursor);
+}
+
 html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  cursor: var(--cursor);
+}
+html * {
+  transition: opacity 0.5s ease;
 }
 html body {
   margin: 0 0 0 0;
@@ -37,26 +45,55 @@ html body #laby h1 {
   margin-top: 0;
   color: rgb(226, 242, 247);
 }
-html body #laby #retour {
+html body #laby article {
+  position: absolute;
+  z-index: 3;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 1% 1.4%;
+}
+html body #laby article h3 {
   font-family: "Titres";
   text-align: center;
   text-transform: uppercase;
-  text-decoration: none;
-  font-size: 2rem;
-  padding: 1%;
-  border-radius: 10px;
-  cursor: pointer;
-  color: whitesmoke;
-  border: none;
-  background-color: #918e8e;
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  transition: transform 0.2s ease;
+  text-align: left;
+  color: #90aedc;
+  margin: 0;
+  font-size: 0.95em;
 }
-html body #laby #retour:hover {
-  background-color: #7c7979;
-  transform: scale(1.05);
+html body #laby article p {
+  font-family: "Textes";
+}
+html body #laby article i {
+  margin-top: 0;
+  color: #90aedc;
+  font-size: 2rem;
+}
+html body #laby article #preced {
+  display: none;
+}
+html body #laby article #suivant {
+  margin-left: 85%;
+}
+html body #laby article #suivant::after {
+  content: "Suivant";
+  font-family: "Titres";
+  font-size: 0.6em;
+  margin: 3px 0 0 -95px;
+  position: absolute;
+}
+html body #laby article button {
+  font-family: "Titres";
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 50px;
+  margin-left: 70%;
+  font-size: 1rem;
+  border: none;
+  background-color: #90aedc;
+  padding: 3% 5%;
+  color: white;
+  cursor: var(--cursorPointer);
 }
 html body #laby div {
   position: absolute;
@@ -82,7 +119,7 @@ html body #laby div button {
   padding: 5%;
   border-radius: 10px;
   color: whitesmoke;
-  cursor: pointer;
+  cursor: var(--cursorPointer);
   background-color: #0f4163;
   transition: transform 0.2s ease;
 }
@@ -91,21 +128,16 @@ html body #laby div button:hover {
   transform: scale(1.05);
 }
 html body #laby #romain {
-  height: 350px;
+  height: 50vh;
   margin: 40vh 0 0 -60vw;
   position: absolute;
 }
 html body #laby canvas {
-  width: 350px;
-  height: 350px;
+  width: 60vh;
+  height: 60vh;
   background-color: #fff;
   border-radius: 15px;
   border-bottom: 10px solid #58b3f4;
-}
-
-.caché {
-  opacity: 0;
-  transition: all 0.2s ease;
 }
 
 @media only screen and (min-width: 1600px) {
@@ -117,20 +149,6 @@ html body #laby canvas {
   html body {
     margin: -21px 0 0 0;
     padding: 0;
-  }
-  html body #laby {
-    background-image: url("../images/png/interieur-grotte.png");
-    min-width: 100vw;
-    min-height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0;
-    position: relative;
-    display: flex;
-    flex-flow: wrap column;
-    justify-content: center;
-    align-items: center;
-    height: 102vh;
   }
   html body #laby h1 {
     font-family: "Titres";
@@ -148,7 +166,7 @@ html body #laby canvas {
     font-size: 2rem;
     padding: 1%;
     border-radius: 10px;
-    cursor: pointer;
+    cursor: var(--cursorPointer);
     color: whitesmoke;
     border: none;
     background-color: #918e8e;
@@ -185,7 +203,7 @@ html body #laby canvas {
     padding: 5%;
     border-radius: 10px;
     color: whitesmoke;
-    cursor: pointer;
+    cursor: var(--cursorPointer);
     background-color: #0f4163;
     transition: transform 0.2s ease;
   }
@@ -203,9 +221,5 @@ html body #laby canvas {
     background-color: #fff;
     border-radius: 15px;
     border-bottom: 10px solid #58b3f4;
-  }
-  .caché {
-    opacity: 0;
-    transition: all 0.2s ease;
   }
 }/*# sourceMappingURL=main-laby.css.map */
