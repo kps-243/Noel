@@ -24,3 +24,12 @@
     transform: translate(-50%,-50%);
     
 }
+
+/* @media (orientation: portrait) {
+    html {
+        margin: 0px;
+        padding: 0px;
+        transform: rotate(90deg);
+
+    }
+  } */
