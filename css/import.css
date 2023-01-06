@@ -60,6 +60,8 @@ i{
 
     border: 1px solid black;
     width: 450px;
+
+    display: none;
 }
 
 
@@ -113,6 +115,9 @@ i{
 
 }
 
+#bulle1{
+  display: block;
+}
 #bulle1 > #preced{
   display: none;
 }

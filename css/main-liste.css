@@ -56,14 +56,14 @@ h2{
 .bulle > #suivant::after{
   content: "C'est parti !";
 }
-
-
-#bulle2{
-    display: none;
-}
 #bulle2 > #suivant::after{
     content: "Suivant";
   }
+
+  #bulle3{
+    display: none;
+  }
+
 #bulle3 .menu-cartes{
     display:flex;
     gap:40px;

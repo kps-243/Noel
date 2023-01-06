@@ -178,6 +178,6 @@ html, body{
   content: "C'est parti !";
   }
 
-  #bulle2, #bulle3{
+  #bulle3{
     display: none;
   }
