@@ -19,7 +19,7 @@ body .cercle1, body .cercle2, body .cercle3, body .cercle4, body .cercle5, body 
 body .cercle1 {
   height: 200px;
   width: 200px;
-  border-radius: 100px;
+  border-radius: 200px;
   left: -70px;
   top: 250px;
 }
@@ -79,7 +79,7 @@ body #cercle6-2 {
 body .cercle7 {
   height: 200px;
   width: 200px;
-  border-radius: 100px;
+  border-radius: 200px;
   top: 1100px;
   left: -400px;
 }
