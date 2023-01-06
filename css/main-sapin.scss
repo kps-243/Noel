@@ -57,7 +57,7 @@ html{
             }
 
             #bulle{
-                left: 38.5vw;
+                left: 35%;
                 bottom: 10vw;
                 h3{
                     color: #e82b2f;
@@ -87,14 +87,14 @@ html{
                     flex-flow: wrap row;
                     justify-content: center;
                     align-items: center;
+                    gap: 3%;
                 }
         
                 .bouton{
-                    width: 55px;
-                    height: 55px;
+                    width: 15vh;
+                    height: 15vh;
                     margin-top: 0px;
-                    border : 2px solid black;
-                    border-radius: 50px;
+                    border-radius: 50%;
                     cursor: var(--cursorPointer);
                     transition: transform 0.3s ease;
                     transform-origin: center;
@@ -102,7 +102,6 @@ html{
         
                 .bouton:hover{
                     transform: scale(1.1);
-                    border : 3px solid black;
                 }
         
             }
@@ -138,33 +137,11 @@ html{
         
             #orgueil{
 
-                img{
-                    height: 45vh;
-                    position: absolute;
-                    margin: 15vw 0 0 20vw;
-                    pointer-events: none;
-                }
-        
-                #rejouer{
-                    @include Police();
-                    font-size: 2rem;
-                    padding: 1%;
-                    border-radius: 10px;
-                    cursor: var(--cursorPointer);
-                    color: whitesmoke;
-                    border: none;
-                    background-color: #881e22;
-                    position: absolute;
-                    display: none;
-                    top: 200px;
-                    left: 250px;
-                    transition: transform 0.2s ease;
-                }
-
-                #rejouer:hover{
-                    background-color: #781b1e;
-                    transform: scale(1.05);
-                }
+                height: 45vh;
+                position: absolute;
+                bottom: 0;
+                left: 15%;
+                pointer-events: none;
             }
         }
 

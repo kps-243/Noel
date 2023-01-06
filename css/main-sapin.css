@@ -51,7 +51,7 @@ html body #jeusapin #retour:hover {
   transform: scale(1.05);
 }
 html body #jeusapin #bulle {
-  left: 38.5vw;
+  left: 35%;
   bottom: 10vw;
 }
 html body #jeusapin #bulle h3 {
@@ -78,20 +78,19 @@ html body #jeusapin #jeu div {
   flex-flow: wrap row;
   justify-content: center;
   align-items: center;
+  gap: 3%;
 }
 html body #jeusapin #jeu .bouton {
-  width: 55px;
-  height: 55px;
+  width: 15vh;
+  height: 15vh;
   margin-top: 0px;
-  border: 2px solid black;
-  border-radius: 50px;
+  border-radius: 50%;
   cursor: var(--cursorPointer);
   transition: transform 0.3s ease;
   transform-origin: center;
 }
 html body #jeusapin #jeu .bouton:hover {
   transform: scale(1.1);
-  border: 3px solid black;
 }
 html body #jeusapin #curseur {
   z-index: 6;
@@ -128,32 +127,12 @@ html body #jeusapin #curseur {
     transform: scale(1);
   }
 }
-html body #jeusapin #orgueil img {
+html body #jeusapin #orgueil {
   height: 45vh;
   position: absolute;
-  margin: 15vw 0 0 20vw;
+  bottom: 0;
+  left: 15%;
   pointer-events: none;
-}
-html body #jeusapin #orgueil #rejouer {
-  font-family: "Titres";
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 2rem;
-  padding: 1%;
-  border-radius: 10px;
-  cursor: var(--cursorPointer);
-  color: whitesmoke;
-  border: none;
-  background-color: #881e22;
-  position: absolute;
-  display: none;
-  top: 200px;
-  left: 250px;
-  transition: transform 0.2s ease;
-}
-html body #jeusapin #orgueil #rejouer:hover {
-  background-color: #781b1e;
-  transform: scale(1.05);
 }
 
 @media only screen and (min-width: 1600px) {
