@@ -55,24 +55,13 @@ html{
             article{
 
                 h3{
-                    color: #1a1e4a;
+                    color: #90aedc;
                 }
 
                 i{
-                    color: #1a1e4a;
+                    color: #90aedc;
+                    font-size: 2rem;
                 }
-            }
-
-            article::before{
-                content: "";
-                position: absolute;
-                border-left: 20px solid rgb(255, 255, 255);
-                border-right: 20px solid transparent;
-                border-top: 20px solid rgb(255, 255, 255);
-                border-bottom: 20px solid transparent;
-                left: -20px;
-                bottom: 10px;
-                rotate: (180deg);
             }
 
             div{

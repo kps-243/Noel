@@ -46,21 +46,11 @@ html body #laby h1 {
   color: rgb(226, 242, 247);
 }
 html body #laby article h3 {
-  color: #1a1e4a;
+  color: #90aedc;
 }
 html body #laby article i {
-  color: #1a1e4a;
-}
-html body #laby article::before {
-  content: "";
-  position: absolute;
-  border-left: 20px solid rgb(255, 255, 255);
-  border-right: 20px solid transparent;
-  border-top: 20px solid rgb(255, 255, 255);
-  border-bottom: 20px solid transparent;
-  left: -20px;
-  bottom: 10px;
-  rotate: 180deg;
+  color: #90aedc;
+  font-size: 2rem;
 }
 html body #laby div {
   position: absolute;
