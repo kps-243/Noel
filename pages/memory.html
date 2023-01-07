@@ -16,114 +16,139 @@
   <a href="../index.html" class="Retour">Retour</a>
   <div id="game">
   
-    <div class="memory">
+  <article class="bulle" id="bulle1">
+    <h3>Hugo le blaireau</h3>
+    <p>Salut à toi jeune visiteur ! Soit le bienvenue au <strong>Musée des souvenirs !</strong></p>
+
+    <p>Je suis <strong>Hugo le Blaireau</strong> et j’ai un petit jeu pour toi !</p>
+
+    <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle1')"></i>
+    <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle1')"></i>
+  </article>
+
+  <article class="bulle" id="bulle2">
+    <h3>Hugo le blaireau</h3>
+    <p>Sur la page suivante, il y a des cases. Et derrière ces cases se cachent des objets.<br/>Retrouve <strong>2 objets identiques</strong> en retournant les cases 1 par 1 !</p>
+
+    <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle2')"></i>
+    <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle2')"></i>
+  </article>
+
+  <!-- <div id="bulle3"> -->
+    <div id="game" >
       <img src="./../images/png/personnages/6-Blaireau.png" alt="Hugo le Blaireau" class="Hugo">
+
+      <div id="bulle3">
+        <div class="memory">
+            <div class="col-carte">
+                <div class="scene">
+                    <div class="card" id="1">
+                      <div class="card__face--front"></div>
+                      <div class="card__face--back"></div>
+                    </div>
+                </div>
+                <div class="scene">
+                    <div class="card" id="2">
+                      <div class="card__face--front"></div>
+                      <div class="card__face--back"></div>
+                    </div>
+                </div><div class="scene">
+                    <div class="card" id="3">
+                      <div class="card__face--front"></div>
+                      <div class="card__face--back"></div>
+                    </div>
+                </div><div class="scene">
+                    <div class="card" id="4">
+                      <div class="card__face--front"></div>
+                      <div class="card__face--back"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-carte">
+                <div class="scene">
+                    <div class="card" id="5">
+                      <div class="card__face--front"></div>
+                      <div class="card__face--back"></div>
+                    </div>
+                </div>
+                <div class="scene">
+                    <div class="card" id="6">
+                      <div class="card__face--front"></div>
+                      <div class="card__face--back"></div>
+                    </div>
+                </div><div class="scene">
+                    <div class="card" id="7">
+                      <div class="card__face--front"></div>
+                      <div class="card__face--back"></div>
+                    </div>
+                </div><div class="scene">
+                    <div class="card" id="8">
+                      <div class="card__face--front"></div>
+                      <div class="card__face--back"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-carte">
+                <div class="scene">
+                    <div class="card" id="9">
+                      <div class="card__face--front"></div>
+                      <div class="card__face--back"></div>
+                    </div>
+                </div>
+                <div class="scene">
+                    <div class="card" id="10">
+                      <div class="card__face--front"></div>
+                      <div class="card__face--back"></div>
+                    </div>
+                </div><div class="scene">
+                    <div class="card" id="11">
+                      <div class="card__face--front"></div>
+                      <div class="card__face--back"></div>
+                    </div>
+                </div><div class="scene">
+                    <div class="card" id="12">
+                      <div class="card__face--front"></div>
+                      <div class="card__face--back"></div>
+                    </div>
+                </div>
+        
+        </div>
         <div class="col-carte">
             <div class="scene">
-                <div class="card" id="1">
+                <div class="card" id="13">
                   <div class="card__face--front"></div>
                   <div class="card__face--back"></div>
                 </div>
             </div>
             <div class="scene">
-                <div class="card" id="2">
+                <div class="card" id="14">
                   <div class="card__face--front"></div>
                   <div class="card__face--back"></div>
                 </div>
             </div><div class="scene">
-                <div class="card" id="3">
+                <div class="card" id="15">
                   <div class="card__face--front"></div>
                   <div class="card__face--back"></div>
                 </div>
             </div><div class="scene">
-                <div class="card" id="4">
+                <div class="card" id="16">
                   <div class="card__face--front"></div>
                   <div class="card__face--back"></div>
                 </div>
             </div>
         </div>
 
-        <div class="col-carte">
-            <div class="scene">
-                <div class="card" id="5">
-                  <div class="card__face--front"></div>
-                  <div class="card__face--back"></div>
-                </div>
-            </div>
-            <div class="scene">
-                <div class="card" id="6">
-                  <div class="card__face--front"></div>
-                  <div class="card__face--back"></div>
-                </div>
-            </div><div class="scene">
-                <div class="card" id="7">
-                  <div class="card__face--front"></div>
-                  <div class="card__face--back"></div>
-                </div>
-            </div><div class="scene">
-                <div class="card" id="8">
-                  <div class="card__face--front"></div>
-                  <div class="card__face--back"></div>
-                </div>
-            </div>
-        </div>
+            <div id="win">Victoire<br/><button><a href="memory.html">Rejouer !</a></button></div>
 
-        <div class="col-carte">
-            <div class="scene">
-                <div class="card" id="9">
-                  <div class="card__face--front"></div>
-                  <div class="card__face--back"></div>
-                </div>
-            </div>
-            <div class="scene">
-                <div class="card" id="10">
-                  <div class="card__face--front"></div>
-                  <div class="card__face--back"></div>
-                </div>
-            </div><div class="scene">
-                <div class="card" id="11">
-                  <div class="card__face--front"></div>
-                  <div class="card__face--back"></div>
-                </div>
-            </div><div class="scene">
-                <div class="card" id="12">
-                  <div class="card__face--front"></div>
-                  <div class="card__face--back"></div>
-                </div>
-            </div>
-    
+        </div>
+      </div>
     </div>
-    <div class="col-carte">
-        <div class="scene">
-            <div class="card" id="13">
-              <div class="card__face--front"></div>
-              <div class="card__face--back"></div>
-            </div>
-        </div>
-        <div class="scene">
-            <div class="card" id="14">
-              <div class="card__face--front"></div>
-              <div class="card__face--back"></div>
-            </div>
-        </div><div class="scene">
-            <div class="card" id="15">
-              <div class="card__face--front"></div>
-              <div class="card__face--back"></div>
-            </div>
-        </div><div class="scene">
-            <div class="card" id="16">
-              <div class="card__face--front"></div>
-              <div class="card__face--back"></div>
-            </div>
-        </div>
-    </div>
-
-        <div id="win">Victoire<br/><button><a href="memory.html">Rejouer !</a></button></div>
-
-    </div>
-  </div>
+  <!-- </div> -->
   
   <div id="tourne">Tourne ton téléphone !</div>
+  <script src="../js/functions.js"></script>
   <script src="./../js/scripts-memory.js"></script>
 </body>
 </html>

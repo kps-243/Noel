@@ -20,12 +20,37 @@
   <div class="listenoel">
 
     <img src="./../images/png/personnages/3-Renne.png" alt="Helene la Renne" class="Helene">
-    <div class="bulle" id="bulle1"><div id="text1">Bienvenue à toi !<br/>Je suis <b>Hélène la renne</b>.</div><button class="suivant">-></button></div>
+       
+    <article class="bulle" id="bulle1">
+      <h3>Hélène la renne</h3>
+      <p>Bienvenue au Royaume des lettres !<br/> Je suis 
+        <strong>Hélène la Renne.</strong></p>
+      
+      <i id="preced" class="fi fi-sr-arrow-circle-left"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle1')"></i>
+    </article>
+
+    <article class="bulle" id="bulle2">
+      <h3>Hélène la renne</h3>
+      <p>Mon Royaume est l’endroit idéale pour <strong>écrire un courrier</strong>. Choisis à qui tu veux écrire et je m’occupe du reste...</p>
+      
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle2')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle2')"></i>
+    </article>
+
+    <div id="bulle3">
+      <div class="menu-cartes">
+        <div class="carte-choix"><div class="carte-carre"><img src="./../images/png/personnages/9-Santa.png"></div><p>Ecrire ma lettre au Père Noël</p></div>
+        <div class="carte-choix"><div class="carte-carre"><img src="./../images/png/personnages/3-Renne.png"></div><p>Ecrire une carte de voeux</p></div>
+      </div>
+    </div>
+
 
   </div>
 
-  
-  <div id="tourne">Tourne ton téléphone !</div> 
-  <script src=""></script> <!-- js A remplir -->
+  <div id="tourne">Tourne ton téléphone !</div>
+  <script src="../js/functions.js"></script>
+  <script src="./../js/script-liste.js"></script>
+
 </body>
 </html>

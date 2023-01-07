@@ -13,10 +13,6 @@ html,body {
   /* cursor: url(./../images/cursor.png) 2 2, default; */
 } 
 
-#tourne {
-  display: none;
-}
-
 body{
   background-color: var(--blue1);
   overflow: hidden;

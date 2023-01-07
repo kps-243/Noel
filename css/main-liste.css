@@ -47,42 +47,71 @@ h2{
     bottom: 0px;
 }
 
-.bulle {
-    background-color:white;
-    padding: 22px;
-    padding-left: 25px;
-    border: 1px solid black;
-    border-radius: 20px;
+.bulle > h3, .bulle > #suivant{
+    color: var(--primary);
+}
+.bulle > #preced{
+    color: var(--secondary);
+}
+.bulle > #suivant::after{
+  content: "C'est parti !";
+}
+#bulle2 > #suivant::after{
+    content: "Suivant";
+  }
+
+  #bulle3{
+    display: none;
+  }
+
+#bulle3 .menu-cartes{
+    display:flex;
+    gap:40px;
 
     position: absolute;
-    left: 40%;
-    bottom: 20vh;
-    width: 35%;
-
-    font-family: 'Textes';
-
-    box-sizing: content-box;
-    height: auto;
+    left: 45vw;
+    bottom: 17vh;
 }
+#bulle3 .carte-choix::selection{
+    background: transparent;
+  }
+#bulle3 .carte-choix{
+    display: flex;
+    flex-direction: column;
+    background: var(--secondary);
+    height: 30vh;
+    width: 19vh;
 
-#text1 {
-    float: left;
-}
-
-.suivant {
-    background-color: #E72E57;
-    color: transparent;
-    border-radius: 50px;
-    border: none;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    float:right;
-
+    margin: auto;
+    
     color: white;
+    filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.15));
+    padding:4vh;
 
-    /* top: 50%;
-    transform: translateY(-50%); */
+    text-align: center;
 
-    cursor: var(--cursorPointer);
+    border-radius: 10px;
+}
+#bulle3 .carte-choix .carte-carre{
+    background-color: white;
+    border-radius: 10px;
+    height: 20vh;
+
+    overflow: hidden;
+}
+
+#bulle3 .carte-choix .carte-carre img{
+    margin-top: 10px;
+    width: 19vh;
+}
+
+#bulle3 .carte-choix p {
+    height:5vh;
+    margin: auto;
+    font-family: 'Titres';
+    font-size: 1.5em;
+    box-sizing: content-box;
+
+    /* top: 50%; 
+    transform: translateY(50%); */
 }
