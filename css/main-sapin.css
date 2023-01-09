@@ -186,7 +186,7 @@ html body #jeusapin #victoire {
     display: flex;
     flex-flow: wrap row;
     justify-content: space-between;
-    marright: 10%;
+    margin-right: 10%;
     position: absolute;
     z-index: 5;
     border-radius: 10px;
