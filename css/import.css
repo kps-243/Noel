@@ -100,11 +100,11 @@ i{
   float: left;
 }
 
-.bulle > #suivant{
+.bulle > #suivant {
     /* margin-left: 85%; */
     float: right;
 }
-.bulle > #suivant::before, .bulle > #preced::before{
+.bulle > #suivant::before, .bulle > #preced::before  {
   font-size: 40px;
 }
 .bulle > #suivant, .bulle > #preced {
@@ -157,6 +157,7 @@ i{
 
   */
 
+>>>>>>>>> Temporary merge branch 2
 
 @media (orientation: portrait) and (max-width: 920px) {
 
@@ -214,7 +215,11 @@ i{
     
       z-index: 100;
     }
+<<<<<<<<< Temporary merge branch 1
+  
+=========
     
+>>>>>>>>> Temporary merge branch 2
   
     /* A METTRE JUSTE AVANT LE JS :
     <div id="tourne">Tourne ton téléphone !</div> 

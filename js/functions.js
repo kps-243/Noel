@@ -1,11 +1,7 @@
+function textToNext(bulledepart,bullearrivee){
 
-
-function textToNext(bulle){
-    let num = bulle.slice(5);
-    num = parseInt(num)+1;
-    
-    let bulle1 = document.getElementById(bulle);
-    let bulle2 = document.getElementById("bulle"+num);
+    let bulle1 = document.getElementById(bulledepart);
+    let bulle2 = document.getElementById(bullearrivee);
 
     bulle1.style.display = "none";
 
@@ -14,12 +10,9 @@ function textToNext(bulle){
     }
 }
 
-function textToBefore(bulle){
-    let num = bulle.slice(5);
-    num = parseInt(num)-1;
-    
-    let bulle1 = document.getElementById(bulle);
-    let bulle2 = document.getElementById("bulle"+num);
+function textToBefore(bulledepart,bullearrivee){
+    let bulle1 = document.getElementById(bulledepart);
+    let bulle2 = document.getElementById(bullearrivee);
    
     if (bulle2){
         bulle1.style.display = "none";

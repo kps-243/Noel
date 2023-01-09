@@ -8,6 +8,7 @@
 
   <title>Memory</title>
  
+  <link rel="icon" type="image/png" href="./../images/png/favicons/blaireau-tete.png" />
   <link rel="stylesheet" href="./../css/main-memory.css">
 
 </head>
@@ -22,16 +23,16 @@
 
     <p>Je suis <strong>Hugo le Blaireau</strong> et j’ai un petit jeu pour toi !</p>
 
-    <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle1')"></i>
-    <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle1')"></i>
+    <i id="preced" class="fi fi-sr-arrow-circle-left"></i>
+    <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle1','bulle2')"></i>
   </article>
 
   <article class="bulle" id="bulle2">
     <h3>Hugo le blaireau</h3>
     <p>Sur la page suivante, il y a des cases. Et derrière ces cases se cachent des objets.<br/>Retrouve <strong>2 objets identiques</strong> en retournant les cases 1 par 1 !</p>
 
-    <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle2')"></i>
-    <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle2')"></i>
+    <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle2','bulle1')"></i>
+    <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle2','bulle3')"></i>
   </article>
 
   <!-- <div id="bulle3"> -->
