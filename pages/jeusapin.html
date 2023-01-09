@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main-sapin.css">
+    
     <title>Jeu du sapin</title>
+
+    <link rel="icon" type="image/png" href="./../images/png/favicons/ecureuil-tete.png">
+    <link rel="stylesheet" href="../css/main-sapin.css">
 </head>
 
 <body>
@@ -14,6 +17,14 @@
         <h1 id="h1">Jeu du sapin</h1>
         <a href="../index.html" class="Retour">Retour</a>
 
+        <article class="bulle" id="bulle">
+            <h3>Orgueil l'Écureuil</h3>
+            <p>Coucou, Bienvenue dans mon sapin.<br>Je suis <strong>Orgueil L’Écureuil.</strong></p>
+            
+            <i id="preced" class="fi fi-sr-arrow-circle-left"></i>
+            <i id="suivant" class="fi fi-sr-arrow-circle-right"></i>
+        </article>
+        
         <section id="jeu">
             <div>
                 <button class="bouton" id="btn1"></button>
@@ -31,7 +42,6 @@
         </section>
 
         <section id="orgueil">
-            <p id="dialogue">Aide-moi à décorer le sapin ! Associe chaque boule de Noël à une boule de la même couleur !</p>
             <img src="../images/svg/4-Ecureuil.svg" alt="orgueil l'écureuil">
             <button id="rejouer">Rejouer</button>
         </section>

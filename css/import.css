@@ -87,11 +87,11 @@ i{
   float: left;
 }
 
-.bulle > #suivant{
+.bulle > #suivant {
     /* margin-left: 85%; */
     float: right;
 }
-.bulle > #suivant::before, .bulle > #preced::before{
+.bulle > #suivant::before, .bulle > #preced::before  {
   font-size: 40px;
 }
 .bulle > #suivant, .bulle > #preced {
@@ -143,7 +143,6 @@ i{
   
 
   */
-
 
 @media (orientation: portrait) and (max-width: 920px) {
 
@@ -201,7 +200,7 @@ i{
     
       z-index: 100;
     }
-    
+  
   
     /* A METTRE JUSTE AVANT LE JS :
     <div id="tourne">Tourne ton téléphone !</div> 
