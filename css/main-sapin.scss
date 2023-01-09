@@ -6,9 +6,10 @@
     text-transform: uppercase;
 }
 
-.caché{
-    opacity: 0;
-}
+$princip : #1e361c;
+$second : #25a244;
+
+
 
 html{
     margin: 0;
@@ -33,44 +34,34 @@ html{
             h1{
                 @include Police();
                 color: rgb(255, 230, 230);
-                font-size:  3rem;
+                font-size:  2rem;
                 padding-top: 50px;
                 margin: 0;
                 pointer-events: none;
             }
 
-            #retour{
-                @include Police();
-                text-decoration: none;
-                font-size: 2rem;
-                padding: 1%;
-                border-radius: 10px;
-                cursor: var(--cursorPointer);
-                color: whitesmoke;
-                border: none;
-                background-color: #918e8e;
-                position: absolute;
-                top: 25px;
-                left: 25px;
-                transition: transform 0.2s ease;
-            }
-
-            #retour:hover{
-                background-color: #7c7979;
-                transform: scale(1.05);
-            }
-
-            #bulle{
+            .bulle{
+                z-index: 8;
                 left: 35%;
                 bottom: 10vw;
+                width: fit-content;
+
                 h3{
-                    color: #e82b2f;
+                    color: $second;
+                }
+
+                #preced{
+                    color: $second;
                 }
 
                 #suivant{
-                    color: #e82b2f;
-                    font-size: 2em;
+                    color: $princip;
+                    // font-size: 2em;
                 }
+            }
+
+            #bulle2 > #preced{
+                display: block;
             }
         
             #jeu{
@@ -78,8 +69,8 @@ html{
                 display: flex;
                 flex-flow: wrap row;
                 justify-content: space-between;
-                // gap: 10%;
-                margin: 30px 0 0 700px;
+                // gap: 1%;
+                right: 10%;
                 position: absolute;
                 z-index: 5;
                 border-radius: 10px;
@@ -147,8 +138,158 @@ html{
                 left: 15%;
                 pointer-events: none;
             }
+
+            #victoire{
+                height: 100%;
+                position: absolute;
+                right: 10%;
+                top: 0;
+                z-index: 7;
+            }
         }
 
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    html{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        cursor: var(--cursor);
+    
+        body{
+            margin: 0;
+            padding: 0;
+    
+            #jeusapin{
+                background-image: url('../images/png/interieur-sapin.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                min-height: 100vh;
+                max-height: 100vh;
+                min-width: 100vw;
+                max-width: 100vw;
+    
+                h1{
+                    @include Police();
+                    color: rgb(255, 230, 230);
+                    font-size:  3rem;
+                    padding-top: 50px;
+                    margin: 0;
+                    pointer-events: none;
+                }
+    
+                .bulle{
+                    z-index: 8;
+                    left: 35%;
+                    bottom: 10vw;
+                    width: fit-content;
+    
+                    h3{
+                        color: $second;
+                    }
+    
+                    #preced{
+                        color: $second;
+                    }
+    
+                    #suivant{
+                        color: $princip;
+                        // font-size: 2em;
+                    }
+                }
+    
+                #bulle2 > #preced{
+                    display: block;
+                }
+            
+                #jeu{
+                    width: 30%;
+                    display: flex;
+                    flex-flow: wrap row;
+                    justify-content: space-between;
+                    // gap: 10%;
+                    marright: 10%;
+                    position: absolute;
+                    z-index: 5;
+                    border-radius: 10px;
+            
+                    div{
+                        width: 100px;
+                        height: 65vh;
+                        display: flex;
+                        flex-flow: wrap row;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 3%;
+                    }
+            
+                    .bouton{
+                        width: 15vh;
+                        height: 15vh;
+                        margin-top: 0px;
+                        border-radius: 50%;
+                        cursor: var(--cursorPointer);
+                        transition: transform 0.3s ease;
+                        transform-origin: center;
+                    }
+            
+                    .bouton:hover{
+                        transform: scale(1.1);
+                    }
+            
+                }
+    
+                #curseur{
+                    z-index: 6;
+                    width: 40px;
+                    height: 40px;
+                    cursor: none;
+                    border-radius: 50%;
+                    border: 2px dashed transparent;
+                    position: absolute;
+                    display: none;
+                    pointer-events: none;
+                    animation : Anim2 2s infinite alternate;
+                }
+            
+                // .expand{
+                //     animation : Anim2 .5s;
+                // }
+            
+                @keyframes Anim2 {
+                    0%{
+                        transform: scale(1);
+                    }
+                    50%{
+                        transform: scale(1.3);
+                    }
+                    100%{
+                        transform: scale(1);
+                    }
+                }
+            
+                #orgueil{
+    
+                    height: 45vh;
+                    position: absolute;
+                    bottom: 0;
+                    left: 15%;
+                    pointer-events: none;
+                }
+    
+                #victoire{
+                    height: 100%;
+                    position: absolute;
+                    right: 10%;
+                    top: 0;
+                    z-index: 7;
+                }
+            }
+    
+        }
     }
 }
 

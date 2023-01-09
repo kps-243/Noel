@@ -12,21 +12,36 @@
         <h1>La grotte gelée</h1>
         <a href="../index.html" class="Retour">Retour</a>
 
-        <article class="bulle" id="bulle">
+        <article class="bulle" id="bulle1">
             <h3>Romain le lapin</h3>
             <p>Salut ! Et bienvenue dans ma petite grotte gelée !<br>Je suis <strong>Romain le lapin !</strong></p>
             
-            <i id="preced" class="fi fi-sr-arrow-circle-left"></i>
-            <i id="suivant" class="fi fi-sr-arrow-circle-right"></i>
+            <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle1')"></i>
+            <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle1')"></i>
+        </article>
+
+        <article class="bulle" id="bulle2">
+            <h3>Romain le lapin</h3>
+            <p>Mon ami est coincé dans un labyrinthe !</p>
+            
+            <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle2')"></i>
+            <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle2')"></i>
+        </article>
+
+        <article class="bulle" id="bulle3">
+            <h3>Romain le lapin</h3>
+            <p>Aide-le à retrouver son chemin ! <strong>Utilises les flèches</strong> de ton clavier pour le contrôler !</p>
+            
+            <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle3')"></i>
+            <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle3');montrer('jeu');montrer('controls')"></i>
         </article>
 
         <div id="victoire" class="caché">
-            <h2>Victoire !</h2>
-            <button id="btn">Recommencer</button>
+            <img src="../images/png/victoire.png" alt="Victoire !">
+            <button id="btn"></button>
         </div>
 
         <canvas id="jeu" class="caché"></canvas>
-<<<<<<< HEAD
 
         <div id="controls" class="caché">
             <i id="haut" class="fi fi-sr-arrow-alt-square-up"></i>
@@ -34,12 +49,11 @@
             <i id="bas" class="fi fi-sr-arrow-alt-square-down"></i>
             <i id="droite" class="fi fi-sr-arrow-alt-square-right"></i>
         </div>
-=======
->>>>>>> 9caaae7ace1783d2005531d4b76505352336f2e1
 
         <img id="romain" src="../images/svg/5-Lapin.svg" alt="Romain le lapin">
     </main>
 
+    <script src="../js/functions.js"></script>
     <script src="../js/script-laby.js"></script>
 </body>
 </html>

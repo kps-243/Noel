@@ -1,20 +1,114 @@
 <!doctype html>
 
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>La BD recette</title>
+  <title>Le palais de la gourmandise</title>
 
   <link rel="stylesheet" href="./../css/main-bd.css"> <!-- css A remplir -->
 
 </head>
 
 <body>
-  <a href="../index.html" class="Retour">Retour</a>
-    
-  <script src=""></script> <!-- js A remplir -->
+  <main>
+
+    <h1 id="h1">Le palais de la gourmandise</h1>
+    <a href="../index.html" class="Retour">Retour</a>
+
+    <article class="bulle" id="bulle1">
+      <h3>Mam'ourse</h3>
+      <p>Bonjour, je suis <strong>Mam’ourse</strong>, et tu viens d’entrer<br>dans le Palais de la gourmandise.</p>
+
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle1')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle1')"></i>
+    </article>
+
+    <article class="bulle" id="bulle2">
+      <h3>Simon l'ourson</h3>
+      <p>Salut, moi je m'appelle <strong>Simon l'ourson</strong>, ravi de<br>faire ta connaissance !</p>
+
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle2')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle2')"></i>
+    </article>
+
+    <article class="bulle" id="bulle3">
+      <h3>Mam'ourse</h3>
+      <p>Ici, tu peux apprendre à cuisiner des petites<br>gourmandises <strong>pas piquéesdes hannetons !!</strong></p>
+
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle3')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle3')"></i>
+    </article>
+
+    <article class="bulle" id="bulle4">
+      <h3>Mam'ourse</h3>
+      <p>Choisis parmi les trois recettes en dessous pour<br> les apprendre !</p>
+
+      <div>
+        <button id="r1">Sablés de Noël</button>
+        <button id="r2">Tartines de Noël</button>
+        <button id="r3">Tiramisu</button>
+      </div>
+
+    </article>
+
+    <section id="bulle5" class="caché">
+      <img src="" alt="">
+      <button id="suivant" onclick="textToNext('bulle5');flex('bulle6')">Page suivante</button>
+    </section>
+
+    <section id="bulle6">
+      <img src="" alt="">
+      <button id="preced" onclick="textToBefore('bulle6');flex('bulle5')">Page précédente</button>
+      <button id="suivant" onclick="textToNext('bulle6');flex('bulle7')">Page suivante</button>
+    </section>
+
+    <section id="bulle7">
+      <img src="" alt="">
+      <button id="rchoix">Retour au choix des recettes</button>
+    </section>
+
+    <section id="bulle8" class="caché">
+      <img src="" alt="">
+      <button id="suivant" onclick="textToNext('bulle8');flex('bulle9')">Page suivante</button>
+    </section>
+
+    <section id="bulle9">
+      <img src="" alt="">
+      <button id="preced" onclick="textToBefore('bulle9');flex('bulle8')">Page précédente</button>
+      <button id="suivant" onclick="textToNext('bulle9');flex('bulle10')">Page suivante</button>
+    </section>
+
+    <section id="bulle10">
+      <img src="" alt="">
+      <button id="rchoix2">Retour au choix des recettes</button>
+    </section>
+
+    <section id="bulle11" class="caché">
+      <img src="" alt="">
+      <button id="suivant" onclick="textToNext('bulle11');flex('bulle12')">Page suivante</button>
+    </section>
+
+    <section id="bulle12">
+      <img src="" alt="">
+      <button id="preced" onclick="textToBefore('bulle12');flex('bulle11')">Page précédente</button>
+      <button id="suivant" onclick="textToNext('bulle12');flex('bulle13')">Page suivante</button>
+    </section>
+
+    <section id="bulle13">
+      <img src="" alt="">
+      <button id="rchoix3">Retour au choix des recettes</button>
+    </section>
+
+    <img id="mamourse" src="../images/svg/1-Mamourse.svg" alt="Mamourse">
+    <img id="ourson" src="../images/svg/1-Ourson.svg" alt="Ourson">
+  </main>
+
+  <script src="../js/functions.js"></script>
+  <script src="../js/script-bd.js"></script>
 </body>
+
 </html>

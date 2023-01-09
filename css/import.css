@@ -9,6 +9,19 @@
     --ombre: #888888; 
 }
 
+html *{
+  transition: opacity 0.3s ease;
+}
+
+.caché{
+  opacity: 0;
+  z-index: 0 !important;
+}
+
+.caché *{
+  display: none;
+}
+
 .Victoire {
 
 }

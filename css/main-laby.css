@@ -1,22 +1,11 @@
-@charset "UTF-8";
 @import url(./fonts.css);
 @import url("./import.css");
 @import url("https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css");
-.caché {
-  opacity: 0;
-}
-.caché #btn {
-  cursor: var(--cursor);
-}
-
 html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow: hidden !important;
   cursor: var(--cursor);
-}
-html * {
-  transition: opacity 0.3s ease;
 }
 html body {
   margin: 0 0 0 0;
@@ -45,43 +34,45 @@ html body #laby h1 {
   margin-top: 0;
   color: rgb(226, 242, 247);
 }
-html body #laby article h3 {
+html body #laby .bulle {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  right: 10%;
+}
+html body #laby .bulle h3 {
+  color: #1a1e4a;
+}
+html body #laby .bulle #preced {
+  color: #1a1e4a;
+}
+html body #laby .bulle #suivant {
   color: #90aedc;
 }
-html body #laby article i {
-  color: #90aedc;
-  font-size: 2rem;
-}
-html body #laby div {
+html body #laby #victoire {
   position: absolute;
   display: flex;
   flex-flow: wrap column;
   justify-content: center;
   align-items: center;
   transition: all 0.2s ease;
+  top: 0;
 }
-html body #laby div h2 {
-  font-family: "Titres";
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 5rem;
-  color: #0f4163;
+html body #laby #victoire img {
+  width: 50%;
+  pointer-events: none;
 }
-html body #laby div button {
-  font-family: "Titres";
-  text-align: center;
-  text-transform: uppercase;
+html body #laby #victoire button {
+  background-image: url("../images/png/restart.png");
+  background-repeat: no-repeat;
+  background-size: contain;
   border: none;
-  font-size: 2rem;
-  padding: 5%;
-  border-radius: 10px;
-  color: whitesmoke;
+  border-radius: 50%;
   cursor: var(--cursorPointer);
-  background-color: #0f4163;
   transition: transform 0.2s ease;
+  margin-top: -15%;
 }
-html body #laby div button:hover {
-  background-color: #0c344f;
+html body #laby #victoire button:hover {
   transform: scale(1.05);
 }
 html body #laby #romain {

@@ -14,15 +14,23 @@
         <h1 id="h1">Le sapin de Noël</h1>
         <a href="../index.html" class="Retour">Retour</a>
 
-        <article class="bulle" id="bulle">
+        <article class="bulle" id="bulle1">
             <h3>Mayeul l'Écureuil</h3>
-            <p>Coucou, Bienvenue dans mon sapin.<br>Je suis <strong>Mayeul L’Écureuil.</strong></p>
+            <p>Coucou, bienvenue dans mon sapin.<br>Je suis <strong>Mayeul L’Écureuil.</strong></p>
             
-            <i id="preced" class="fi fi-sr-arrow-circle-left"></i>
-            <i id="suivant" class="fi fi-sr-arrow-circle-right"></i>
+            <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle1')"></i>
+            <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle1')"></i>
+        </article>
+
+        <article class="bulle" id="bulle2">
+            <h3>Mayeul l'Écureuil</h3>
+            <p>Dans mon sapin, tu peux relier les boules de Noël pour l'illuminer.</p>
+            
+            <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle2')"></i>
+            <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle2');montrer('jeu')"></i>
         </article>
         
-        <section id="jeu">
+        <section id="jeu" class="caché">
             <div>
                 <img src="../images/png/sapin.png" class="bouton" id="btn1"></img>
                 <img src="../images/png/sapin.png" class="bouton" id="btn2"></img>
@@ -38,10 +46,13 @@
             </div>
         </section>
 
+        <img class="caché" id="victoire" src="../images/png/victoire.png" alt="Victoire !">
+
         <img id="orgueil" src="../images/svg/4-Ecureuil.svg" alt="orgueil l'écureuil">
         <div id="curseur"></div>
     </main>
 
+    <script src="../js/functions.js"></script>
     <script src="../js/script-sapin.js"></script>
 </body>
 
