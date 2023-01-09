@@ -25,23 +25,23 @@
       <p>Bonjour, je suis <strong>Mam’ourse</strong>, et tu viens d’entrer<br>dans le Palais de la gourmandise.</p>
 
       <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle1')"></i>
-      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle1')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle1','bulle2')"></i>
     </article>
 
     <article class="bulle" id="bulle2">
       <h3>Simon l'ourson</h3>
       <p>Salut, moi je m'appelle <strong>Simon l'ourson</strong>, ravi de<br>faire ta connaissance !</p>
 
-      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle2')"></i>
-      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle2')"></i>
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle2','bulle1')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle2','bulle3')"></i>
     </article>
 
     <article class="bulle" id="bulle3">
       <h3>Mam'ourse</h3>
       <p>Ici, tu peux apprendre à cuisiner des petites<br>gourmandises <strong>pas piquéesdes hannetons !!</strong></p>
 
-      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle3')"></i>
-      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle3')"></i>
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle3','bulle2')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle3','bulle4')"></i>
     </article>
 
     <article class="bulle" id="bulle4">
@@ -58,13 +58,13 @@
 
     <section id="bulle5" class="caché">
       <img src="" alt="">
-      <button id="suivant" onclick="textToNext('bulle5');flex('bulle6')">Page suivante</button>
+      <button id="suivant" onclick="textToNext('bulle5','bulle6');flex('bulle6')">Page suivante</button>
     </section>
 
     <section id="bulle6">
       <img src="" alt="">
-      <button id="preced" onclick="textToBefore('bulle6');flex('bulle5')">Page précédente</button>
-      <button id="suivant" onclick="textToNext('bulle6');flex('bulle7')">Page suivante</button>
+      <button id="preced" onclick="textToBefore('bulle6','bulle5');flex('bulle5')">Page précédente</button>
+      <button id="suivant" onclick="textToNext('bulle6','bulle7');flex('bulle7')">Page suivante</button>
     </section>
 
     <section id="bulle7">
@@ -74,13 +74,13 @@
 
     <section id="bulle8" class="caché">
       <img src="" alt="">
-      <button id="suivant" onclick="textToNext('bulle8');flex('bulle9')">Page suivante</button>
+      <button id="suivant" onclick="textToNext('bulle8','bulle9');flex('bulle9')">Page suivante</button>
     </section>
 
     <section id="bulle9">
       <img src="" alt="">
-      <button id="preced" onclick="textToBefore('bulle9');flex('bulle8')">Page précédente</button>
-      <button id="suivant" onclick="textToNext('bulle9');flex('bulle10')">Page suivante</button>
+      <button id="preced" onclick="textToBefore('bulle9','bulle8');flex('bulle8')">Page précédente</button>
+      <button id="suivant" onclick="textToNext('bulle9','bulle10');flex('bulle10')">Page suivante</button>
     </section>
 
     <section id="bulle10">
@@ -90,13 +90,13 @@
 
     <section id="bulle11" class="caché">
       <img src="" alt="">
-      <button id="suivant" onclick="textToNext('bulle11');flex('bulle12')">Page suivante</button>
+      <button id="suivant" onclick="textToNext('bulle11','bulle12');flex('bulle12')">Page suivante</button>
     </section>
 
     <section id="bulle12">
       <img src="" alt="">
-      <button id="preced" onclick="textToBefore('bulle12');flex('bulle11')">Page précédente</button>
-      <button id="suivant" onclick="textToNext('bulle12');flex('bulle13')">Page suivante</button>
+      <button id="preced" onclick="textToBefore('bulle12','bulle11');flex('bulle11')">Page précédente</button>
+      <button id="suivant" onclick="textToNext('bulle12','bulle13');flex('bulle13')">Page suivante</button>
     </section>
 
     <section id="bulle13">
