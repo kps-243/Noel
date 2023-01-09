@@ -1,0 +1,88 @@
+@import url('./import.css');
+@import url('./colors.css');
+
+:root {
+    --primary:#E72E57;
+    --secondary: #FF8CA6;
+}
+
+
+html, body{
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+
+    background-image: url(./../images/png/3-back.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    overflow: hidden;
+
+    cursor: var(--cursor); 
+}
+
+h2{
+    color: var(--primary);
+    font-size: 2rem;
+}
+
+.listenoel {
+    margin: auto;
+    
+    display: flex;
+    justify-content:center;
+    align-items:center;
+
+    width: 50vw;
+    height: 100vh;
+    gap: 10px;
+
+}
+
+.Helene{
+    width:30vh;
+    position: absolute;
+    left: 15vw;
+    bottom: 0px;
+}
+
+.bulle {
+    background-color:white;
+    padding: 22px;
+    padding-left: 25px;
+    border: 1px solid black;
+    border-radius: 20px;
+
+    position: absolute;
+    left: 40%;
+    bottom: 20vh;
+    width: 35%;
+
+    font-family: 'Textes';
+
+    box-sizing: content-box;
+    height: auto;
+}
+
+#text1 {
+    float: left;
+}
+
+.suivant {
+    background-color: #E72E57;
+    color: transparent;
+    border-radius: 50px;
+    border: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    float:right;
+
+    color: white;
+
+    /* top: 50%;
+    transform: translateY(-50%); */
+
+    cursor: var(--cursorPointer);
+}

@@ -1,5 +1,150 @@
+@import url(./fonts.css);
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
+@import url(./animation.css);
 
 :root{
     --cursor: url(./../images/png/cursor.png) 2 2, default;
     --cursorPointer: url(./../images/png/cursor-pointer.png) 2 2, pointer;
 }
+
+.Victoire {
+
+}
+
+.Retour {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    background-color: cadetblue;
+    border-radius: 50px;
+    padding: 20px;
+    color:white;
+
+    cursor: var(--cursorPointer);
+}
+.Retour:focus, .Retour:hover{
+    color: white;
+    text-decoration: none;
+}
+.Titre {
+    font-family: 'Titres';
+    font-size: 8vh;
+    position: absolute;
+    white-space: nowrap;
+    
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+i{
+    display: inline-block;
+    cursor: var(--cursorPointer);
+}
+
+.bulle{
+    position: absolute;
+    z-index: 3;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 1% 1.4%;
+}
+
+.bulle > h3{
+    font-family : 'Titres';
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 0.95em;
+}
+
+.bulle > p{
+    font-family: 'Textes';
+}
+
+.bulle > i{
+    margin-top: 0;
+    display: inline-block;
+    cursor: var(--cursorPointer);
+}
+
+.bulle > #preced{
+    display: none;
+}
+
+.bulle > #suivant{
+    margin-left: 85%;
+}
+
+.bulle > #suivant::after{
+    content: "Suivant";
+    font-family: 'Titres';
+    font-size: 0.6em;
+    margin: 3px 0 0 -95px;
+    position: absolute;
+}
+
+
+@media (orientation: portrait) and (max-width: 920px) {
+
+    html {
+      margin: 0;
+      height: 100vh; 
+      width: 100vw;
+  
+      overflow: hidden;
+    }
+  
+    body{
+      margin: 0;
+      height: 100vh; 
+      width: 100vw;
+      overflow: hidden;
+    }
+  
+    body::after{
+      display: none;
+    }
+  
+    main{
+      display: none;
+    }
+  
+    #allTheMap {
+      width: 100vw;
+      height: 100vh;
+  
+      overflow: hidden;
+    }
+  
+    #tourne {
+      display: block;
+  
+      position:fixed;
+      top: 0;
+      left: 0;
+    
+      width: 100vw;
+      height: 100vh;
+    
+      background-color: #222;
+      color: antiquewhite;
+      box-shadow: 10px 10px 50px black inset;
+  
+      text-align: center;
+      line-height: 100vh;
+      word-wrap: break-word;
+  
+      animation-name: texteAnim;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite; 
+    
+      z-index: 100;
+    }
+  
+  
+    /* A METTRE JUSTE AVANT LE JS :
+    <div id="tourne">Tourne ton téléphone !</div> 
+    */
+  
+  }

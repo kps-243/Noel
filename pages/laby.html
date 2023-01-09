@@ -10,14 +10,29 @@
 <body>
     <main id="laby">
         <h1>La grotte gelée</h1>
-        <a href="../index.html" id="retour">Retour</a>
+        <a href="../index.html" class="Retour">Retour</a>
+
+        <article class="bulle" id="bulle">
+            <h3>Orgueil l'Écureuil</h3>
+            <p>Coucou, Bienvenue dans mon sapin.<br>Je suis <strong>Orgueil L’Écureuil.</strong></p>
+            
+            <i id="preced" class="fi fi-sr-arrow-circle-left"></i>
+            <i id="suivant" class="fi fi-sr-arrow-circle-right"></i>
+        </article>
 
         <div id="victoire" class="caché">
             <h2>Victoire !</h2>
             <button id="btn">Recommencer</button>
         </div>
 
-        <canvas id="jeu"></canvas>
+        <canvas id="jeu" class="caché"></canvas>
+
+        <div id="controls" class="caché">
+            <i id="haut" class="fi fi-sr-arrow-alt-square-up"></i>
+            <i id="gauche" class="fi fi-sr-arrow-alt-square-left"></i>
+            <i id="bas" class="fi fi-sr-arrow-alt-square-down"></i>
+            <i id="droite" class="fi fi-sr-arrow-alt-square-right"></i>
+        </div>
 
         <img id="romain" src="../images/svg/5-Lapin.svg" alt="Romain le lapin">
     </main>

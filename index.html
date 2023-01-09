@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
   <title>LeclercNoel</title>
 
@@ -54,11 +54,12 @@
 
 
     <div id="allTheMap">
-      <img class="map" src="./images/jpg/map.jpg" />
-      <!-- <img class="map" id="map-sapin" src="./images/png/map-sapins.png"/> -->
+      <img class="map" id="background" src="./images/jpg/map.jpg" />
+      <img id="map-sapin" src="./images/png/map-sapins.png" />
+      <!-- <img id="map-front" src="./images/png/deco-front.png"/> -->
     </div>
 
-    <a href="">
+    <a href="./pages/laby.html">
       <div id="grotte" class="abri">
         <img id="grotte-gelee" class="lieux" src="./images/png/lieux/5-grotte-gelee.png" />
         <img id="lapin" class="animaux" src="./images/svg/5-Lapin.svg" />
@@ -115,7 +116,7 @@
     </a>
     <div id="text-royaume" class="text">Royaume des lettres</div>
 
-    <a href="./pages/difference.html">
+    <a href="./pages/differences.html">
       <div id="tour" class="abri">
         <img id="tour-du-bric-a-brac" class="lieux" src="./images/png/lieux/7-tour-bric-a-brac.png" />
         <img id="marmotte" class="animaux" src="./images/svg/7-Marmotte.svg" />
@@ -126,6 +127,7 @@
 
 
   </main>
+  <div id="tourne">Tourne ton téléphone !</div>
 
   <script src="./js/scripts.js"></script>
 </body>
