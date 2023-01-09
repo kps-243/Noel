@@ -1,3 +1,5 @@
+@import url(./import.css);
+
 @mixin FlexMid {
     display: flex;
     justify-content: center;
@@ -25,11 +27,11 @@
 }
 
 body{
-    background-color: purple;
+    
     #img{
     @include FlexMid();
     width: 970px;
-    margin-top: -400px;
+    margin-top: 400px;
     transform: scale(0.4);
     #diff1, #diff2{
             position: relative;
@@ -104,11 +106,11 @@ body{
     }
     div{
         position: absolute;
-        z-index: 0;
+        
     }
     area{
         position: absolute;
-        z-index: 1;
+        
     }
 }
 
