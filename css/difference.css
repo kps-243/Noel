@@ -1,9 +1,10 @@
+@import url(./import.css);
 body #img {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 970px;
-  margin-top: -400px;
+  margin-top: 400px;
   transform: scale(0.4);
 }
 body #img #diff1, body #img #diff2 {
@@ -88,9 +89,7 @@ body #cercle7-2 {
 }
 body div {
   position: absolute;
-  z-index: 0;
 }
 body area {
   position: absolute;
-  z-index: 1;
 }/*# sourceMappingURL=difference.css.map */

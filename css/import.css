@@ -1,6 +1,9 @@
 @import url(./fonts.css);
 @import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
 @import url(./animation.css);
+@import url(./fonts.css);
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
+@import url(./animation.css);
 
 :root{
     --cursor: url(./../images/png/cursor.png) 2 2, default;
