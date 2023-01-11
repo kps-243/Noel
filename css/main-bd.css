@@ -11,7 +11,7 @@ html body {
   padding: 0;
 }
 html body main {
-  background-image: url("../images/png/interieur-bd.png");
+  background-image: url("../images/jpg/interieur-palais.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -155,15 +155,6 @@ html body main #ourson {
   html body {
     margin: 0;
     padding: 0;
-  }
-  html body main {
-    background-image: url("../images/png/interieur-bd.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    max-height: 100vh;
-    min-width: 100vw;
-    max-width: 100vw;
   }
   html body main h1 {
     font-family: "Titres";

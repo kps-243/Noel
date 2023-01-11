@@ -167,18 +167,18 @@ i{
       overflow: hidden;
     }
   
-    body{
+    html body{
       margin: 0;
       height: 100vh; 
       width: 100vw;
       overflow: hidden;
     }
   
-    body::after{
+    html body::after{
       display: none;
     }
   
-    main{
+    html body main{
       display: none;
     }
   
