@@ -1,0 +1,119 @@
+@mixin FlexMid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin BigCircle {
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+}
+@mixin MediumCircle {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+}
+@mixin SmallCircle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+@function add($a) {
+    @return $a + 1160px;
+}
+
+body{
+
+    #img{
+    @include FlexMid();
+    width: 970px;
+    margin-top: -400px;
+    transform: scale(0.4);
+    #diff1, #diff2{
+            position: relative;
+            width: 1160px;
+            height: 1506px;
+        }
+    }
+    .cercle1, .cercle2, .cercle3, .cercle4, .cercle5, .cercle6, .cercle7{
+        position: absolute;
+        border: 6px solid red;
+        opacity: 0;
+        
+    }
+    .cercle1{
+        @include BigCircle();
+        left: -70px;
+        top: 250px; 
+    }
+
+    #cercle1-2{
+        left: add(-70px);
+    }
+    .cercle2{
+        @include SmallCircle();
+        top: 650px;
+        left: -400px;
+    }
+    
+    #cercle2-2{
+        left: add(-400px);
+    }
+
+    .cercle3{
+        @include MediumCircle();
+        top: 800px;
+        left: 320px; 
+    }
+    #cercle3-2{
+        left: add(320px);
+    }
+    .cercle4{
+        @include SmallCircle();
+        top: 650px;
+        left: -630px;
+    }
+    #cercle4-2{
+        left: add(-630px);
+    }
+    .cercle5{
+        @include SmallCircle();
+        top: 1070px;
+        left: -550px;
+    }
+    #cercle5-2{
+        left: add(-550px);
+    }
+    .cercle6{
+        @include SmallCircle();
+        top: 970px;
+        left: -660px;
+    }
+    #cercle6-2{
+        left: add(-660px);
+    }
+    .cercle7{
+        @include BigCircle();
+        top: 1100px;
+        left: -400px;    
+    }
+    #cercle7-2{
+         left: add(-400px);
+    }
+    div{
+        position: absolute;
+        z-index: 0;
+    }
+    area{
+        position: absolute;
+        z-index: 1;
+    }
+}
+
+@media screen and (min-width: 1000px){
+
+
+    
+}

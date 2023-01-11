@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/difference.css">
+    <title>Le jeu des 7 différences</title>
+</head>
+
+<body>
+    <button>
+        <a href="./../index.html">Retour</a>
+    </button>
+    <div id="img">
+        <div class="img1">
+            <img usemap="#img1" src="./../images/jpg/jeu-7-difference-droite.jpg" alt="" id="diff1">
+            <div class="cercle1"></div>
+            <div class="cercle2"></div>
+            <div class="cercle3"></div>
+            <div class="cercle4"></div>
+            <div class="cercle5"></div>
+            <div class="cercle6"></div>
+            <div class="cercle7"></div>
+        </div>
+        <div class="img2">
+            <img usemap="#img2" src="./../images/jpg/jeu-7-difference-gauche.jpg" alt="" id="diff2">
+            <div id="cercle1-2" class="cercle1"></div>
+            <div id="cercle2-2" class="cercle2"></div>
+            <div id="cercle3-2" class="cercle3"></div>
+            <div id="cercle4-2" class="cercle4"></div>
+            <div id="cercle5-2" class="cercle5"></div>
+            <div id="cercle6-2" class="cercle6"></div>
+            <div id="cercle7-2" class="cercle7"></div>
+        </div>
+    </div>
+
+    <map name="img1">
+        <area shape="poly" coords="612,322,847,290,862,405,628,441" alt="image1" rel="nofollow noreferrer noopener"
+            onclick="circleAppear('.cercle1')" />
+        <area shape="circle" coords="334,707,53" alt="image1" rel="nofollow noreferrer noopener"
+            onclick="circleAppear('.cercle2')" />
+        <area shape="poly" coords="1012,1013,1157,762,1158,887,1092,1000" alt="image1"
+            rel="nofollow noreferrer noopener" onclick="circleAppear('.cercle3')" />
+        <area shape="poly" coords="102,642,138,648,114,748,82,738" alt="image1" rel="nofollow noreferrer noopener"
+            onclick="circleAppear('.cercle4')" />
+        <area shape="circle" coords="204,1123,53" alt="image1" rel="nofollow noreferrer noopener"
+            onclick="circleAppear('.cercle5')" />
+        <area shape="poly" coords="6,954,76,989,127,1010,135,1076,94,1076,45,1079,2,1079" alt="image1"
+            rel="nofollow noreferrer noopener" onclick="circleAppear('.cercle6')" />
+        <area shape="poly" coords="333,1141,401,1148,415,1341,318,1337" alt="image1" rel="nofollow noreferrer noopener"
+            onclick="circleAppear('.cercle7')" />
+    </map>
+    <map name="img2">
+        <area shape="poly" coords="612,322,847,290,862,405,628,441" alt="image2" rel="nofollow noreferrer noopener"
+            onclick="circleAppear('.cercle1')" />
+        <area shape="circle" coords="334,707,53" alt="image2" rel="nofollow noreferrer noopener"
+            onclick="circleAppear('.cercle2')" />
+        <area shape="poly" coords="1012,1013,1157,762,1158,887,1092,1000" alt="image2"
+            rel="nofollow noreferrer noopener" onclick="circleAppear('.cercle3')" />
+        <area shape="poly" coords="102,642,138,648,114,748,82,738" alt="image2" rel="nofollow noreferrer noopener"
+            onclick="circleAppear('.cercle4')" />
+        <area shape="circle" coords="204,1123,53" alt="image2" rel="nofollow noreferrer noopener"
+            onclick="circleAppear('.cercle5')" />
+        <area shape="poly" coords="6,954,76,989,127,1010,135,1076,94,1076,45,1079,2,1079" alt="image2"
+            rel="nofollow noreferrer noopener" onclick="circleAppear('.cercle6')" />
+        <area shape="poly" coords="333,1141,401,1148,415,1341,318,1337" alt="image2" rel="nofollow noreferrer noopener"
+            onclick="circleAppear('.cercle7')" />
+    </map>
+
+
+    <script src="./../js/script-difference.js"></script>
+</body>
+
+</html>

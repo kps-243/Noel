@@ -1,0 +1,96 @@
+body #img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 970px;
+  margin-top: -400px;
+  transform: scale(0.4);
+}
+body #img #diff1, body #img #diff2 {
+  position: relative;
+  width: 1160px;
+  height: 1506px;
+}
+body .cercle1, body .cercle2, body .cercle3, body .cercle4, body .cercle5, body .cercle6, body .cercle7 {
+  position: absolute;
+  border: 6px solid red;
+  opacity: 0;
+}
+body .cercle1 {
+  height: 200px;
+  width: 200px;
+  border-radius: 200px;
+  left: -70px;
+  top: 250px;
+}
+body #cercle1-2 {
+  left: 1090px;
+}
+body .cercle2 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  top: 650px;
+  left: -400px;
+}
+body #cercle2-2 {
+  left: 760px;
+}
+body .cercle3 {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  top: 800px;
+  left: 320px;
+}
+body #cercle3-2 {
+  left: 1480px;
+}
+body .cercle4 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  top: 650px;
+  left: -630px;
+}
+body #cercle4-2 {
+  left: 530px;
+}
+body .cercle5 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  top: 1070px;
+  left: -550px;
+}
+body #cercle5-2 {
+  left: 610px;
+}
+body .cercle6 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  top: 970px;
+  left: -660px;
+}
+body #cercle6-2 {
+  left: 500px;
+}
+body .cercle7 {
+  height: 200px;
+  width: 200px;
+  border-radius: 200px;
+  top: 1100px;
+  left: -400px;
+}
+body #cercle7-2 {
+  left: 760px;
+}
+body div {
+  position: absolute;
+  z-index: 0;
+}
+body area {
+  position: absolute;
+  z-index: 1;
+}/*# sourceMappingURL=difference.css.map */
