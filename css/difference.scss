@@ -31,7 +31,7 @@ body{
     #img{
     @include FlexMid();
     width: 100%;
-    height: 100vh;
+    
     margin-top: 300px;
     transform: scale(0.5);
 
@@ -39,7 +39,14 @@ body{
             position: relative;
             width: 1160px;
             height: 1506px;
+            padding: 50px;
         }
+    .img1, .img2{
+        margin: auto
+    }
+    // #diff2{
+    //     margin-left: 92.%;
+    // }
     // #diff2{
     //     margin-left: 1506px;
     // }
@@ -119,6 +126,7 @@ body{
     }
     area{
         position: absolute;
+        z-index: 1;
         
     }
 }
