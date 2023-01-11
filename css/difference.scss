@@ -30,19 +30,28 @@ body{
     
     #img{
     @include FlexMid();
-    width: 970px;
-    margin-top: 400px;
-    transform: scale(0.4);
+    width: 100%;
+    height: 100vh;
+    margin-top: 300px;
+    transform: scale(0.5);
+
     #diff1, #diff2{
             position: relative;
             width: 1160px;
             height: 1506px;
         }
+    // #diff2{
+    //     margin-left: 1506px;
+    // }
+    // #diff1{
+    //     margin-left: -35%;
+    // }
     }
     .cercle1, .cercle2, .cercle3, .cercle4, .cercle5, .cercle6, .cercle7{
         position: absolute;
         border: 6px solid red;
         opacity: 0;
+        z-index: 1
         
     }
     .cercle1{

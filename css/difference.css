@@ -3,9 +3,10 @@ body #img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 970px;
-  margin-top: 400px;
-  transform: scale(0.4);
+  width: 100%;
+  height: 100vh;
+  margin-top: 300px;
+  transform: scale(0.5);
 }
 body #img #diff1, body #img #diff2 {
   position: relative;
@@ -16,6 +17,7 @@ body .cercle1, body .cercle2, body .cercle3, body .cercle4, body .cercle5, body 
   position: absolute;
   border: 6px solid red;
   opacity: 0;
+  z-index: 1;
 }
 body .cercle1 {
   height: 200px;
