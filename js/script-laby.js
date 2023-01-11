@@ -28,17 +28,16 @@ document.addEventListener('DOMContentLoaded', function () {
         playerY = 0;
         Evictoire.classList.add('caché');
         clef = 0;
-        victoire = 0;
+        victoire = 1;
         maze[12][4] = 3;
     });
 
     if (matchMedia("only screen and (max-width: 768px)").matches) {
         media = 'mobile';
-        montrer('controls');
-        console.log('tel');
+        document.querySelector('#bulle1 p').innerHTML = "Salut ! Et bienvenue dans ma petite grotte gelée ! Je suis <strong>Romain le lapin !</strong>";
+        document.querySelector('#bulle3 p').innerHTML = "Aide-le à retrouver son chemin ! <strong>Utilises les flèches</strong>sur la droite du<br> labyrinthe pour le contrôler !";
       } else {
         media = 'ordi';
-        console.log('ordi');
       }
 
     document.addEventListener('keydown', (event) => {

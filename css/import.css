@@ -23,7 +23,7 @@ html *{
 }
 
 .Victoire {
-
+  display: none;
 }
 
 .Retour {

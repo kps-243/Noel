@@ -19,17 +19,17 @@
 
         <article class="bulle" id="bulle1">
             <h3>Mayeul l'Écureuil</h3>
-            <p>Coucou, bienvenue dans mon sapin.<br>Je suis <strong>Mayeul L’Écureuil.</strong></p>
+            <p>Coucou, bienvenue dans mon sapin. Je suis <br><strong>Mayeul L’Écureuil.</strong></p>
             
             <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle1')"></i>
-            <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle1')"></i>
+            <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle1','bulle2')"></i>
         </article>
 
         <article class="bulle" id="bulle2">
             <h3>Mayeul l'Écureuil</h3>
-            <p>Dans mon sapin, tu peux relier les boules de Noël pour l'illuminer.</p>
+            <p>Dans mon sapin, tu peux relier les boules de<br>Noël pour l'illuminer.</p>
             
-            <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle2')"></i>
+            <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle2','bulle1')"></i>
             <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle2');montrer('jeu')"></i>
         </article>
         

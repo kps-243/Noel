@@ -20,22 +20,22 @@
             <p>Salut ! Et bienvenue dans ma petite grotte gelée !<br>Je suis <strong>Romain le lapin !</strong></p>
             
             <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle1')"></i>
-            <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle1')"></i>
+            <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle1','bulle2')"></i>
         </article>
 
         <article class="bulle" id="bulle2">
             <h3>Romain le lapin</h3>
-            <p>Mon ami est coincé dans un labyrinthe !</p>
+            <p>Mon ami est coincé dans un labyrinthe !<br> </p>
             
-            <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle2')"></i>
-            <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle2')"></i>
+            <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle2','bulle1')"></i>
+            <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle2','bulle3')"></i>
         </article>
 
         <article class="bulle" id="bulle3">
             <h3>Romain le lapin</h3>
-            <p>Aide-le à retrouver son chemin ! <strong>Utilises les flèches</strong> de ton clavier pour le contrôler !</p>
+            <p id="txtcontrols">Aide-le à retrouver son chemin ! <strong>Utilises les flèches</strong><br>de ton clavier pour le contrôler !</p>
             
-            <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle3')"></i>
+            <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle3','bulle2')"></i>
             <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle3');montrer('jeu');montrer('controls')"></i>
         </article>
 
