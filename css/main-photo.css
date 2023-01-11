@@ -1,16 +1,49 @@
-@import url('./import.css');
-
-html, body{
-    margin: 0px;
-    height: 100vh;
-    width: 100vw;
-
-    background-image: url(./../images/png/8-back.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    overflow: hidden;
-
-    cursor: var(--cursor); 
+@import url("./import.css");
+html, body {
+  margin: 0px;
+  min-height: 100vh;
+  min-width: 100vw;
+  max-height: 100vh;
+  max-width: 100vw;
+  background-image: url(./../images/png/8-back.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  cursor: var(--cursor);
 }
+
+main h1 {
+  font-family: "Titres";
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(255, 230, 230);
+  font-size: 2rem;
+  padding-top: 50px;
+  margin: 0;
+  pointer-events: none;
+}
+main .bulle {
+  z-index: 8;
+  left: 35%;
+  bottom: 10vw;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main .bulle h3 {
+  color: #e82b2f;
+}
+main .bulle #preced {
+  color: #e82b2f;
+}
+main .bulle #suivant {
+  color: #591023;
+}
+main #nico {
+  height: 50vh;
+  position: absolute;
+  bottom: 0;
+  right: 15%;
+  pointer-events: none;
+}/*# sourceMappingURL=main-photo.css.map */
