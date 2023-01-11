@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const canvas = document.querySelector('#jeu');
     const ctx = canvas.getContext('2d');
     const Iclef = new Image();
-    Iclef.src = "./images/png/clef.png";
+    Iclef.src = '../images/png/clef.png';
     const Evictoire = document.querySelector('#victoire');
     const controls = document.querySelector('#controls');
     const haut = document.querySelector('#haut');
@@ -154,9 +154,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     ctx.arc(x * cellSizeX + cellSizeX / 2, y * cellSizeY + cellSizeY / 2, 4, 0, 2 * Math.PI);
                     ctx.fillStyle = 'orange';
                     ctx.fill();
-                    // Iclef.onload = () => {
-                    //     ctx.drawImage(Iclef, x, y);
-                    // }
+                    // Iclef.addEventListener("load", function() {
+                    //     // Dessin de l'image sur le canvas
+                    //     ctx.drawImage(Iclef, 0, 0, 10, 10);
+                    // });
                 }
             }
         }
