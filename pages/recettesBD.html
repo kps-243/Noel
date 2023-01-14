@@ -46,62 +46,29 @@
 
     <article class="bulle" id="bulle4">
       <h3>Mam'ourse</h3>
-      <p>Choisis parmi les trois recettes en dessous pour<br> les apprendre !</p>
+      <p>Choisis parmi les trois recettes en dessous pour<br> les apprendre ! Tu pourra tourner ton téléphone<br>pour mieux lire.</p>
 
       <div>
-        <button id="r1">Sablés de Noël</button>
-        <button id="r2">Tartines de Noël</button>
-        <button id="r3">Tiramisu</button>
+        <button onclick="textToNext('bulle4','sablés');flex('sablés')">Sablés de Noël</button>
+        <button id="r2" onclick="textToNext('bulle4','tartines');flex('tartines')">Tartines de Noël</button>
+        <button id="r3" onclick="textToNext('bulle4','tiramisu');flex('tiramisu')">Tiramisu</button>
       </div>
 
     </article>
 
-    <section id="bulle5" class="caché">
-      <img src="" alt="">
-      <button id="suivant" onclick="textToNext('bulle5','bulle6');flex('bulle6')">Page suivante</button>
+    <section id="sablés">
+      <img src="../images/png/BD1-mobile.png" alt="Recette des sablés de Noël">
+      <button id="rchoix" onclick="textToNext('sablés','bulle4')">Retour au choix des recettes</button>
     </section>
 
-    <section id="bulle6">
-      <img src="" alt="">
-      <button id="preced" onclick="textToBefore('bulle6','bulle5');flex('bulle5')">Page précédente</button>
-      <button id="suivant" onclick="textToNext('bulle6','bulle7');flex('bulle7')">Page suivante</button>
+    <section id="tartines">
+      <img src="../images/png/BD2-mobile.png" alt="Recette des tartines de Noël">
+      <button id="rchoix2" onclick="textToNext('tartines','bulle4')">Retour au choix des recettes</button>
     </section>
 
-    <section id="bulle7">
-      <img src="" alt="">
-      <button id="rchoix">Retour au choix des recettes</button>
-    </section>
-
-    <section id="bulle8" class="caché">
-      <img src="" alt="">
-      <button id="suivant" onclick="textToNext('bulle8','bulle9');flex('bulle9')">Page suivante</button>
-    </section>
-
-    <section id="bulle9">
-      <img src="" alt="">
-      <button id="preced" onclick="textToBefore('bulle9','bulle8');flex('bulle8')">Page précédente</button>
-      <button id="suivant" onclick="textToNext('bulle9','bulle10');flex('bulle10')">Page suivante</button>
-    </section>
-
-    <section id="bulle10">
-      <img src="" alt="">
-      <button id="rchoix2">Retour au choix des recettes</button>
-    </section>
-
-    <section id="bulle11" class="caché">
-      <img src="" alt="">
-      <button id="suivant" onclick="textToNext('bulle11','bulle12');flex('bulle12')">Page suivante</button>
-    </section>
-
-    <section id="bulle12">
-      <img src="" alt="">
-      <button id="preced" onclick="textToBefore('bulle12','bulle11');flex('bulle11')">Page précédente</button>
-      <button id="suivant" onclick="textToNext('bulle12','bulle13');flex('bulle13')">Page suivante</button>
-    </section>
-
-    <section id="bulle13">
-      <img src="" alt="">
-      <button id="rchoix3">Retour au choix des recettes</button>
+    <section id="tiramisu">
+      <img src="../images/png/BD3-mobile.png" alt="Recette du tiramisu">
+      <button onclick="textToNext('tiramisu','bulle4')">Retour au choix des recettes</button>
     </section>
 
     <img id="mamourse" src="../images/svg/1-Mamourse.svg" alt="Mamourse">
@@ -110,7 +77,7 @@
 
   <div id="tourne">Tourne ton téléphone !</div> 
   <script src="../js/functions.js"></script>
-  <script src="../js/script-bd.js"></script>
+  <!-- <script src="../js/script-bd.js"></script> -->
 </body>
 
 </html>

@@ -3,7 +3,6 @@ html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  overflow-y: hidden;
   cursor: var(--cursor);
 }
 html body {
@@ -81,52 +80,56 @@ html body main #bulle2 > #preced {
 }
 html body main section {
   background-color: #ff8ca6;
-  width: 30%;
-  height: 75%;
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   position: absolute;
-  border-radius: 25px;
-  display: flex;
+  border-radius: 0;
+  display: none;
   flex-flow: wrap row;
   justify-content: center;
   align-items: center;
-  padding: 1%;
-  right: 10%;
-  bottom: 10%;
+  padding: 0;
+  left: 0;
+  top: 0;
+  z-index: 6;
 }
 html body main section img {
-  width: 80%;
-  height: 80%;
-  border: 1px solid black;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 html body main section button {
+  position: absolute;
   border: none;
   border-radius: 50px;
-  background-color: #e82b2f;
-  bottom: 2%;
+  background-color: #fff;
+  color: #e82b2f;
+  bottom: 1%;
   cursor: var(--cursorPointer);
-  padding: 4% 4%;
+  padding: 1.5vw 1.5vw;
   font-family: "Titres";
   text-align: center;
   text-transform: uppercase;
-  font-size: 0.8em;
-  color: white;
+  font-size: 1.5rem;
   transition: transform 0.2s ease;
 }
 html body main section button:hover {
   transform: scale(1.05);
 }
-html body main section #preced {
-  background-color: #fcc75d;
-  color: black;
-}
 html body main section #rchoix, html body main section #rchoix2, html body main section #rchoix3 {
   background-color: #fff;
   color: #e82b2f;
 }
+html body main #tartines button, html body main #tiramisu button {
+  bottom: 0.5%;
+}
 html body main #bulle4 {
   z-index: 3;
 }
-html body main #bulle6, html body main #bulle7, html body main #bulle8, html body main #bulle9, html body main #bulle10, html body main #bulle11, html body main #bulle12, html body main #bulle13 {
+html body main .recette {
   display: none;
 }
 html body main #mamourse {
@@ -149,7 +152,6 @@ html body main #ourson {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    overflow-y: hidden;
     cursor: var(--cursor);
   }
   html body {
@@ -191,6 +193,10 @@ html body main #ourson {
     gap: 2%;
   }
   html body main .bulle div button {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     cursor: var(--cursorPointer);
     font-family: "Titres";
     text-align: center;
@@ -218,52 +224,58 @@ html body main #ourson {
   }
   html body main section {
     background-color: #ff8ca6;
-    width: 20%;
-    height: 60%;
+    width: 98vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     position: absolute;
-    border-radius: 25px;
-    display: flex;
+    border-radius: 0;
+    display: none;
     flex-flow: wrap row;
     justify-content: center;
     align-items: center;
     padding: 1%;
-    right: 20%;
+    left: 0;
+    top: 0;
+    z-index: 6;
   }
   html body main section img {
-    width: 80%;
-    height: 80%;
-    border: 1px solid black;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   html body main section button {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    position: absolute;
     border: none;
     border-radius: 50px;
-    background-color: #e82b2f;
+    background-color: #fff;
+    color: #e82b2f;
     bottom: 2%;
     cursor: var(--cursorPointer);
-    padding: 4% 4%;
+    padding: 1.5vw 1.5vw;
     font-family: "Titres";
     text-align: center;
     text-transform: uppercase;
-    font-size: 1.1rem;
-    color: white;
+    font-size: 1.5rem;
     transition: transform 0.2s ease;
   }
   html body main section button:hover {
     transform: scale(1.05);
   }
-  html body main section #preced {
-    background-color: #fcc75d;
-    color: black;
-  }
-  html body main section #rchoix, html body main section #rchoix2, html body main section #rchoix3 {
-    background-color: #fff;
-    color: #e82b2f;
+  html body main #tartines button, html body main #tiramisu button {
+    bottom: 1%;
   }
   html body main #bulle4 {
     z-index: 3;
-  }
-  html body main #bulle6, html body main #bulle7, html body main #bulle9, html body main #bulle10, html body main #bulle11, html body main #bulle12, html body main #bulle13 {
-    display: none;
   }
   html body main #mamourse {
     height: 60%;

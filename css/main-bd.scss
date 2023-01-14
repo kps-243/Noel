@@ -13,7 +13,7 @@ html{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    overflow-y: hidden;
+    // overflow-y: hidden;
     cursor: var(--cursor);
 
     body{
@@ -97,43 +97,40 @@ html{
 
             section{
                 background-color: #ff8ca6;
-                width: 30%;
-                height: 75%;
+                width: 100vw;
+                height: fit-content;
                 position: absolute;
-                border-radius: 25px;
-                display: flex;
+                border-radius: 0;
+                display: none;
                 flex-flow: wrap row;
                 justify-content: center;
                 align-items: center;
-                padding: 1%;
-                right: 10%;
-                bottom: 10%;
+                padding: 0;
+                left: 0;
+                top: 0;
+                z-index: 6;
 
                 img{
-                    width: 80%;
-                    height: 80%;
-                    border: 1px solid black;
+                    width: 100%;
+                    height: fit-content;
+                    // border: 1px solid black;
                 }
                 button{
+                    position: absolute;
                     border: none;
                     border-radius: 50px;
-                    background-color: #e82b2f;
-                    bottom: 2%;
+                    background-color: #fff;
+                    color: #e82b2f;
+                    bottom: 1%;
                     cursor: var(--cursorPointer);
-                    padding: 4% 4%;
+                    padding: 1.5vw 1.5vw;
                     @include Police();
-                    font-size: 0.8em;
-                    color: white;
+                    font-size: 1.5rem;
                     transition: transform 0.2s ease;
                 }
                 
                 button:hover{
                     transform: scale(1.05);
-                }
-
-                #preced{
-                    background-color: #fcc75d;
-                    color: black;
                 }
 
                 #rchoix,#rchoix2,#rchoix3{
@@ -142,11 +139,17 @@ html{
                 }
             }
 
+            #tartines, #tiramisu{
+                button{
+                    bottom: 0.5%;
+                }
+            }
+
             #bulle4{
                 z-index: 3;
             }
 
-            #bulle6, #bulle7,#bulle8,#bulle9,#bulle10,#bulle11,#bulle12,#bulle13{
+            .recette{
                 display: none;
             }
 
@@ -174,7 +177,7 @@ html{
         margin: 0;
         padding: 0;
         overflow-x: hidden;
-        overflow-y: hidden;
+        // overflow-y: hidden;
         cursor: var(--cursor);
     
         body{
@@ -219,6 +222,7 @@ html{
                         gap: 2%;
     
                         button{
+                            user-select: none;
                             cursor: var(--cursorPointer);
                             @include Police();
                             font-size: 1rem;
@@ -251,56 +255,53 @@ html{
     
                 section{
                     background-color: #ff8ca6;
-                    width: 20%;
-                    height: 60%;
+                    width: 98vw;
+                    height: fit-content;
                     position: absolute;
-                    border-radius: 25px;
-                    display: flex;
+                    border-radius: 0;
+                    display: none;
                     flex-flow: wrap row;
                     justify-content: center;
                     align-items: center;
                     padding: 1%;
-                    right: 20%;
+                    left: 0;
+                    top: 0;
+                    z-index: 6;
     
                     img{
-                        width: 80%;
-                        height: 80%;
-                        border: 1px solid black;
+                        user-select: none;
+                        width: 100%;
+                        height: fit-content;
+                        // border: 1px solid black;
                     }
                     button{
+                        user-select: none;
+                        position: absolute;
                         border: none;
                         border-radius: 50px;
-                        background-color: #e82b2f;
+                        background-color: #fff;
+                        color: #e82b2f;
                         bottom: 2%;
                         cursor: var(--cursorPointer);
-                        padding: 4% 4%;
+                        padding: 1.5vw 1.5vw;
                         @include Police();
-                        font-size: 1.1rem;
-                        color: white;
+                        font-size: 1.5rem;
                         transition: transform 0.2s ease;
                     }
                     
                     button:hover{
                         transform: scale(1.05);
                     }
-    
-                    #preced{
-                        background-color: #fcc75d;
-                        color: black;
-                    }
-    
-                    #rchoix,#rchoix2,#rchoix3{
-                        background-color: #fff;
-                        color: #e82b2f;
+                }
+
+                #tartines, #tiramisu{
+                    button{
+                        bottom: 1%;
                     }
                 }
     
                 #bulle4{
                     z-index: 3;
-                }
-    
-                #bulle6, #bulle7,#bulle9,#bulle10,#bulle11,#bulle12,#bulle13{
-                    display: none;
                 }
     
                 #mamourse{

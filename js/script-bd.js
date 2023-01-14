@@ -2,58 +2,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
     'use strict';
 
-    const r1 = document.querySelector('#r1');
-    const r2 = document.querySelector('#r2');
-    const r3 = document.querySelector('#r3');
-    const rchoix = document.querySelector('#rchoix');
-    const rchoix2 = document.querySelector('#rchoix2');
-    const rchoix3 = document.querySelector('#rchoix3');
-    const ours = document.querySelector('#ourson');
+    var bd = 0;
+    const tourne = document.getElementById('tourne');
+    const bd1 = document.querySelector('#sablés button');
+    const bd2 = document.querySelector('#tartines button');
+    const bd3 = document.querySelector('#tiramisu button');
 
-    r1.addEventListener("click", () => {
-        cacher('bulle4');
-        ours.style.right = "50%";
-        montrer('bulle5');
-        
+
+    function responsive() {
+        if (matchMedia("only screen and (max-width: 768px)").matches) {
+            return 'mobile';
+        }
+
+        else {
+            return 'ordi';
+        }
+    }
+
+    // var sheet = document.styleSheets[0]['cssRules'][0]['styleSheet']['rules']['cssText'];
+    // console.log(sheet);
+
+    var sheet0 = document.styleSheets[0]['cssRules'][0];
+    var sheet = sheet0.styleSheets;
+    for (var i = 0; i < sheet.cssRules.length; i++) {
+        if (sheet.cssRules[i].media && sheet.cssRules[i].media[0] === "(orientation: portrait) and (max-width: 920px)") {
+            // sheet.cssRules[i].cssText = sheet.cssRules[i].cssText.replace("background-color: red;", "background-color: blue;");
+            console.log(sheet.cssRules[i].cssText);
+        }
+    }
+
+    bd1.addEventListener("click", function () {
+        if (responsive() == 'mobile') {
+
+        }
+
     })
 
-    rchoix.addEventListener("click", () => {
-        document.getElementById('bulle7').style.display = "none";
-        ours.style.right = "24%";
-        cacher('bulle5');
-        flex('bulle5');
-        montrer('bulle4');
-        
-    })
-
-    r2.addEventListener("click", () => {
-        cacher('bulle4');
-        ours.style.right = "50%";
-        montrer('bulle8');
-        flex('bulle8');
-        
-    })
-
-    rchoix2.addEventListener("click", () => {
-        document.getElementById('bulle10').style.display = "none";
-        ours.style.right = "24%";
-        cacher('bulle8');
-        montrer('bulle4');
-        
-    })
-
-    r3.addEventListener("click", () => {
-        cacher('bulle4');
-        ours.style.right = "50%";
-        montrer('bulle11');
-        flex('bulle11');
-    })
-
-    rchoix3.addEventListener("click", () => {
-        document.getElementById('bulle13').style.display = "none";
-        ours.style.right = "24%";
-        cacher('bulle11');
-        montrer('bulle4');
-        
-    })
 });
