@@ -227,13 +227,16 @@ main #nico {
     width: 30vw;
   }
   main #drop {
-    left: 21.5vw;
+    left: 23vw;
     background-size: cover;
+  }
+  main #drop .import {
+    padding: 4% 4% 4% 10%;
   }
   main #drop #lord {
     height: 50%;
     position: absolute;
-    left: 2%;
+    left: 0%;
     bottom: 25%;
   }
   main #drop img {
@@ -272,7 +275,7 @@ main #nico {
             user-select: none;
   }
   main #accessoire {
-    right: 20vw;
+    right: 22vw;
   }
   main #accessoire div img {
     width: 50%;
@@ -297,6 +300,9 @@ main #nico {
     gap: 10vh;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+  main #drop .import {
+    padding: 4% 4% 4% 12%;
   }
   main #drop #lord {
     height: 50%;

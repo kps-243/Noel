@@ -262,13 +262,16 @@ main{
         }
 
         #drop{
-            left:21.5vw;
+            left:23vw;
             background-size: cover;
 
+            .import{
+                padding: 4% 4% 4% 10%;
+            }
             #lord{
                 height: 50%;
                 position: absolute;
-                left: 2%;
+                left: 0%;
                 bottom: 25%;
             }
 
@@ -308,7 +311,7 @@ main{
         }
 
         #accessoire{
-            right: 20vw;
+            right: 22vw;
         }
         #accessoire div img{
             width: 50%;
@@ -340,6 +343,9 @@ main{
             background-size: cover;
             background-repeat: no-repeat;
     
+            .import{
+                padding: 4% 4% 4% 12%;
+            }
             #lord{
                 height: 50%;
                 position: absolute;
