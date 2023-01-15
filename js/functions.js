@@ -70,3 +70,7 @@ function OpenHF(HF){
         }
     }
 }
+
+function reload(){
+    location.reload(true);
+}
