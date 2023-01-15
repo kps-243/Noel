@@ -71,9 +71,6 @@ main #drop {
   background-size: cover;
   background-repeat: no-repeat;
 }
-main #drop #lord {
-  display: none;
-}
 main #drop button {
   font-family: "Titres";
   text-align: center;
@@ -92,6 +89,9 @@ main #drop button {
 }
 main #drop button:hover {
   transform: scale(1.1);
+}
+main #drop img {
+  position: absolute;
 }
 main .zone::before {
   content: "";
@@ -236,6 +236,9 @@ main #nico {
     left: 2%;
     bottom: 25%;
   }
+  main #drop img {
+    position: absolute;
+  }
   main #ready, main #download, main #quit {
     text-decoration: none;
     position: absolute;
@@ -300,6 +303,9 @@ main #nico {
     position: absolute;
     left: 5%;
     bottom: 25%;
+  }
+  main #drop img {
+    position: absolute;
   }
   main #drop button {
     font-family: "Titres";

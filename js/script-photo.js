@@ -83,12 +83,15 @@ document.addEventListener('DOMContentLoaded', function () {
                     var x = event.clientX;
                     var y = event.clientY;
 
+                    var Cx = drop.offsetLeft;
+                    var Cy = drop.offsetTop;
+
                     // définir la position de l'image en utilisant les coordonnées
 
                     if (actibonnet == 1) {
                         bonnet.style.position = "absolute";
-                        bonnet.style.left = x - 500 + "px";
-                        bonnet.style.top = y - 325 + "px";
+                        bonnet.style.left = x - Cx + "px";
+                        bonnet.style.top = y - Cy + "px";
 
                         // ajouter l'image à la zone de dépôt
                         event.target.appendChild(bonnet);
@@ -98,8 +101,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     else if (actibarbe == 1) {
                         barbe.style.position = "absolute";
-                        barbe.style.left = x - 475 + "px";
-                        barbe.style.top = y - 325 + "px";
+                        barbe.style.left = x - Cx + "px";
+                        barbe.style.top = y - Cy + "px";
 
                         // ajouter l'image à la zone de dépôt
                         event.target.appendChild(barbe);
@@ -109,8 +112,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     else if (actisapin == 1) {
                         sapin.style.position = "absolute";
-                        sapin.style.left = x - 500 + "px";
-                        sapin.style.top = y - 225 + "px";
+                        sapin.style.left = x - Cx + "px";
+                        sapin.style.top = y - Cy + "px";
 
                         // ajouter l'image à la zone de dépôt
                         event.target.appendChild(sapin);
@@ -120,8 +123,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     else if (actilunettes == 1) {
                         lunettes.style.position = "absolute";
-                        lunettes.style.left = x - 507 + "px";
-                        lunettes.style.top = y - 215 + "px";
+                        lunettes.style.left = x - Cx + "px";
+                        lunettes.style.top = y - Cy + "px";
 
                         // ajouter l'image à la zone de dépôt
                         event.target.appendChild(lunettes);

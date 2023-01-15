@@ -97,10 +97,6 @@ main{
         background-size: cover;
         background-repeat: no-repeat;
 
-        #lord{
-            display: none;
-        }
-
         button{
             @include Police();
             position: relative;
@@ -118,6 +114,10 @@ main{
 
         button:hover{
             transform: scale(1.1);
+        }
+
+        img{
+            position: absolute;
         }
     }
 
@@ -271,6 +271,10 @@ main{
                 left: 2%;
                 bottom: 25%;
             }
+
+            img{
+                position: absolute;
+            }
         }
 
         #ready, #download, #quit{
@@ -341,6 +345,10 @@ main{
                 position: absolute;
                 left: 5%;
                 bottom: 25%;
+            }
+
+            img{
+                position: absolute;
             }
     
             button{

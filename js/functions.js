@@ -39,7 +39,7 @@ function classe(el,classe) {
 function capture(el) {
     html2canvas(document.getElementById(el)).then(canvas => {
         let link = document.createElement('a');
-        link.download = "screenshot.png";
+        link.download = "portraitNoël.png";
         link.href = canvas.toDataURL();
         link.click();
     });
