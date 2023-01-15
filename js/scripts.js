@@ -144,7 +144,8 @@ function handle(evnt){
 }
 
 function OpenHF(HF){
-    if (HF = 'header'){
+    if (HF == 'header'){
+        console.log("g")
         let header = document.getElementById("header");
         let flecheHeader = document.getElementById("fleche-header")
         if (header.style.top == "0px"){
@@ -154,6 +155,17 @@ function OpenHF(HF){
             header.style.top = "0px";
             flecheHeader.style.transform = "rotate(180deg)";
         }
-        
+    }
+    else if (HF == 'footer'){
+        console.log("f")
+        let footer = document.getElementById("footer");
+        let flechefooter = document.getElementById("fleche-footer")
+        if (footer.style.bottom == "0px"){
+            footer.style.bottom = "-11vh";
+            flechefooter.style.transform = "rotate(0deg)";
+        } else {
+            footer.style.bottom = "0px";
+            flechefooter.style.transform = "rotate(180deg)";
+        }
     }
 }
