@@ -31,3 +31,16 @@ function montrer(el) {
 function cacher(el) {
     document.getElementById(el).classList.add('caché');
 }
+
+function classe(el,classe) {
+    document.getElementById(el).classList.add(classe);
+}
+
+function capture(el) {
+    html2canvas(document.getElementById(el)).then(canvas => {
+        let link = document.createElement('a');
+        link.download = "portraitNoël.png";
+        link.href = canvas.toDataURL();
+        link.click();
+    });
+}

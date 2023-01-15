@@ -4,14 +4,54 @@
     100% {transform: rotate(-0.2deg);}
   }
 
-  @keyframes texteAnim {
-    0% {font-size: 4vh;}
-    50% {font-size: 4.3vh;}
-    100% {font-size: 4vh;}
-  }
+@keyframes texteAnim {
+  0% {font-size: 4vh;}
+  50% {font-size: 4.3vh;}
+  100% {font-size: 4vh;}
+}
 
-  @keyframes maisonsAnim {
-    0% { transform: scale(1);}
-    10% { transform: scale(1.2);}
-    20% { transform: scale(1);}
-  }
+@keyframes maisonsAnim {
+  0% { transform: scale(1);}
+  10% { transform: scale(1.2);}
+  20% { transform: scale(1);}
+}
+
+@keyframes Enseignes {
+  0% {
+		animation-timing-function: ease-in;
+		transform: translateY(-200px);
+	}
+
+  40% {
+		animation-timing-function: ease-in;
+		transform: translateY(10px);
+	}
+
+  75% {
+		animation-timing-function: ease-in;
+		transform: translateY(-15px);
+	}
+
+	100% {
+		animation-timing-function: ease-in;
+		transform: translateY(0px);
+	}
+}
+
+@keyframes Sortie {
+
+  0% {
+		animation-timing-function: ease-out;
+		transform: translateY(0px);
+	}
+
+	25% {
+		animation-timing-function: ease-out;
+		transform: translateY(20px);
+	}
+  
+  100% {
+		animation-timing-function: ease-out;
+		transform: translateY(-200px);
+	}
+}

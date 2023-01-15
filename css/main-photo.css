@@ -13,15 +13,27 @@ html, body {
   cursor: var(--cursor);
 }
 
-main h1 {
-  font-family: "Titres";
-  text-align: center;
-  text-transform: uppercase;
-  color: rgb(255, 230, 230);
-  font-size: 2rem;
-  padding-top: 50px;
+main figure {
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  position: absolute;
+  padding: 0;
   margin: 0;
-  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: Enseignes 0.5s ease 0s 1 normal none;
+          animation: Enseignes 0.5s ease 0s 1 normal none;
+  transition: top 1s ease;
+}
+main figure img {
+  padding: 0px;
+  margin-top: -15vh;
+  width: 40vw;
+}
+main .sortie {
+  top: -500px;
 }
 main .bulle {
   z-index: 8;
@@ -40,11 +52,11 @@ main .bulle #preced {
 main .bulle #suivant {
   color: #591023;
 }
-main #bulle4 {
+main #bulle4, main #bulle6, main #mobile {
   display: block;
 }
 main #drop {
-  width: 20vw;
+  width: 23vw;
   height: 55vh;
   display: flex;
   flex-flow: wrap column;
@@ -54,24 +66,18 @@ main #drop {
   border-radius: 15px;
   position: relative;
   top: 24vh;
-  left: 24.25vw;
+  left: 20vw;
   gap: 10vh;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-}
-main #drop #lord {
-  height: 50%;
-  position: absolute;
-  left: 5%;
-  bottom: 25%;
 }
 main #drop button {
   font-family: "Titres";
   text-align: center;
   text-transform: uppercase;
   position: relative;
-  font-size: 1.3rem;
-  padding: 4% 4% 4% 12%;
+  font-size: 0.8rem;
+  padding: 4%;
   margin-bottom: 5vh;
   border: none;
   border-radius: 6px;
@@ -84,6 +90,9 @@ main #drop button {
 main #drop button:hover {
   transform: scale(1.1);
 }
+main #drop img {
+  position: absolute;
+}
 main .zone::before {
   content: "";
   background-image: url("../images/png/photo-film.png");
@@ -94,41 +103,89 @@ main .zone::before {
   height: 7vw;
   z-index: 1;
 }
+main #ready, main #download, main #quit {
+  text-decoration: none;
+  position: absolute;
+  font-family: "Titres";
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  padding: 1%;
+  border: none;
+  right: 13%;
+  bottom: 13%;
+  border-radius: 6px;
+  background-color: #e82b2f;
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: var(--cursorPointer);
+  transition: transform 0.2s ease;
+}
+main #download {
+  padding: 3%;
+  bottom: 18%;
+  right: 10%;
+}
+main #quit {
+  position: relative;
+  padding: 3%;
+  margin: 10% 0 0 40%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+main #ready:hover, main #download:hover, main #quit:hover {
+  transform: scale(1.1);
+}
 main #accessoire {
   display: flex;
   flex-flow: wrap row;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   height: 50vh;
   width: 20vw;
   top: 9vh;
-  right: 24.5vw;
+  right: 20vw;
   position: absolute;
-  gap: 25%;
+}
+main #accessoire div {
+  width: 100%;
+  height: 49%;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0vw;
+  grid-row-gap: 0px;
+  justify-content: center;
+  align-items: center;
+}
+main #accessoire div img {
+  width: 50%;
+}
+main #accessoire:active {
+  cursor: var(--cursor);
+  grid-area: auto;
 }
 main #bonnet {
   transform: scale(0.8);
   cursor: var(--cursorPointer);
   transition: transform 0.2s ease;
-  margin: 17% 0 0 -5%;
 }
 main #barbe {
   transform: scale(0.8);
   cursor: var(--cursorPointer);
   transition: transform 0.2s ease;
-  margin: 17% 0 0 -3%;
 }
 main #sapin {
   transform: scale(0.8);
   cursor: var(--cursorPointer);
   transition: transform 0.2s ease;
-  margin: -10% 0 0 4%;
 }
 main #lunettes {
   transform: scale(0.8);
   cursor: var(--cursorPointer);
   transition: transform 0.2s ease;
-  margin: -5% 0 0 2%;
   transform: scale(0.9);
 }
 main #lunettes:hover {
@@ -143,10 +200,142 @@ main #nico {
   bottom: 0;
   right: 15%;
   pointer-events: none;
+  transition: bottom 1s ease;
 }
 
 @media only screen and (min-width: 1200px) {
   main .bulle {
+    left: 35vw;
+  }
+  main figure {
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-animation: Enseignes 0.5s ease 0s 1 normal none;
+            animation: Enseignes 0.5s ease 0s 1 normal none;
+    transition: top 1s ease;
+  }
+  main figure img {
+    padding: 0px;
+    margin-top: -15vh;
+    width: 30vw;
+  }
+  main #drop {
+    left: 23vw;
+    background-size: cover;
+  }
+  main #drop .import {
+    padding: 4% 4% 4% 10%;
+  }
+  main #drop #lord {
+    height: 50%;
+    position: absolute;
+    left: 0%;
+    bottom: 25%;
+  }
+  main #drop img {
+    position: absolute;
+  }
+  main #ready, main #download, main #quit {
+    text-decoration: none;
+    position: absolute;
+    font-family: "Titres";
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    padding: 1%;
+    border: none;
+    right: 25%;
+    bottom: 13%;
+    border-radius: 6px;
+    background-color: #e82b2f;
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    cursor: var(--cursorPointer);
+    transition: transform 0.2s ease;
+  }
+  main #download {
+    padding: 3%;
+    bottom: 18%;
+    right: 10%;
+  }
+  main #quit {
+    position: relative;
+    padding: 3%;
+    margin: 10% 0 0 50%;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  main #accessoire {
+    right: 22vw;
+  }
+  main #accessoire div img {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  main .bulle {
     left: 45vw;
+  }
+  main #drop {
+    width: 20vw;
+    height: 55vh;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #f8e5e6;
+    border-radius: 15px;
+    position: relative;
+    top: 24vh;
+    left: 24.25vw;
+    gap: 10vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  main #drop .import {
+    padding: 4% 4% 4% 12%;
+  }
+  main #drop #lord {
+    height: 50%;
+    position: absolute;
+    left: 5%;
+    bottom: 25%;
+  }
+  main #drop img {
+    position: absolute;
+  }
+  main #drop button {
+    font-family: "Titres";
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 1.3rem;
+    padding: 4% 4% 4% 12%;
+    margin-bottom: 5vh;
+    border: none;
+    border-radius: 6px;
+    background-color: #e82b2f;
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    cursor: var(--cursorPointer);
+    transition: transform 0.2s ease;
+  }
+  main #drop button:hover {
+    transform: scale(1.1);
+  }
+  main #accessoire {
+    right: 22vw;
+  }
+  main #accessoire div img {
+    width: 50%;
   }
 }/*# sourceMappingURL=main-photo.css.map */

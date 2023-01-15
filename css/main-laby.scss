@@ -37,11 +37,22 @@ html{
             justify-content: center;
             align-items: center;
 
-            h1{
-                @include Police();
-                font-size: 3rem;
-                margin-top: 0;
-                color: rgb(226, 242, 247);
+            figure{
+                z-index: 10;
+                width: 100%;
+                top: 0;
+                position: absolute;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                animation: Enseignes 0.5s ease 0s 1 normal none;
+                img{
+                    padding: 0px;
+                    margin-top: -10vh;
+                    width: 30vw;
+                }
             }
 
             .bulle{
@@ -62,16 +73,22 @@ html{
             }
 
             #victoire{
+                width: 100vw;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.6);
                 position: absolute;
+                z-index: 11;
                 display: flex;
                 flex-flow: wrap column;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
                 transition: all 0.2s ease;
+                padding-top: 10vh;
                 top: 0;
 
                 img{
-                    width: 50%;
+                    margin-top: 0vh;
+                    max-height: 60vh;
                     pointer-events: none;
                 }
 
@@ -83,10 +100,8 @@ html{
                     border-radius: 50%;
                     cursor: var(--cursorPointer);
                     transition: transform 0.2s ease;
-                    margin-top: -15%;
                     height: 10vw;
                     width: 10vw;
-                    z-index: 20;
                 }
 
                 button:hover{
@@ -105,6 +120,8 @@ html{
                 background-color: #fff;
                 border-radius: 15px;
                 border-bottom: 10px solid #58b3f4;
+                position: absolute;
+                margin-top: 10%;
             }
 
             #controls{
@@ -209,9 +226,30 @@ html{
                     rotate: (180deg);
                 }
 
-                #victoire #btn{
-                    height: 5vw;
-                    width: 5vw;
+                #victoire{
+                    width: 100vw;
+                    height: 100vh;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    position: absolute;
+                    z-index: 11;
+                    display: flex;
+                    flex-flow: wrap column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    transition: all 0.2s ease;
+                    padding-top: 10vh;
+                    top: 0;
+    
+                    img{
+                        margin-top: 0vh;
+                        max-height: 60vh;
+                        pointer-events: none;
+                    }
+
+                    #btn{
+                        width: 5vw;
+                        height: 5vw;
+                    }
                 }
     
                 #romain{
@@ -229,28 +267,6 @@ html{
 
                 #controls{
                     display: none;
-                }
-            }
-        }
-    }
-}
-
-@media only screen and (min-width: 1600px) {
-
-    html{
-        body{
-            #laby{
-                h1{
-                    font-size: 4rem;
-                }
-            
-                #victoire{
-                    img{
-                        width: 77%;
-                    }
-                    #btn{
-                        margin-top: -20%;
-                    }
                 }
             }
         }
