@@ -1,4 +1,5 @@
 @import url(./import.css);
+@import url(./fonts.css);
 
 @mixin Mid {
     justify-content: center;
@@ -26,10 +27,12 @@
 }
 
 body{
+    font-family: "Textes";
     background-image: url(./../images/jpg/2-jeu-7-difference-gauche.jpg);   
     h1{
         text-align: center;
-        color: white
+        color: white;
+        font-family: "Titres"
     }
     #bulle5{
     @include Mid();

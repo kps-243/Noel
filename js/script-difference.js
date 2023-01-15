@@ -7,10 +7,13 @@ let cercle6 = document.querySelector(".cercle6");
 let cercle7 = document.querySelector(".cercle7");
 
 function circleAppear(cercle) {
-  console.log("coucou");
   const newcercles = document.querySelectorAll(cercle);
   newcercles.forEach((newcercle) => {
     newcercle.style.opacity = "1";
-    console.log(newcercle.style.opacity);
   });
+  // let victoire = 0;
+  // if ((newcercle.style.opacity = "1")) {
+  //   victoire++;
+  //   console.log(victoire);
+  // }
 }
