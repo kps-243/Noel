@@ -26,13 +26,23 @@ html body #laby {
   justify-content: center;
   align-items: center;
 }
-html body #laby h1 {
-  font-family: "Titres";
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 3rem;
-  margin-top: 0;
-  color: rgb(226, 242, 247);
+html body #laby figure {
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: Enseignes 0.5s ease 0s 1 normal none;
+          animation: Enseignes 0.5s ease 0s 1 normal none;
+}
+html body #laby figure img {
+  padding: 0px;
+  margin-top: -10vh;
+  width: 30vw;
 }
 html body #laby .bulle {
   width: -webkit-fit-content;
@@ -50,16 +60,22 @@ html body #laby .bulle #suivant {
   color: #90aedc;
 }
 html body #laby #victoire {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
+  z-index: 11;
   display: flex;
   flex-flow: wrap column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   transition: all 0.2s ease;
+  padding-top: 10vh;
   top: 0;
 }
 html body #laby #victoire img {
-  width: 50%;
+  margin-top: 0vh;
+  max-height: 60vh;
   pointer-events: none;
 }
 html body #laby #victoire #btn {
@@ -70,10 +86,8 @@ html body #laby #victoire #btn {
   border-radius: 50%;
   cursor: var(--cursorPointer);
   transition: transform 0.2s ease;
-  margin-top: -15%;
   height: 10vw;
   width: 10vw;
-  z-index: 20;
 }
 html body #laby #victoire button:hover {
   transform: scale(1.05);
@@ -89,6 +103,8 @@ html body #laby canvas {
   background-color: #fff;
   border-radius: 15px;
   border-bottom: 10px solid #58b3f4;
+  position: absolute;
+  margin-top: 10%;
 }
 html body #laby #controls {
   z-index: 5;
@@ -201,16 +217,5 @@ html body #laby #controls #bas {
   }
   html body #laby #controls {
     display: none;
-  }
-}
-@media only screen and (min-width: 1600px) {
-  html body #laby h1 {
-    font-size: 4rem;
-  }
-  html body #laby #victoire img {
-    width: 77%;
-  }
-  html body #laby #victoire #btn {
-    margin-top: -20%;
   }
 }/*# sourceMappingURL=main-laby.css.map */

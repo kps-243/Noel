@@ -34,13 +34,27 @@ html, body{
 
 main{
 
-    h1{
-        @include Police();
-        color: rgb(255, 230, 230);
-        font-size:  2rem;
-        padding-top: 50px;
+    figure{
+        z-index: 10;
+        width: 100%;
+        top: 0;
+        position: absolute;
+        padding: 0;
         margin: 0;
-        pointer-events: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: Enseignes 0.5s ease 0s 1 normal none;
+        transition: top 1s ease;
+        img{
+            padding: 0px;
+            margin-top: -15vh;
+            width: 40vw;
+        }
+    }
+
+    .sortie{
+        top: -500px;
     }
 
     .bulle{
@@ -63,12 +77,12 @@ main{
         }
     }
 
-    #bulle4{
+    #bulle4,#bulle6, #mobile{
         display: block;
     }
 
     #drop{
-        width: 20vw;
+        width: 23vw;
         height: 55vh;
         display: flex;
         flex-flow: wrap column;
@@ -78,23 +92,20 @@ main{
         border-radius: 15px;
         position: relative;
         top: 24vh;
-        left: 24.25vw;
+        left: 20vw;
         gap: 10vh;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
 
         #lord{
-            height: 50%;
-            position: absolute;
-            left: 5%;
-            bottom: 25%;
+            display: none;
         }
 
         button{
             @include Police();
             position: relative;
-            font-size: 1.3rem;
-            padding: 4% 4% 4% 12%;
+            font-size: 0.8rem;
+            padding: 4%;
             margin-bottom: 5vh;
             border: none;
             border-radius: 6px;
@@ -121,38 +132,87 @@ main{
         z-index: 1;
     }
 
+    #ready, #download, #quit{
+        text-decoration: none;
+        position: absolute;
+        @include Police();
+        font-size: 1.3rem;
+        padding: 1%;
+        border: none;
+        right: 13%;
+        bottom: 13%;
+        border-radius: 6px;
+        background-color: #e82b2f;
+        color: white;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        cursor: var(--cursorPointer);
+        transition: transform 0.2s ease;
+    }
+
+    #download{
+        padding: 3%;
+        bottom: 18%;
+        right: 10%;
+    }
+    
+    #quit{
+        position: relative;
+        padding: 3%;
+        margin: 10% 0 0 40%;
+        user-select: none;
+    }
+    
+    #ready:hover, #download:hover, #quit:hover{
+        transform: scale(1.1);
+    }
+
     #accessoire{
         display: flex;
         flex-flow: wrap row;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         height: 50vh;
         width: 20vw;
         top: 9vh;
-        right: 24.5vw;
+        right: 20vw;
         position: absolute;
-        gap: 25%;
-    
+
+        div{
+            width: 100%;
+            height: 49%;
+            // background-color: red;
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            grid-template-rows: 1fr;
+            grid-column-gap: 0vw;
+            grid-row-gap: 0px;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                width: 50%;
+            }
+        }
+    }
+    #accessoire:active{
+        cursor: var(--cursor);
+        grid-area: auto;
     }
 
     #bonnet{
         @include Access();
-        margin: 17% 0 0 -5%;
     }
 
     #barbe{
         @include Access();
-        margin: 17% 0 0 -3%;
     }
 
     #sapin{
         @include Access();
-        margin: -10% 0 0 4%;
     }
 
     #lunettes{
         @include Access();
-        margin: -5% 0 0 2%;
         transform: scale(0.9);
     }
 
@@ -171,17 +231,144 @@ main{
         bottom: 0;
         right: 15%;
         pointer-events: none;
+        transition: bottom 1s ease;
     }
 }
 
 @media only screen and (min-width: 1200px) {
 
     main{
+        .bulle{
+            left: 35vw;
+        }
 
+        figure{
+            z-index: 10;
+            width: 100%;
+            top: 0;
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: Enseignes 0.5s ease 0s 1 normal none;
+            transition: top 1s ease;
+            img{
+                padding: 0px;
+                margin-top: -15vh;
+                width: 30vw;
+            }
+        }
+
+        #drop{
+            left:21.5vw;
+            background-size: cover;
+
+            #lord{
+                height: 50%;
+                position: absolute;
+                left: 2%;
+                bottom: 25%;
+            }
+        }
+
+        #ready, #download, #quit{
+            text-decoration: none;
+            position: absolute;
+            @include Police();
+            font-size: 1.3rem;
+            padding: 1%;
+            border: none;
+            right: 25%;
+            bottom: 13%;
+            border-radius: 6px;
+            background-color: #e82b2f;
+            color: white;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            cursor: var(--cursorPointer);
+            transition: transform 0.2s ease;
+        }
+    
+        #download{
+            padding: 3%;
+            bottom: 18%;
+            right: 10%;
+        }
+        
+        #quit{
+            position: relative;
+            padding: 3%;
+            margin: 10% 0 0 50%;
+            user-select: none;
+        }
+
+        #accessoire{
+            right: 20vw;
+        }
+        #accessoire div img{
+            width: 50%;
+        }
+
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+
+    main{
         .bulle{
             left: 45vw;
         }
 
-    }
+        #drop{
+            width: 20vw;
+            height: 55vh;
+            display: flex;
+            flex-flow: wrap column;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: #f8e5e6;
+            border-radius: 15px;
+            position: relative;
+            top: 24vh;
+            left: 24.25vw;
+            gap: 10vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+    
+            #lord{
+                height: 50%;
+                position: absolute;
+                left: 5%;
+                bottom: 25%;
+            }
+    
+            button{
+                @include Police();
+                position: relative;
+                font-size: 1.3rem;
+                padding: 4% 4% 4% 12%;
+                margin-bottom: 5vh;
+                border: none;
+                border-radius: 6px;
+                background-color: #e82b2f;
+                color: white;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                cursor: var(--cursorPointer);
+                transition: transform 0.2s ease;
+            }
+    
+            button:hover{
+                transform: scale(1.1);
+            }
+        }
 
+        #accessoire{
+            right: 22vw;
+        }
+        #accessoire div img{
+            width: 50%;
+        }
+
+    }
 }

@@ -31,13 +31,19 @@ html{
             min-width: 100vw;
             max-width: 100vw;
 
-            h1{
-                @include Police();
-                color: rgb(255, 230, 230);
-                font-size:  2rem;
-                padding-top: 50px;
+            figure{
+                z-index: 10;
+                padding: 0;
                 margin: 0;
-                pointer-events: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                animation: Enseignes 0.5s ease 0s 1 normal none;
+                img{
+                    padding: 0px;
+                    margin-top: -10vh;
+                    width: 30vw;
+                }
             }
 
             .bulle{
