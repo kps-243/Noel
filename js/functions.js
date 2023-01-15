@@ -36,10 +36,10 @@ function classe(el,classe) {
     document.getElementById(el).classList.add(classe);
 }
 
-function capture(el) {
+function capture(el, nom) {
     html2canvas(document.getElementById(el)).then(canvas => {
         let link = document.createElement('a');
-        link.download = "portraitNoël.png";
+        link.download = nom+'.png';
         link.href = canvas.toDataURL();
         link.click();
     });
