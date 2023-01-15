@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     var clef = 0;
-    var victoire = 1;
+    var victoire = 0;
     var media = '';
 
     let playerX = 1; // position initiale du joueur en x
