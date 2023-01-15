@@ -157,7 +157,7 @@ html body #jeusapin #victoire #rejouer {
   height: 10vw;
   width: 10vw;
 }
-html body #jeusapin #victoire button:hover {
+html body #jeusapin #victoire #rejouer:hover {
   transform: scale(1.05);
 }
 

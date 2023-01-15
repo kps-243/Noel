@@ -1,4 +1,5 @@
 @import url('./import.css');
+@import url('./fonts.css');
 
 html, body{
     margin: 0px;
@@ -13,9 +14,11 @@ html, body{
     overflow: hidden;
 
     cursor: var(--cursor); 
+    font-family: "Textes";
 }
 
 h1{
+    font-family: "Titres";
     text-align: center;
     color: white;
 }

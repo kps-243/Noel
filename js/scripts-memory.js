@@ -49,9 +49,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     duo.push(carte.id);;                  
                 }
                 // Si WIN :
-                if (retournees.length/2==pairesMax-1 && duo.length==2){                                    
-                    console.log("retournee : "+retournees);
-                    winScreen();
+                if (retournees.length/2==pairesMax-1 && duo.length==2){
+                    montrer('victoire');
                 }
             });
         });
@@ -93,11 +92,3 @@ function retourneCarte(liste){
     document.getElementById(liste[0]).classList.toggle('is-flipped');
     document.getElementById(liste[1]).classList.toggle('is-flipped');
 }
-
-function winScreen() {
-    let win = document.getElementById('win');
-    console.log(win);
-    win.style.display = "block";
-    
-}
-

@@ -48,7 +48,6 @@ function capture(el, nom) {
 
 function OpenHF(HF){
     if (HF == 'header'){
-        console.log("g")
         let header = document.getElementById("header");
         let flecheHeader = document.getElementById("fleche-header")
         if (header.style.top == "0px"){
@@ -60,7 +59,6 @@ function OpenHF(HF){
         }
     }
     else if (HF == 'footer'){
-        console.log("f")
         let footer = document.getElementById("footer");
         let flechefooter = document.getElementById("fleche-footer")
         if (footer.style.bottom == "0px"){
@@ -71,4 +69,8 @@ function OpenHF(HF){
             flechefooter.style.transform = "rotate(0deg)";
         }
     }
+}
+
+function reload(){
+    location.reload(true);
 }

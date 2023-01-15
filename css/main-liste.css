@@ -60,7 +60,7 @@ h2{
     color: var(--secondary);
 }
 
-#bulle8 > #preced, #bulle14 > #preced, #bulle16 > #preced{
+#bulle8 > #preced, #bulle14 > #preced, #bulle16 > #preced, #bulle17 > #preced{
     display: none;
   }
 

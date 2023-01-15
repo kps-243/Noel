@@ -1,10 +1,13 @@
 @import url(./import.css);
+@import url(./fonts.css);
 body {
+  font-family: "Textes";
   background-image: url(./../images/jpg/2-jeu-7-difference-gauche.jpg);
 }
 body h1 {
   text-align: center;
   color: white;
+  font-family: "Titres";
 }
 body #bulle5 {
   justify-content: center;
