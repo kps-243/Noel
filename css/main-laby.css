@@ -1,22 +1,11 @@
-@charset "UTF-8";
 @import url(./fonts.css);
 @import url("./import.css");
 @import url("https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css");
-.caché {
-  opacity: 0;
-}
-.caché #btn {
-  cursor: var(--cursor);
-}
-
 html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow: hidden !important;
   cursor: var(--cursor);
-}
-html * {
-  transition: opacity 0.3s ease;
 }
 html body {
   margin: 0 0 0 0;
@@ -37,61 +26,70 @@ html body #laby {
   justify-content: center;
   align-items: center;
 }
-html body #laby h1 {
-  font-family: "Titres";
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 3rem;
-  margin-top: 0;
-  color: rgb(226, 242, 247);
-}
-html body #laby article h3 {
-  color: #1a1e4a;
-}
-html body #laby article i {
-  color: #1a1e4a;
-}
-html body #laby article::before {
-  content: "";
+html body #laby figure {
+  z-index: 10;
+  width: 100%;
+  top: 0;
   position: absolute;
-  border-left: 20px solid rgb(255, 255, 255);
-  border-right: 20px solid transparent;
-  border-top: 20px solid rgb(255, 255, 255);
-  border-bottom: 20px solid transparent;
-  left: -20px;
-  bottom: 10px;
-  rotate: 180deg;
-}
-html body #laby div {
-  position: absolute;
+  padding: 0;
+  margin: 0;
   display: flex;
-  flex-flow: wrap column;
   justify-content: center;
   align-items: center;
+  -webkit-animation: Enseignes 0.5s ease 0s 1 normal none;
+          animation: Enseignes 0.5s ease 0s 1 normal none;
+}
+html body #laby figure img {
+  padding: 0px;
+  margin-top: -10vh;
+  width: 30vw;
+}
+html body #laby .bulle {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  right: 10%;
+}
+html body #laby .bulle h3 {
+  color: #1a1e4a;
+}
+html body #laby .bulle #preced {
+  color: #1a1e4a;
+}
+html body #laby .bulle #suivant {
+  color: #90aedc;
+}
+html body #laby #victoire {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  z-index: 11;
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: flex-start;
+  align-items: center;
   transition: all 0.2s ease;
+  padding-top: 10vh;
+  top: 0;
 }
-html body #laby div h2 {
-  font-family: "Titres";
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 5rem;
-  color: #0f4163;
+html body #laby #victoire img {
+  margin-top: 0vh;
+  max-height: 60vh;
+  pointer-events: none;
 }
-html body #laby div button {
-  font-family: "Titres";
-  text-align: center;
-  text-transform: uppercase;
+html body #laby #victoire #btn {
+  background-image: url("../images/png/restart.png");
+  background-repeat: no-repeat;
+  background-size: contain;
   border: none;
-  font-size: 2rem;
-  padding: 5%;
-  border-radius: 10px;
-  color: whitesmoke;
+  border-radius: 50%;
   cursor: var(--cursorPointer);
-  background-color: #0f4163;
   transition: transform 0.2s ease;
+  height: 10vw;
+  width: 10vw;
 }
-html body #laby div button:hover {
-  background-color: #0c344f;
+html body #laby #victoire button:hover {
   transform: scale(1.05);
 }
 html body #laby #romain {
@@ -105,6 +103,8 @@ html body #laby canvas {
   background-color: #fff;
   border-radius: 15px;
   border-bottom: 10px solid #58b3f4;
+  position: absolute;
+  margin-top: 10%;
 }
 html body #laby #controls {
   z-index: 5;
@@ -116,10 +116,15 @@ html body #laby #controls {
   height: 20vh;
   right: 10vw;
   position: absolute;
+  color: #90aedc;
 }
 html body #laby #controls #haut {
   grid-row: 1/3;
   grid-column: 2/3;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 html body #laby #controls #gauche {
   grid-row: 2/3;
@@ -171,12 +176,17 @@ html body #laby #controls #bas {
     margin-top: 0;
     color: rgb(226, 242, 247);
   }
-  html body #laby article h3 {
+  html body #laby .bulle h3 {
     color: #1a1e4a;
   }
-  html body #laby article i {
+  html body #laby .bulle #preced {
+    color: #90aedc;
+  }
+  html body #laby .bulle #suivant {
     color: #1a1e4a;
-    font-size: 2rem;
+  }
+  html body #laby #bulle2 p {
+    margin-bottom: 3.5vh;
   }
   html body #laby article::before {
     content: "";
@@ -189,37 +199,28 @@ html body #laby #controls #bas {
     bottom: 10px;
     rotate: 180deg;
   }
-  html body #laby div {
+  html body #laby #victoire {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
+    z-index: 11;
     display: flex;
     flex-flow: wrap column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     transition: all 0.2s ease;
+    padding-top: 10vh;
+    top: 0;
   }
-  html body #laby div h2 {
-    font-family: "Titres";
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 5rem;
-    color: #0f4163;
+  html body #laby #victoire img {
+    margin-top: 0vh;
+    max-height: 60vh;
+    pointer-events: none;
   }
-  html body #laby div button {
-    font-family: "Titres";
-    text-align: center;
-    text-transform: uppercase;
-    border: none;
-    font-size: 2rem;
-    padding: 5%;
-    border-radius: 10px;
-    color: whitesmoke;
-    cursor: var(--cursorPointer);
-    background-color: #0f4163;
-    transition: transform 0.2s ease;
-  }
-  html body #laby div button:hover {
-    background-color: #0c344f;
-    transform: scale(1.05);
+  html body #laby #victoire #btn {
+    width: 5vw;
+    height: 5vw;
   }
   html body #laby #romain {
     height: 50vh;
@@ -235,88 +236,5 @@ html body #laby #controls #bas {
   }
   html body #laby #controls {
     display: none;
-  }
-}
-@media only screen and (min-width: 1600px) {
-  html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-  html body {
-    margin: -21px 0 0 0;
-    padding: 0;
-  }
-  html body #laby h1 {
-    font-family: "Titres";
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 3rem;
-    padding-top: 70px;
-    color: rgb(226, 242, 247);
-  }
-  html body #laby #retour {
-    font-family: "Titres";
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 2rem;
-    padding: 1%;
-    border-radius: 10px;
-    cursor: var(--cursorPointer);
-    color: whitesmoke;
-    border: none;
-    background-color: #918e8e;
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    transition: transform 0.2s ease;
-  }
-  html body #laby #retour:hover {
-    background-color: #7c7979;
-    transform: scale(1.05);
-  }
-  html body #laby div {
-    position: absolute;
-    display: flex;
-    flex-flow: wrap column;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s ease;
-  }
-  html body #laby div h2 {
-    font-family: "Titres";
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 5rem;
-    color: #0f4163;
-  }
-  html body #laby div button {
-    font-family: "Titres";
-    text-align: center;
-    text-transform: uppercase;
-    border: none;
-    font-size: 2rem;
-    padding: 5%;
-    border-radius: 10px;
-    color: whitesmoke;
-    cursor: var(--cursorPointer);
-    background-color: #0f4163;
-    transition: transform 0.2s ease;
-  }
-  html body #laby div button:hover {
-    background-color: #0c344f;
-    transform: scale(1.05);
-  }
-  html body #laby #romain {
-    height: 400px;
-    margin: -25vh 0 0 -60vw;
-  }
-  html body #laby canvas {
-    width: 500px;
-    height: 500px;
-    background-color: #fff;
-    border-radius: 15px;
-    border-bottom: 10px solid #58b3f4;
   }
 }/*# sourceMappingURL=main-laby.css.map */

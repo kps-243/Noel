@@ -1,12 +1,13 @@
 <!doctype html>
 
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>La BD recette</title>
+  <title>Palais de la gourmandise</title>
 
   <link rel="icon" type="image/png" href="./../images/png/favicons/ours-tete.png">
   <link rel="stylesheet" href="./../css/main-bd.css"> <!-- css A remplir -->
@@ -14,8 +15,72 @@
 </head>
 
 <body>
-  <a href="../index.html" class="Retour">Retour</a>
+  <main>
+
+    <figure>
+      <img src="../images/png/1-palais-enseigne.png" alt="Enseigne Palais de la Gourmandise">
+    </figure>
     
-  <script src=""></script> <!-- js A remplir -->
+    <a href="../index.html" class="Retour"><img src="./../images/png/fleche.png"><p>Retour à la carte</p></a> 
+
+    <article class="bulle" id="bulle1">
+      <h3>Mam'ourse</h3>
+      <p>Bonjour, je suis <strong>Mam’ourse</strong>, et tu viens d’entrer<br>dans le Palais de la gourmandise.</p>
+
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle1')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle1','bulle2')"></i>
+    </article>
+
+    <article class="bulle" id="bulle2">
+      <h3>Simon l'ourson</h3>
+      <p>Salut, moi je m'appelle <strong>Simon l'ourson</strong>, ravi de<br>faire ta connaissance !</p>
+
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle2','bulle1')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle2','bulle3')"></i>
+    </article>
+
+    <article class="bulle" id="bulle3">
+      <h3>Mam'ourse</h3>
+      <p>Ici, tu peux apprendre à cuisiner des petites<br>gourmandises <strong>pas piquéesdes hannetons !!</strong></p>
+
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle3','bulle2')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle3','bulle4')"></i>
+    </article>
+
+    <article class="bulle" id="bulle4">
+      <h3>Mam'ourse</h3>
+      <p>Choisis parmi les trois recettes en dessous pour<br> les apprendre ! Tu pourra tourner ton téléphone<br>pour mieux lire.</p>
+
+      <div>
+        <button onclick="textToNext('bulle4','sablés');flex('sablés')">Sablés de Noël</button>
+        <button id="r2" onclick="textToNext('bulle4','tartines');flex('tartines')">Tartines de Noël</button>
+        <button id="r3" onclick="textToNext('bulle4','tiramisu');flex('tiramisu')">Tiramisu</button>
+      </div>
+
+    </article>
+
+    <section id="sablés">
+      <img src="../images/png/BD1-mobile.png" alt="Recette des sablés de Noël">
+      <button id="rchoix" onclick="textToNext('sablés','bulle4')">Retour au choix des recettes</button>
+    </section>
+
+    <section id="tartines">
+      <img src="../images/png/BD2-mobile.png" alt="Recette des tartines de Noël">
+      <button id="rchoix2" onclick="textToNext('tartines','bulle4')">Retour au choix des recettes</button>
+    </section>
+
+    <section id="tiramisu">
+      <img src="../images/png/BD3-mobile.png" alt="Recette du tiramisu">
+      <button onclick="textToNext('tiramisu','bulle4')">Retour au choix des recettes</button>
+    </section>
+
+    <img id="mamourse" src="../images/svg/1-Mamourse.svg" alt="Mamourse">
+    <img id="ourson" src="../images/svg/1-Ourson.svg" alt="Ourson">
+  </main>
+
+  <div id="tourne">Tourne ton téléphone !</div> 
+  <script src="../js/functions.js"></script>
+  <!-- <script src="../js/script-bd.js"></script> -->
 </body>
+
 </html>

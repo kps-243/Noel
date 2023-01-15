@@ -1,20 +1,116 @@
 <!doctype html>
 
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>L'Atelier Photo</title>
+  <title>L'igloo de la photo</title>
 
   <link rel="stylesheet" href="./../css/main-photo.css"> <!-- css A remplir -->
 
 </head>
 
 <body>
-  <a href="../index.html" class="Retour">Retour</a>
-    
-  <script src=""></script> <!-- js A remplir -->
+  <a href="../index.html" class="Retour"><img src="./../images/png/fleche.png"><p>Retour à la carte</p></a> 
+
+  <main>
+
+    <figure id="pancarte">
+      <img src="../images/png/8-igloo-enseigne.png" alt="Enseigne Grotte de Glace">
+    </figure>
+
+    <article class="bulle" id="bulle1">
+      <h3>Nico le Manchot</h3>
+      <p>Yo, yo, yo ! Je m'appelle <strong>Nico le Manchot</strong>.</p>
+
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle1')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle1','bulle2')"></i>
+    </article>
+
+    <article class="bulle" id="bulle2">
+      <h3>Nico le Manchot</h3>
+      <p>Bienvenue dans mon igloo !<br>Aujourd'hui, on va s'amuser avec des <strong>photos...</strong></p>
+
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle2','bulle1')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle2','bulle3')"></i>
+    </article>
+
+    <article class="bulle" id="bulle3">
+      <h3>Nico le Manchot</h3>
+      <p>Pour commencer, donnes-moi une <strong>photo de toi,</strong><br>De préférence une photo de face.</p>
+
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle3','bulle2')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle3','');montrer('drop')"></i>
+    </article>
+
+    <button class="caché" id="ready" onclick="montrer('bulle4');montrer('nico');cacher('ready')">Ma photo est prête !</button>
+
+    <article class="bulle caché" id="bulle4">
+      <h3>Nico le Manchot</h3>
+      <p>Regardes le résultat : es-tu satisfait ?</p>
+
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="cacher('bulle4')"></i>
+      <button id="download" onclick="textToNext('bulle4','bulle5');capture('drop')">Prendre la photo</button>
+    </article>
+
+    <article class="bulle" id="bulle5">
+      <h3>Nico le Manchot</h3>
+      <p>Tu peux maintenant envoyer ta photo à tous <br> tes amis ! Tu es toujours le bienvenue <br> si tu veux prendre d'autres clichés !</p>
+
+      <a id="quit" href="../index.html">Quitter l'igloo</a>
+    </article>
+
+    <article class="bulle caché" id="bulle6">
+      <h3>Nico le Manchot</h3>
+      <p>Tu peux maintenant <strong>glisser et déposer des accessoires</strong><br>sur ta photo ! Apelles-moi quand tu auras terminé.</p>
+
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="cacher('bulle6')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="cacher('bulle6');montrer('accessoire');cacher('nico');classe('pancarte','sortie');montrer('ready')"></i>
+    </article>
+
+    <article class="bulle caché" id="mobile">
+      <h3>Nico le Manchot</h3>
+      <p>Désolé, mais je n'accepte pas ceux <br> qui utilisent leur téléphone. Reviens <br> me voir quand tu seras sur un ordinateur !</p>
+
+      <a id="quit" href="../index.html">Quitter l'igloo</a>
+    </article>
+
+    <section id="drop" class="zone caché">
+      <input type="file" accept=".png, .jpg, jpeg" id="fileInput" style="display:none"/>
+      <button class="import" onclick="document.getElementById('fileInput').click()"> 
+        <lord-icon
+          id="lord"
+          src="https://cdn.lordicon.com/yzqrwwtj.json"
+          trigger="loop-on-hover"
+          target=".import"
+          colors="primary:#ffffff"
+          state="hover-2">
+      </lord-icon>
+        Importer ma photo</button>
+    </section>
+
+    <section id="accessoire" class="caché">
+      <div>
+        <img id="bonnet" src="../images/png/accessbonnet.png" alt="Bonnet de Noël" draggable="true">
+        <img id="barbe" src="../images/png/accessbarbe.png" alt="Barbe du Père Noël" draggable="true">
+      </div>
+      <div id="feur">
+        <img id="sapin" src="../images/png/accesssapin.png" alt="Sapin" draggable="true">
+        <img id="lunettes" src="../images/png/accesslunettes.png" alt="Lunettes" draggable="true">
+      </div>
+    </section>
+
+    <img id="nico" src="../images/png/personnages/8-Manchot.png" alt="Nico le Manchot">
+  </main>
+
+  <div id="tourne">Tourne ton téléphone !</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../js/functions.js"></script>
+  <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
+  <script src="../js/script-photo.js"></script>
 </body>
+
 </html>

@@ -12,20 +12,39 @@
 </head>
 <body>
     <main id="laby">
-        <h1>La grotte gelée</h1>
-        <a href="../index.html" class="Retour">Retour</a>
+        
+        <figure>
+            <img src="../images/png/5-grotte-enseigne.png" alt="Enseigne Grotte de Glace">
+        </figure>
+        <a href="../index.html" class="Retour"><img src="./../images/png/fleche.png"><p>Retour à la carte</p></a> 
 
-        <article class="bulle" id="bulle">
-            <h3>Orgueil l'Écureuil</h3>
-            <p>Coucou, Bienvenue dans mon sapin.<br>Je suis <strong>Orgueil L’Écureuil.</strong></p>
+        <article class="bulle" id="bulle1">
+            <h3>Romain le lapin</h3>
+            <p>Salut ! Et bienvenue dans ma petite grotte gelée !<br>Je suis <strong>Romain le lapin !</strong></p>
             
-            <i id="preced" class="fi fi-sr-arrow-circle-left"></i>
-            <i id="suivant" class="fi fi-sr-arrow-circle-right"></i>
+            <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle1')"></i>
+            <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle1','bulle2')"></i>
+        </article>
+
+        <article class="bulle" id="bulle2">
+            <h3>Romain le lapin</h3>
+            <p>Mon ami est coincé dans un labyrinthe !<br> </p>
+            
+            <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle2','bulle1')"></i>
+            <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle2','bulle3')"></i>
+        </article>
+
+        <article class="bulle" id="bulle3">
+            <h3>Romain le lapin</h3>
+            <p id="txtcontrols">Aide-le à retrouver son chemin ! <strong>Utilises les flèches</strong><br>de ton clavier pour le contrôler !</p>
+            
+            <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle3','bulle2')"></i>
+            <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle3');montrer('jeu');montrer('controls')"></i>
         </article>
 
         <div id="victoire" class="caché">
-            <h2>Victoire !</h2>
-            <button id="btn">Recommencer</button>
+            <img src="../images/png/win-screen-2.png" alt="Victoire !">
+            <button id="btn"></button>
         </div>
 
         <canvas id="jeu" class="caché"></canvas>
@@ -36,10 +55,20 @@
             <i id="bas" class="fi fi-sr-arrow-alt-square-down"></i>
             <i id="droite" class="fi fi-sr-arrow-alt-square-right"></i>
         </div>
+        <canvas id="jeu" class="caché"></canvas>
 
-        <img id="romain" src="../images/svg/5-Lapin.svg" alt="Romain le lapin">
+        <div id="controls" class="caché">
+            <i id="haut" class="fi fi-sr-arrow-alt-square-up"></i>
+            <i id="gauche" class="fi fi-sr-arrow-alt-square-left"></i>
+            <i id="bas" class="fi fi-sr-arrow-alt-square-down"></i>
+            <i id="droite" class="fi fi-sr-arrow-alt-square-right"></i>
+        </div>
+
+        <img id="romain" src="../images/png/personnages/5-Lapin.png" alt="Romain le lapin">
     </main>
 
+    <div id="tourne">Tourne ton téléphone !</div> 
+    <script src="../js/functions.js"></script>
     <script src="../js/script-laby.js"></script>
 </body>
 </html>
