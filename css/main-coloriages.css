@@ -14,3 +14,29 @@ html, body{
 
     cursor: var(--cursor); 
 }
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+#bulle4 {
+    height: 200px;
+    justify-content: space-between;
+    background-color: transparent;
+    border: none;
+}
+.act-coloriages, .act-creation{
+    width: 150px;
+    background-color: #1e361c;
+    border-radius: 12px;
+}
+.img{
+    width: 150px;
+    height: 200px;
+}
+h4{
+    text-align: center;
+    bottom: 0;
+    color: white;
+}

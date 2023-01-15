@@ -1,6 +1,7 @@
 <!doctype html>
 
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,8 +16,51 @@
 
 <body>
   <a href="../index.html" class="Retour">Retour</a>
-  
-    
-  <script src=""></script> <!-- js A remplir -->
+  <h1>Maison de la Création</h1>
+
+  <article class="bulle" id="bulle1">
+    <h3>Edouard le Renard</h3>
+    <p>Bienvenue à <strong>la maison de la Création !</strong></p>
+
+    <p>Je suis <strong>Edouard le Renard</strong></p>
+
+    <i id="preced" class="fi fi-sr-arrow-circle-left"></i>
+    <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle1','bulle2')"></i>
+  </article>
+
+  <article class="bulle" id="bulle2">
+    <h3>Edouard le Renard</h3>
+    <p>Dans ma maison, tu auras la possibilité d'exprimer tes talents artistiques</p>
+
+    <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle2','bulle1')"></i>
+    <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle2','bulle3')"></i>
+  </article>
+
+  <article class="bulle" id="bulle3">
+    <h3>Edouard le Renard</h3>
+    <p>Choisis parmis les 2 catégories suivantes et amuse toi bien !</p>
+
+    <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle3','bulle2')"></i>
+    <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle3',flex('bulle4'))"></i>
+  </article>
+
+  <div class="bulle" id="bulle4">
+    <div class="act-coloriages">
+      <div class="img"><a href="./../pdf/SAE301_coloriage.pdf">
+          <h4>Coloriages</h4>
+        </a></div>
+
+    </div>
+    <div class="act-creation">
+      <div class="img"><img src="" alt="">
+        <h4>Ateliers de Création</h4>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="./../js/functions.js"></script>
+  <script src="./../js/script-coloriages.js"></script> <!-- js A remplir -->
 </body>
+
 </html>
