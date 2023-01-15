@@ -43,7 +43,7 @@
       <p>Pour commencer, donnes-moi une <strong>photo de toi,</strong><br>De préférence une photo de face.</p>
 
       <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle3','bulle2')"></i>
-      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle3','');montrer('drop')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle3','');montrer('drop','portraitNoël')"></i>
     </article>
 
     <button class="caché" id="ready" onclick="montrer('bulle4');montrer('nico');cacher('ready')">Ma photo est prête !</button>
@@ -53,7 +53,7 @@
       <p>Regardes le résultat : es-tu satisfait ?</p>
 
       <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="cacher('bulle4')"></i>
-      <button id="download" onclick="textToNext('bulle4','bulle5');capture('drop')">Prendre la photo</button>
+      <button id="download" onclick="textToNext('bulle4','bulle5');capture('drop','')">Prendre la photo</button>
     </article>
 
     <article class="bulle" id="bulle5">
