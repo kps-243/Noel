@@ -5,23 +5,23 @@
 @import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
 @import url(./animation.css);
 
-:root{
-    --cursor: url(./../images/png/cursor.png) 2 2, default;
-    --cursorPointer: url(./../images/png/cursor-pointer.png) 2 2, pointer;
+:root {
+  --cursor: url(./../images/png/cursor.png) 2 2, default;
+  --cursorPointer: url(./../images/png/cursor-pointer.png) 2 2, pointer;
 
-    --ombre: #888888; 
+  --ombre: #888888;
 }
 
-html *{
+html * {
   transition: opacity 0.3s ease;
 }
 
-.caché{
+.caché {
   opacity: 0;
   z-index: 0 !important;
 }
 
-.caché *{
+.caché * {
   display: none;
 }
 
@@ -30,119 +30,167 @@ html *{
 }
 
 .Retour {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 
-    text-decoration: none;
+  text-decoration: none;
 
-    background-color: cadetblue;
-    border-radius: 50px;
-    padding: 20px;
-    color:white;
+  background-color: cadetblue;
+  border-radius: 50px;
+  padding: 20px;
+  color: white;
 
-    cursor: var(--cursorPointer);
-    z-index: 100;
+  cursor: var(--cursorPointer);
+  z-index: 100;
 }
-.Retour:focus, .Retour:hover{
-    color: white;
-    text-decoration: none;
+
+.Retour:focus,
+.Retour:hover {
+  color: white;
+  text-decoration: none;
 }
+
 .Titre {
-    font-family: 'Titres';
-    font-size: 8vh;
-    position: absolute;
-    white-space: nowrap;
-    
-    top: 50px;
-    left: 50%;
-    transform: translate(-50%,-50%);
+  font-family: 'Titres';
+  font-size: 8vh;
+  position: absolute;
+  white-space: nowrap;
+
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-i{
-    display: inline-block;
-    cursor: var(--cursorPointer);
+i {
+  display: inline-block;
+  cursor: var(--cursorPointer);
 }
 
-.bulle{
-    position: absolute;
-    left: 40vw;
-    bottom:16vh;
+.bulle {
+  position: absolute;
+  left: 40vw;
+  bottom: 16vh;
 
-    z-index: 3;
-    background-color: #fff;
-    border-radius: 25px;
-    padding: 25px 25px;
+  z-index: 3;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 25px 25px;
 
-    border: 1px solid black;
-    width: 450px;
+  border: 1px solid black;
+  width: 450px;
 
-    display: none;
-}
-
-
-.bulle > h3{
-    font-family : 'Textes';
-    margin: 0;
-    font-size: 1em;
-    font-weight: 600 ;
-}
-
-.bulle > p{
-    font-family: 'Textes';
-    margin-top: 5px;
-}
-
-.bulle > i{
-    margin-top: 0;
-    display: inline-block;
-    cursor: var(--cursorPointer);
-}
-
-.bulle > #preced{
-  float: left;
-}
-
-.bulle > #suivant {
-    /* margin-left: 85%; */
-    float: right;
-}
-.bulle > #suivant::before, .bulle > #preced::before  {
-  font-size: 40px;
-}
-.bulle > #suivant, .bulle > #preced {
-  text-shadow: 0px 2px 2px var(--ombre)
-}
-.bulle > #suivant:hover, .bulle > #preced:hover{
-  text-shadow: none;
-}
-.bulle > #suivant::after{
-    content: "Suivant";
-
-    font-family: 'Titres';
-    font-style: normal;
-    font-size: 1.5em;
-    font-weight: 100;
-
-    margin-right: 5px;
-
-    float: left;
-    line-height: 40px;
-
-}
-
-#bulle1{
-  display: block;
-}
-#bulle1 > #preced{
   display: none;
 }
 
-#tourne{
-  display:none;
+
+.bulle>h3 {
+  font-family: 'Textes';
+  margin: 0;
+  font-size: 1em;
+  font-weight: 600;
 }
 
-  /* 
+.bulle>p {
+  font-family: 'Textes';
+  margin-top: 5px;
+}
+
+.bulle>i {
+  margin-top: 0;
+  display: inline-block;
+  cursor: var(--cursorPointer);
+}
+
+.bulle>#preced {
+  float: left;
+}
+
+.bulle>#suivant {
+  /* margin-left: 85%; */
+  float: right;
+}
+
+.bulle>#suivant::before,
+.bulle>#preced::before {
+  font-size: 40px;
+}
+
+.bulle>#suivant,
+.bulle>#preced {
+  text-shadow: 0px 2px 2px var(--ombre)
+}
+
+.bulle>#suivant:hover,
+.bulle>#preced:hover {
+  text-shadow: none;
+}
+
+.bulle>#suivant::after {
+  content: "Suivant";
+
+  font-family: 'Titres';
+  font-style: normal;
+  font-size: 1.5em;
+  font-weight: 100;
+
+  margin-right: 5px;
+
+  float: left;
+  line-height: 40px;
+
+}
+
+#bulle1 {
+  display: block;
+}
+
+#bulle1>#preced {
+  display: none;
+}
+
+#victoire {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  z-index: 11;
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.2s ease;
+  padding-top: 10vh;
+  top: 0;
+}
+
+#victoire img {
+  margin-top: 0vh;
+  max-height: 60vh;
+  pointer-events: none;
+}
+
+#victoire #rejouer {
+  background-image: url('../images/png/restart.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  border-radius: 50%;
+  cursor: var(--cursorPointer);
+  transition: transform 0.2s ease;
+  height: 10vw;
+  width: 10vw;
+}
+
+#victoire #rejouer:hover {
+  transform: scale(1.05);
+}
+
+#tourne {
+  display: none;
+}
+
+/* 
   EXEMPLE DE CHANGEMENTS :
 
   .bulle > h3, .bulle > #suivant{
@@ -162,64 +210,64 @@ i{
 
 @media (orientation: portrait) and (max-width: 920px) {
 
-    html {
-      margin: 0;
-      height: 100vh; 
-      width: 100vw;
-  
-      overflow: hidden;
-    }
-  
-    html body{
-      margin: 0;
-      height: 100vh; 
-      width: 100vw;
-      overflow: hidden;
-    }
-  
-    html body::after{
-      display: none;
-    }
-  
-    html body main{
-      display: none;
-    }
-  
-    #allTheMap {
-      width: 100vw;
-      height: 100vh;
-  
-      overflow: hidden;
-    }
-  
-    #tourne {
-      display: block;
-  
-      position:fixed;
-      top: 0;
-      left: 0;
-    
-      width: 100vw;
-      height: 100vh;
-    
-      background-color: #222;
-      color: antiquewhite;
-      box-shadow: 10px 10px 50px black inset;
-  
-      text-align: center;
-      line-height: 100vh;
-      word-wrap: break-word;
-  
-      animation-name: texteAnim;
-      animation-duration: 1.5s;
-      animation-iteration-count: infinite; 
-    
-      z-index: 100;
-    }
-  
-  
-    /* A METTRE JUSTE AVANT LE JS :
+  html {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+
+    overflow: hidden;
+  }
+
+  html body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  html body::after {
+    display: none;
+  }
+
+  html body main {
+    display: none;
+  }
+
+  #allTheMap {
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+  }
+
+  #tourne {
+    display: block;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #222;
+    color: antiquewhite;
+    box-shadow: 10px 10px 50px black inset;
+
+    text-align: center;
+    line-height: 100vh;
+    word-wrap: break-word;
+
+    animation-name: texteAnim;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+
+    z-index: 100;
+  }
+
+
+  /* A METTRE JUSTE AVANT LE JS :
     <div id="tourne">Tourne ton téléphone !</div> 
     */
-  
-  }
+
+}
