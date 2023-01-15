@@ -188,17 +188,6 @@ html body #laby #controls #bas {
   html body #laby #bulle2 p {
     margin-bottom: 3.5vh;
   }
-  html body #laby article::before {
-    content: "";
-    position: absolute;
-    border-left: 20px solid rgb(255, 255, 255);
-    border-right: 20px solid transparent;
-    border-top: 20px solid rgb(255, 255, 255);
-    border-bottom: 20px solid transparent;
-    left: -20px;
-    bottom: 10px;
-    rotate: 180deg;
-  }
   html body #laby #victoire {
     width: 100vw;
     height: 100vh;
