@@ -1,4 +1,5 @@
 @import url('./import.css');
+@import url('./animation.css');
 
 :root{
   --primary:  #FCC75D;

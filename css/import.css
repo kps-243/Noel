@@ -366,6 +366,9 @@ figure {
   align-items: center;
   animation: Enseignes 0.5s ease 0s 1 normal none;
   transition: top 1s ease;
+
+  animation-name: Sortie;
+  animation-delay: 2s;
 }
 
 figure img {
