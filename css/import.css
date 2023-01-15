@@ -1,14 +1,32 @@
 @import url(./fonts.css);
 @import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
 @import url(./animation.css);
+@import url(./fonts.css);
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
+@import url(./animation.css);
 
 :root{
     --cursor: url(./../images/png/cursor.png) 2 2, default;
     --cursorPointer: url(./../images/png/cursor-pointer.png) 2 2, pointer;
+
+    --ombre: #888888; 
+}
+
+html *{
+  transition: opacity 0.3s ease;
+}
+
+.caché{
+  opacity: 0;
+  z-index: 0 !important;
+}
+
+.caché *{
+  display: none;
 }
 
 .Victoire {
-
+  display: none;
 }
 
 .Retour {
@@ -16,12 +34,15 @@
     top: 10px;
     left: 10px;
 
+    text-decoration: none;
+
     background-color: cadetblue;
     border-radius: 50px;
     padding: 20px;
     color:white;
 
     cursor: var(--cursorPointer);
+    z-index: 100;
 }
 .Retour:focus, .Retour:hover{
     color: white;
@@ -45,21 +66,31 @@ i{
 
 .bulle{
     position: absolute;
+    left: 40vw;
+    bottom:16vh;
+
     z-index: 3;
     background-color: #fff;
     border-radius: 25px;
-    padding: 1% 1.4%;
+    padding: 25px 25px;
+
+    border: 1px solid black;
+    width: 450px;
+
+    display: none;
 }
 
+
 .bulle > h3{
-    font-family : 'Titres';
-    text-transform: uppercase;
+    font-family : 'Textes';
     margin: 0;
-    font-size: 0.95em;
+    font-size: 1em;
+    font-weight: 600 ;
 }
 
 .bulle > p{
     font-family: 'Textes';
+    margin-top: 5px;
 }
 
 .bulle > i{
@@ -69,21 +100,65 @@ i{
 }
 
 .bulle > #preced{
-    display: none;
+  float: left;
 }
 
-.bulle > #suivant{
-    margin-left: 85%;
+.bulle > #suivant {
+    /* margin-left: 85%; */
+    float: right;
 }
-
+.bulle > #suivant::before, .bulle > #preced::before  {
+  font-size: 40px;
+}
+.bulle > #suivant, .bulle > #preced {
+  text-shadow: 0px 2px 2px var(--ombre)
+}
+.bulle > #suivant:hover, .bulle > #preced:hover{
+  text-shadow: none;
+}
 .bulle > #suivant::after{
     content: "Suivant";
+
     font-family: 'Titres';
-    font-size: 0.6em;
-    margin: 3px 0 0 -95px;
-    position: absolute;
+    font-style: normal;
+    font-size: 1.5em;
+    font-weight: 100;
+
+    margin-right: 5px;
+
+    float: left;
+    line-height: 40px;
+
 }
 
+#bulle1{
+  display: block;
+}
+#bulle1 > #preced{
+  display: none;
+}
+
+#tourne{
+  display:none;
+}
+
+  /* 
+  EXEMPLE DE CHANGEMENTS :
+
+  .bulle > h3, .bulle > #suivant{
+    color: var(--primary);
+  }
+
+  .bulle > #preced{
+    display: none;
+  }
+
+  .bulle > #suivant::after{
+  content: "C'est parti !";
+  } 
+  
+
+  */
 
 @media (orientation: portrait) and (max-width: 920px) {
 
@@ -95,18 +170,18 @@ i{
       overflow: hidden;
     }
   
-    body{
+    html body{
       margin: 0;
       height: 100vh; 
       width: 100vw;
       overflow: hidden;
     }
   
-    body::after{
+    html body::after{
       display: none;
     }
   
-    main{
+    html body main{
       display: none;
     }
   

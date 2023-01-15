@@ -8,24 +8,225 @@
 
   <title>Ta liste de Noël</title>
 
-  <link rel="stylesheet" href="./../css/main-liste.css"> <!-- css A remplir -->
+  <link rel="icon" type="image/png" href="./../images/png/favicons/renne-tete.png">
+  <link rel="stylesheet" href="./../css/main-liste.css">
 
 </head>
 
 <body>
   <a href="../index.html" class="Retour">Retour</a>
 
+  <div id="filter"></div>
   <h2 class="Titre">Royaume des lettres</h2>
 
   <div class="listenoel">
 
-    <img src="./../images/png/personnages/3-Renne.png" alt="Helene la Renne" class="Helene">
-    <div class="bulle" id="bulle1"><div id="text1">Bienvenue à toi !<br/>Je suis <b>Hélène la renne</b>.</div><button class="suivant">-></button></div>
+    <img src="./../images/png/personnages/3-Renne.png" alt="Helene la Renne" class="Helene" id="Helene">
+       
+    <article class="bulle" id="bulle1">
+      <h3>Hélène la renne</h3>
+      <p>Bienvenue au Royaume des lettres !<br/> Je suis 
+        <strong>Hélène la Renne.</strong></p>
+      
+      <i id="preced" class="fi fi-sr-arrow-circle-left"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle1','bulle2')"></i>
+    </article>
+
+    <article class="bulle" id="bulle2">
+      <h3>Hélène la renne</h3>
+      <p>Mon Royaume est l’endroit idéale pour <strong>écrire un courrier</strong>. Choisis à qui tu veux écrire et je m’occupe du reste...</p>
+      
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle2','bulle1')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle2','bulle3')"></i>
+    </article>
+
+    <div id="bulle3">
+      <div class="menu-cartes">
+        <div class="carte-choix" onclick="textToNext('bulle3','bulle4')"><div class="carte-carre"><img src="./../images/png/personnages/9-Santa.png"></div><p>Ecrire ma lettre au Père Noël</p></div>
+        <div class="carte-choix" onclick="textToNext('bulle3','bulle14')"><div class="carte-carre"><img src="./../images/png/personnages/3-Renne.png"></div><p>Ecrire une carte de voeux</p></div>
+      </div>
+    </div>
+
+    <article class="bulle" id="bulle4">
+      <h3>Hélène la renne</h3>
+      <p>Tu as raison, c’est le moment idéal pour écrire ta lettre au père Noël !<br/>
+        <strong>As-tu été sage</strong> cette année ? Pour le savoir, réponds à mes <strong>3 petites questions</strong>...</p>
+      
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle4','bulle3')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle4','bulle5')"></i>
+    </article>
+
+    <form>
+
+    <article class="bulle" id="bulle5">
+      <h3>Hélène la renne</h3>
+      <p><strong>1. Est-ce que tu as été gentil avec ta famille ?</strong></p>
+      
+      <input type="radio" id="question1-1" name="question1" value="question1-1" checked>
+      <label for="question1-1">Oui très gentil !</label><br/>
+
+      <input type="radio" id="question1-2" name="question1" value="question1-2">
+      <label for="question1-2">Oui, mais pas toujours</label><br/>
+
+      <input type="radio" id="question1-3" name="question1" value="question1-3">
+      <label for="question1-3">Non pas vraiment</label><br/><br/>
+      
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle5','bulle4')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle5','bulle6')"></i>
+    </article>
+
+    <article class="bulle" id="bulle6">
+      <h3>Hélène la renne</h3>
+      <p><strong>2. Est-ce que tu as fait des bêtises ?</strong></p>
+      
+      <input type="radio" id="question2-1" name="question2" value="question2-1" checked>
+      <label for="question2-1">Non aucune</label><br/>
+
+      <input type="radio" id="question2-2" name="question2" value="question2-2">
+      <label for="question2-2">Oui de toutes petites bêtises</label><br/>
+
+      <input type="radio" id="question2-3" name="question2" value="question2-3">
+      <label for="question2-3">Oui quelques unes</label><br/><br/>
+      
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle6','bulle5')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle6','bulle7')"></i>
+    </article>
+
+    <article class="bulle" id="bulle7">
+      <h3>Hélène la renne</h3>
+      <p><strong>3. Rappelle-moi ton prénom et ton âge s’il te plait</strong></p>
+      
+      <p>Je m'appelle <input type="texte" id="prenom" name="question3-1">
+        et j'ai 
+      <select name="question3-2" id="age">
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+    </select> ans.</p><br/>
+      
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle7','bulle6')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext(valide()[0],valide()[1])"></i>
+    </article>
+  </form>
+
+  <article class="bulle" id="bulle8">
+    <h3>Hélène la renne</h3>
+    <p>Bravo ! Tu as été <strong>très sage !</strong><br/>
+      Voici ta lettre au Père Nöel...
+    </p>
+    
+    <i id="preced" class="fi fi-sr-arrow-circle-left"></i>
+    <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext(popLettre('bulle8','bulle9')[0],popLettre('bulle8','bulle9')[1])"></i>
+  </article>
+
+  <article class="lettre-wrapper" id="bulle9">
+    <div class="timbre"><div class="photo-wrapper"><img src="./../images/png/personnages/9-Santa.png" class="photo-timbre"></div><img src="../images/png/timbre-lettre.png" class="carre-timbre"></div>
+    <div class="lettre">
+      <p id="texte9"></p>
+      <div class="signature" id="sign9">Ton Prénom</div>
+    </div>
+
+    <button class="parfait" onclick="textToNext(depopLettre('bulle9','bulle3')[0],depopLettre('bulle9','bulle3')[1])">C'est parfait</button>
+  </article>
+
+  <article class="bulle" id="bulle10">
+    <h3>Hélène la renne</h3>
+    <p>Oups...<br/>
+      Tu as été <strong>moyennement sage</strong> !<br/>
+      Voici ta lettre au Père Noël...
+    </p>
+    
+    <i id="preced" class="fi fi-sr-arrow-circle-left"></i>
+    <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext(popLettre('bulle10','bulle11')[0],popLettre('bulle10','bulle11')[1])"></i>
+  </article>
+
+  <article class="lettre-wrapper" id="bulle11">
+    <div class="timbre"><div class="photo-wrapper"><img src="./../images/png/personnages/9-Santa.png" class="photo-timbre"></div><img src="../images/png/timbre-lettre.png" class="carre-timbre"></div>
+    <div class="lettre" >
+      <p id="texte11"></p>
+      <div class="signature" id="sign11">Ton Prénom</div>
+    </div>
+
+    <button class="parfait" onclick="textToNext(depopLettre('bulle11','bulle3')[0],depopLettre('bulle11','bulle3')[1])">C'est parfait</button>
+  </article>
+
+  <article class="bulle" id="bulle12">
+    <h3>Hélène la renne</h3>
+    <p>Aïe aïe aïe...<br/>
+      Tu n'as <strong>pas</strong> été <strong>très sage</strong> !<br/>
+      Voici ta lettre au Père Noël...
+    </p>
+    
+    <i id="preced" class="fi fi-sr-arrow-circle-left"></i>
+    <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext(popLettre('bulle12','bulle13')[0],popLettre('bulle12','bulle13')[1])"></i>
+  </article>
+
+  <article class="lettre-wrapper" id="bulle13">
+    <div class="timbre"><div class="photo-wrapper"><img src="./../images/png/personnages/9-Santa.png" class="photo-timbre"></div><img src="../images/png/timbre-lettre.png" class="carre-timbre"></div>
+    <div class="lettre">
+      <p id="texte13"></p>
+      <div class="signature" id="sign13">Ton Prénom</div>
+    </div>
+
+    <button class="parfait" onclick="textToNext(depopLettre('bulle13','bulle3')[0],depopLettre('bulle13','bulle3')[1])">C'est parfait</button>
+  </article>
+  
+  <article class="bulle" id="bulle14">
+    <h3>Hélène la renne</h3>
+    <p>Tu veux envoyer une <strong>carte de vœux</strong> à tes amis ou ta famille pour leur souhaiter de bonnes fêtes de fin d’année !
+      Quelle bonne idée !</p>
+    
+    <i id="preced" class="fi fi-sr-arrow-circle-left"></i>
+    <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext(popLettre('bulle14','bulle15')[0],popLettre('bulle14','bulle15')[1])"></i>
+  </article>
+
+  <article class="lettre-wrapper" id="bulle15">
+    <div class="lettre" id="carteVoeux">
+      <div class="timbre"><div class="photo-wrapper"><img src="./../images/png/personnages/3-Renne.png" class="photo-timbre"></div><img src="../images/png/timbre-lettre.png" class="carre-timbre"></div>
+      <p id="texte15">
+        Titre de ma carte<br/>
+        <input type="texte"><br/>
+
+        Mon adresse mail<br/>
+        <input type="texte"><br/>
+
+        L'adresse mail de mon ami.e<br/>
+        <input type="texte"><br/>
+
+        Texte que je veux écrire à mon ami.e<br/>
+        <textarea  id="texteamonami"></textarea><br/>
+
+        <input type="checkbox" name="rgpd" id="rgpd"><label for="rgpd">En cochant cette case j'accepte le RGPD</label>
+      </p>
+    </div>
+
+    <button class="parfait" onclick="textToNext(depopLettre('bulle15','bulle3')[0],depopLettre('bulle15','bulle16')[1])">Envoyer ma carte</button>
+  </article>
+
+  <article class="bulle" id="bulle16">
+    <h3>Hélène la renne</h3>
+    <p><strong>Ta carte a bien été envoyée</strong><br/>N'hésites pas si tu as besoin d'autre chose...</p>
+    
+    <i id="preced" class="fi fi-sr-arrow-circle-left"></i>
+    <i id="suivant" class="fi fi-sr-arrow-circle-right"  onclick="textToNext('bulle16','bulle3')"></i>
+  </article>
+
+
 
   </div>
 
-  
-  <div id="tourne">Tourne ton téléphone !</div> 
-  <script src=""></script> <!-- js A remplir -->
+  <div id="tourne">Tourne ton téléphone !</div>
+  <script src="../js/functions.js"></script>
+  <script src="./../js/script-liste.js"></script>
+
 </body>
 </html>

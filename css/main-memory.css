@@ -1,5 +1,10 @@
 @import url('./import.css');
 
+:root{
+  --primary:  #FCC75D;
+  --secondary: #FCEC5D;
+}
+
 html, body{
     margin: 0px;
     height: 100vh;
@@ -29,14 +34,20 @@ html, body{
   margin-right: auto;
 }
 .Hugo{
+  position: absolute;
+
   width:30vh;
   z-index: 1;
   bottom: 0px;
+  left: 15vw;
   align-self:flex-end;
+
+  pointer-events: none;
 }
 
 .memory{
     margin: auto;
+    /* margin-left: 20vw; */
 
     display: flex;
     justify-content:center;
@@ -58,6 +69,7 @@ html, body{
     position: absolute;
     text-align: center;
     border: 1px solid black;
+    background-color: #EBA749;
     background-color: #EBA749;
     padding: 50px;
 }
@@ -152,4 +164,21 @@ html, body{
       box-sizing: border-box;
       border: 3px solid #EBA749;
     }
+  }
+
+
+  .bulle > h3,   .bulle > #preced{
+    color: var(--primary);
+  }
+
+  .bulle > #suivant{
+  color: var(--secondary)
+  }
+
+  .bulle > #suivant::after{
+  content: "C'est parti !";
+  }
+
+  #bulle3{
+    display: none;
   }

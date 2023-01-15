@@ -1,50 +1,62 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" id="html">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main-sapin.css">
+    
     <title>Jeu du sapin</title>
+
+    <link rel="icon" type="image/png" href="./../images/png/favicons/ecureuil-tete.png">
+    <link rel="stylesheet" href="../css/main-sapin.css">
 </head>
 
 <body>
     <main id="jeusapin">
-        <h1 id="h1">Jeu du sapin</h1>
+        <h1 id="h1">Le sapin de Noël</h1>
         <a href="../index.html" class="Retour">Retour</a>
 
-        <article class="bulle" id="bulle">
-            <h3>Orgueil l'Écureuil</h3>
-            <p>Coucou, Bienvenue dans mon sapin.<br>Je suis <strong>Orgueil L’Écureuil.</strong></p>
+        <article class="bulle" id="bulle1">
+            <h3>Mayeul l'Écureuil</h3>
+            <p>Coucou, bienvenue dans mon sapin. Je suis <br><strong>Mayeul L’Écureuil.</strong></p>
             
-            <i id="preced" class="fi fi-sr-arrow-circle-left"></i>
-            <i id="suivant" class="fi fi-sr-arrow-circle-right"></i>
+            <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle1')"></i>
+            <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle1','bulle2')"></i>
+        </article>
+
+        <article class="bulle" id="bulle2">
+            <h3>Mayeul l'Écureuil</h3>
+            <p>Dans mon sapin, tu peux relier les boules de<br>Noël pour l'illuminer.</p>
+            
+            <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle2','bulle1')"></i>
+            <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle2');montrer('jeu')"></i>
         </article>
         
-        <section id="jeu">
+        <section id="jeu" class="caché">
             <div>
-                <button class="bouton" id="btn1"></button>
-                <button class="bouton" id="btn2"></button>
-                <button class="bouton" id="btn3"></button>
-                <button class="bouton" id="btn4"></button>
+                <img src="../images/png/sapin.png" class="bouton" id="btn1"></img>
+                <img src="../images/png/sapin.png" class="bouton" id="btn2"></img>
+                <img src="../images/png/sapin.png" class="bouton" id="btn3"></img>
+                <img src="../images/png/sapin.png" class="bouton" id="btn4"></img>
             </div>
 
             <div>
-                <button class="bouton" id="btn21"></button>
-                <button class="bouton" id="btn22"></button>
-                <button class="bouton" id="btn23"></button>
-                <button class="bouton" id="btn24"></button>
+                <img src="../images/png/sapin.png" class="bouton" id="btn21"></img>
+                <img src="../images/png/sapin.png" class="bouton" id="btn22"></img>
+                <img src="../images/png/sapin.png" class="bouton" id="btn23"></img>
+                <img src="../images/png/sapin.png" class="bouton" id="btn24"></img>
             </div>
         </section>
 
-        <section id="orgueil">
-            <img src="../images/svg/4-Ecureuil.svg" alt="orgueil l'écureuil">
-            <button id="rejouer">Rejouer</button>
-        </section>
+        <img class="caché" id="victoire" src="../images/png/victoire.png" alt="Victoire !">
+
+        <img id="orgueil" src="../images/svg/4-Ecureuil.svg" alt="orgueil l'écureuil">
         <div id="curseur"></div>
     </main>
 
+    <div id="tourne">Tourne ton téléphone !</div> 
+    <script src="../js/functions.js"></script>
     <script src="../js/script-sapin.js"></script>
 </body>
 

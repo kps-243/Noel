@@ -4,6 +4,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var jeu = 0;
 
+    function montrer(el) {
+        document.getElementById(el).classList.remove('caché');
+        console.log('lol'); 
+    }
+
     function alea(tab) { //Mélange d'un tableau
         let i, j, tmp;
         for (i = tab.length - 1; i > 0; i--) {
@@ -32,17 +37,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function couleur() { //Association de deux boutons par la couleur
-        btn1.style.backgroundColor = '#ff0200';
-        btn21.style.backgroundColor = '#ff0200';
 
-        btn2.style.backgroundColor = '#2f39ec';
-        btn22.style.backgroundColor = '#2f39ec';
+        btn2.src = '../images/png/sapin2.png';
+        btn22.src = '../images/png/sapin2.png';
 
-        btn3.style.backgroundColor = '#4af305';
-        btn23.style.backgroundColor = '#4af305';
+        btn3.src = '../images/png/sapin3.png';
+        btn23.src = '../images/png/sapin3.png';
 
-        btn4.style.backgroundColor = '#ffe701';
-        btn24.style.backgroundColor = '#ffe701';
+        btn4.src = '../images/png/sapin4.png';
+        btn24.src = '../images/png/sapin4.png';
     }
 
     //Déclaration de deux tableaux
@@ -99,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
             actif = 0;
         }
         if (victoire == 4) {
-            document.querySelector('#rejouer').style.display = 'block';
+            montrer('victoire');
         }
     });
 
@@ -120,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
             actif = 0;
         }
         if (victoire == 4) {
-            document.querySelector('#rejouer').style.display = 'block';
+            montrer('victoire');
         }
     });
 
@@ -141,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function () {
             actif = 0;
         }
         if (victoire == 4) {
-            document.querySelector('#rejouer').style.display = 'block';
+            montrer('victoire');
         }
     });
 
@@ -191,13 +194,6 @@ document.addEventListener('DOMContentLoaded', function () {
             curseur.style.borderColor = bordure;
         }
 
-    });
-
-    const rejouer = document.querySelector("#rejouer");
-
-    //Mélange à nouveau les boutons lorsqu'on clique sur 'Rejouer'
-    rejouer.addEventListener("click", () => {
-        window.location.reload();
     });
 
 });

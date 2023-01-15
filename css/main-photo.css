@@ -1,16 +1,152 @@
-@import url('./import.css');
-
-html, body{
-    margin: 0px;
-    height: 100vh;
-    width: 100vw;
-
-    background-image: url(./../images/png/8-back.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    overflow: hidden;
-
-    cursor: var(--cursor); 
+@import url("./import.css");
+html, body {
+  margin: 0px;
+  min-height: 100vh;
+  min-width: 100vw;
+  max-height: 100vh;
+  max-width: 100vw;
+  background-image: url(./../images/png/8-back.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  cursor: var(--cursor);
 }
+
+main h1 {
+  font-family: "Titres";
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(255, 230, 230);
+  font-size: 2rem;
+  padding-top: 50px;
+  margin: 0;
+  pointer-events: none;
+}
+main .bulle {
+  z-index: 8;
+  left: 5vw;
+  bottom: 10vw;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main .bulle h3 {
+  color: #e82b2f;
+}
+main .bulle #preced {
+  color: #e82b2f;
+}
+main .bulle #suivant {
+  color: #591023;
+}
+main #bulle4 {
+  display: block;
+}
+main #drop {
+  width: 20vw;
+  height: 55vh;
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #f8e5e6;
+  border-radius: 15px;
+  position: relative;
+  top: 24vh;
+  left: 24.25vw;
+  gap: 10vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+main #drop #lord {
+  height: 50%;
+  position: absolute;
+  left: 5%;
+  bottom: 25%;
+}
+main #drop button {
+  font-family: "Titres";
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  font-size: 1.3rem;
+  padding: 4% 4% 4% 12%;
+  margin-bottom: 5vh;
+  border: none;
+  border-radius: 6px;
+  background-color: #e82b2f;
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: var(--cursorPointer);
+  transition: transform 0.2s ease;
+}
+main #drop button:hover {
+  transform: scale(1.1);
+}
+main .zone::before {
+  content: "";
+  background-image: url("../images/png/photo-film.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 5%;
+  width: 7vw;
+  height: 7vw;
+  z-index: 1;
+}
+main #accessoire {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  align-items: flex-start;
+  height: 50vh;
+  width: 20vw;
+  top: 9vh;
+  right: 24.5vw;
+  position: absolute;
+  gap: 25%;
+}
+main #bonnet {
+  transform: scale(0.8);
+  cursor: var(--cursorPointer);
+  transition: transform 0.2s ease;
+  margin: 17% 0 0 -5%;
+}
+main #barbe {
+  transform: scale(0.8);
+  cursor: var(--cursorPointer);
+  transition: transform 0.2s ease;
+  margin: 17% 0 0 -3%;
+}
+main #sapin {
+  transform: scale(0.8);
+  cursor: var(--cursorPointer);
+  transition: transform 0.2s ease;
+  margin: -10% 0 0 4%;
+}
+main #lunettes {
+  transform: scale(0.8);
+  cursor: var(--cursorPointer);
+  transition: transform 0.2s ease;
+  margin: -5% 0 0 2%;
+  transform: scale(0.9);
+}
+main #lunettes:hover {
+  transform: scale(1);
+}
+main #bonnet:hover, main #barbe:hover, main #sapin:hover {
+  transform: scale(0.9);
+}
+main #nico {
+  height: 50vh;
+  position: absolute;
+  bottom: 0;
+  right: 15%;
+  pointer-events: none;
+}
+
+@media only screen and (min-width: 1200px) {
+  main .bulle {
+    left: 45vw;
+  }
+}/*# sourceMappingURL=main-photo.css.map */

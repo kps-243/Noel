@@ -1,12 +1,13 @@
 <!doctype html>
 
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>L'Atelier Photo</title>
+  <title>L'igloo de la photo</title>
 
   <link rel="stylesheet" href="./../css/main-photo.css"> <!-- css A remplir -->
 
@@ -14,7 +15,69 @@
 
 <body>
   <a href="../index.html" class="Retour">Retour</a>
-    
-  <script src=""></script> <!-- js A remplir -->
+
+  <main>
+
+    <article class="bulle" id="bulle1">
+      <h3>Nico le Manchot</h3>
+      <p>Yo, yo, yo ! Je m'appelle <strong>Nico le Manchot</strong>.</p>
+
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle1')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle1','bulle2')"></i>
+    </article>
+
+    <article class="bulle" id="bulle2">
+      <h3>Nico le Manchot</h3>
+      <p>Bienvenue dans mon igloo !<br>Aujourd'hui, on va s'amuser avec des <strong>photos...</strong></p>
+
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle2','bulle1')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle2','bulle3')"></i>
+    </article>
+
+    <article class="bulle" id="bulle3">
+      <h3>Nico le Manchot</h3>
+      <p>Pour commencer, donnes-moi une <strong>photo de toi,</strong><br>De préférence une photo de face.</p>
+
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle3','bulle2')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle3');montrer('drop')"></i>
+    </article>
+
+    <article class="bulle caché" id="bulle4">
+      <h3>Nico le Manchot</h3>
+      <p>Tu peux maintenant <strong>glisser et déposer des accessoires</strong><br>sur ta photo ! Apelles-moi quand tu auras terminé.</p>
+
+      <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle4')"></i>
+      <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle4');montrer('accessoire');cacher('nico')"></i>
+    </article>
+
+    <section id="drop" class="zone caché">
+      <input type="file" accept=".png, .jpg, jpeg" id="fileInput" style="display:none"/>
+      <button class="import" onclick="document.getElementById('fileInput').click()"> 
+        <lord-icon
+          id="lord"
+          src="https://cdn.lordicon.com/yzqrwwtj.json"
+          trigger="loop-on-hover"
+          target=".import"
+          colors="primary:#ffffff"
+          state="hover-2">
+      </lord-icon>
+        Importer ma photo</button>
+    </section>
+
+    <div id="accessoire" class="caché">
+      <img id="bonnet" src="../images/png/accessbonnet.png" alt="Bonnet de Noël" draggable="true">
+      <img id="barbe" src="../images/png/accessbarbe.png" alt="Barbe du Père Noël" draggable="true">
+      <img id="sapin" src="../images/png/accesssapin.png" alt="Sapin" draggable="true">
+      <img id="lunettes" src="../images/png/accesslunettes.png" alt="Lunettes" draggable="true">
+    </div>
+
+    <img id="nico" src="../images/png/personnages/8-Manchot.png" alt="Nico le Manchot">
+  </main>
+
+  <div id="tourne">Tourne ton téléphone !</div>
+  <script src="../js/functions.js"></script>
+  <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
+  <script src="../js/script-photo.js"></script>
 </body>
+
 </html>

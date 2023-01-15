@@ -1,1 +1,294 @@
-@import url('./import.css');
+@import url("./import.css");
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  cursor: var(--cursor);
+}
+html body {
+  margin: 0;
+  padding: 0;
+}
+html body main {
+  background-image: url("../images/jpg/interieur-palais.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  max-height: 100vh;
+  min-width: 100vw;
+  max-width: 100vw;
+}
+html body main h1 {
+  font-family: "Titres";
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(255, 230, 230);
+  font-size: 3rem;
+  padding-top: 50px;
+  margin: 0;
+  pointer-events: none;
+}
+html body main .bulle {
+  z-index: 8;
+  left: 35%;
+  bottom: 40%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+html body main .bulle h3 {
+  color: #11b3d9;
+}
+html body main .bulle #preced {
+  color: #11b3d9;
+}
+html body main .bulle #suivant {
+  color: #94cde3;
+}
+html body main .bulle div {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+}
+html body main .bulle div button {
+  cursor: var(--cursorPointer);
+  font-family: "Titres";
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 4% 3%;
+  border: none;
+  color: white;
+  border-radius: 50px;
+  background-color: #ff8ca6;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  transition: transform 0.2s ease;
+}
+html body main .bulle div button:hover {
+  transform: scale(1.05);
+}
+html body main .bulle div #r2 {
+  background-color: #e82b2f;
+}
+html body main .bulle div #r3 {
+  background-color: #591023;
+}
+html body main #bulle2 > #preced {
+  display: block;
+}
+html body main section {
+  background-color: #ff8ca6;
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  border-radius: 0;
+  display: none;
+  flex-flow: wrap row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  left: 0;
+  top: 0;
+  z-index: 6;
+}
+html body main section img {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+html body main section button {
+  position: absolute;
+  border: none;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #e82b2f;
+  bottom: 1%;
+  cursor: var(--cursorPointer);
+  padding: 1.5vw 1.5vw;
+  font-family: "Titres";
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  transition: transform 0.2s ease;
+}
+html body main section button:hover {
+  transform: scale(1.05);
+}
+html body main section #rchoix, html body main section #rchoix2, html body main section #rchoix3 {
+  background-color: #fff;
+  color: #e82b2f;
+}
+html body main #tartines button, html body main #tiramisu button {
+  bottom: 0.5%;
+}
+html body main #bulle4 {
+  z-index: 3;
+}
+html body main .recette {
+  display: none;
+}
+html body main #mamourse {
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 16.5%;
+  pointer-events: none;
+}
+html body main #ourson {
+  height: 35%;
+  position: absolute;
+  bottom: 0;
+  right: 24%;
+  pointer-events: none;
+}
+
+@media only screen and (min-width: 1200px) {
+  html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    cursor: var(--cursor);
+  }
+  html body {
+    margin: 0;
+    padding: 0;
+  }
+  html body main h1 {
+    font-family: "Titres";
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(255, 230, 230);
+    font-size: 3rem;
+    padding-top: 50px;
+    margin: 0;
+    pointer-events: none;
+  }
+  html body main .bulle {
+    z-index: 8;
+    left: 40%;
+    bottom: 50%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  html body main .bulle h3 {
+    color: #11b3d9;
+  }
+  html body main .bulle #preced {
+    color: #11b3d9;
+  }
+  html body main .bulle #suivant {
+    color: #94cde3;
+  }
+  html body main .bulle div {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+  }
+  html body main .bulle div button {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    cursor: var(--cursorPointer);
+    font-family: "Titres";
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 4% 3%;
+    border: none;
+    color: white;
+    border-radius: 50px;
+    background-color: #ff8ca6;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    transition: transform 0.2s ease;
+  }
+  html body main .bulle div button:hover {
+    transform: scale(1.05);
+  }
+  html body main .bulle div #r2 {
+    background-color: #e82b2f;
+  }
+  html body main .bulle div #r3 {
+    background-color: #591023;
+  }
+  html body main #bulle2 > #preced {
+    display: block;
+  }
+  html body main section {
+    background-color: #ff8ca6;
+    width: 98vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: absolute;
+    border-radius: 0;
+    display: none;
+    flex-flow: wrap row;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    left: 0;
+    top: 0;
+    z-index: 6;
+  }
+  html body main section img {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  html body main section button {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    position: absolute;
+    border: none;
+    border-radius: 50px;
+    background-color: #fff;
+    color: #e82b2f;
+    bottom: 2%;
+    cursor: var(--cursorPointer);
+    padding: 1.5vw 1.5vw;
+    font-family: "Titres";
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    transition: transform 0.2s ease;
+  }
+  html body main section button:hover {
+    transform: scale(1.05);
+  }
+  html body main #tartines button, html body main #tiramisu button {
+    bottom: 1%;
+  }
+  html body main #bulle4 {
+    z-index: 3;
+  }
+  html body main #mamourse {
+    height: 60%;
+    position: absolute;
+    bottom: 0;
+    left: 16.5%;
+    pointer-events: none;
+  }
+  html body main #ourson {
+    height: 39%;
+    position: absolute;
+    bottom: 0;
+    right: 24%;
+    pointer-events: none;
+  }
+}/*# sourceMappingURL=main-bd.css.map */
