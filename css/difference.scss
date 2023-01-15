@@ -1,7 +1,6 @@
 @import url(./import.css);
 
-@mixin FlexMid {
-    display: flex;
+@mixin Mid {
     justify-content: center;
     align-items: center;
 }
@@ -23,99 +22,95 @@
 }
 
 @function add($a) {
-    @return $a + 1160px;
+    @return $a + 30px;
 }
 
 body{
-    
-    #img{
-    @include FlexMid();
-    width: 970px;
-    margin-top: 400px;
+    background-image: url(./../images/jpg/2-jeu-7-difference-gauche.jpg);   
+    h1{
+        text-align: center;
+        color: white
+    }
+    #bulle5{
+    @include Mid();
+    width: 100%;
+    margin-top: -500px;
     transform: scale(0.4);
+    bottom: auto;
+    left: auto;
+    background-color: transparent;
+    border: none;
+
     #diff1, #diff2{
             position: relative;
             width: 1160px;
             height: 1506px;
+            padding: 50px;
         }
+    .img1, .img2{
+        position: relative;
+        display: block;
+    }
     }
     .cercle1, .cercle2, .cercle3, .cercle4, .cercle5, .cercle6, .cercle7{
         position: absolute;
         border: 6px solid red;
         opacity: 0;
+        z-index: 1
         
     }
     .cercle1{
         @include BigCircle();
-        left: -70px;
-        top: 250px; 
+        left: 55%;
+        top: 20%; 
+        z-index: 2;
     }
 
-    #cercle1-2{
-        left: add(-70px);
-    }
     .cercle2{
         @include SmallCircle();
-        top: 650px;
-        left: -400px;
+        top: 42%;
+        left: 8%;
     }
     
-    #cercle2-2{
-        left: add(-400px);
-    }
+
 
     .cercle3{
         @include MediumCircle();
-        top: 800px;
+        top: 42%;
         left: 320px; 
     }
-    #cercle3-2{
-        left: add(320px);
-    }
+   
     .cercle4{
         @include SmallCircle();
-        top: 650px;
-        left: -630px;
+        top: 63%;
+        left: 7%;
     }
-    #cercle4-2{
-        left: add(-630px);
-    }
+   
     .cercle5{
         @include SmallCircle();
-        top: 1070px;
-        left: -550px;
+        top: 70%;
+        left: 15%;
     }
-    #cercle5-2{
-        left: add(-550px);
-    }
+
     .cercle6{
         @include SmallCircle();
-        top: 970px;
-        left: -660px;
+        top: 80%;
+        left: 28%;
     }
-    #cercle6-2{
-        left: add(-660px);
-    }
+
     .cercle7{
         @include BigCircle();
-        top: 1100px;
-        left: -400px;    
+        top: 50%;
+        left: 80%;    
     }
-    #cercle7-2{
-         left: add(-400px);
-    }
+
     div{
         position: absolute;
         
     }
-    area{
-        position: absolute;
-        
+
+    .Charlotte{
+        margin-top: 30%;
     }
-}
-
-@media screen and (min-width: 1000px){
-
-
     
 }
