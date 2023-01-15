@@ -1,7 +1,6 @@
 @import url(./import.css);
 
-@mixin FlexMid {
-    display: flex;
+@mixin Mid {
     justify-content: center;
     align-items: center;
 }
@@ -27,12 +26,20 @@
 }
 
 body{
-    
-    #img{
-    @include FlexMid();
+    background-image: url(./../images/jpg/2-jeu-7-difference-gauche.jpg);   
+    h1{
+        text-align: center;
+        color: white
+    }
+    #bulle5{
+    @include Mid();
     width: 100%;
     margin-top: -500px;
     transform: scale(0.4);
+    bottom: auto;
+    left: auto;
+    background-color: transparent;
+    border: none;
 
     #diff1, #diff2{
             position: relative;
@@ -44,15 +51,6 @@ body{
         position: relative;
         display: block;
     }
-    // #diff2{
-    //     margin-left: 92.%;
-    // }
-    // #diff2{
-    //     margin-left: 1506px;
-    // }
-    // #diff1{
-    //     margin-left: -35%;
-    // }
     }
     .cercle1, .cercle2, .cercle3, .cercle4, .cercle5, .cercle6, .cercle7{
         position: absolute;
@@ -110,15 +108,9 @@ body{
         position: absolute;
         
     }
-    area{
-        position: absolute;
-        z-index: 1;
-        
+
+    .Charlotte{
+        margin-top: 30%;
     }
-}
-
-@media screen and (min-width: 1000px){
-
-
     
 }

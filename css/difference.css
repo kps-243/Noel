@@ -1,19 +1,29 @@
 @import url(./import.css);
-body #img {
-  display: flex;
+body {
+  background-image: url(./../images/jpg/2-jeu-7-difference-gauche.jpg);
+}
+body h1 {
+  text-align: center;
+  color: white;
+}
+body #bulle5 {
   justify-content: center;
   align-items: center;
   width: 100%;
   margin-top: -500px;
   transform: scale(0.4);
+  bottom: auto;
+  left: auto;
+  background-color: transparent;
+  border: none;
 }
-body #img #diff1, body #img #diff2 {
+body #bulle5 #diff1, body #bulle5 #diff2 {
   position: relative;
   width: 1160px;
   height: 1506px;
   padding: 50px;
 }
-body #img .img1, body #img .img2 {
+body #bulle5 .img1, body #bulle5 .img2 {
   position: relative;
   display: block;
 }
@@ -76,7 +86,6 @@ body .cercle7 {
 body div {
   position: absolute;
 }
-body area {
-  position: absolute;
-  z-index: 1;
+body .Charlotte {
+  margin-top: 30%;
 }/*# sourceMappingURL=difference.css.map */

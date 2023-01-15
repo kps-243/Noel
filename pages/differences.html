@@ -7,15 +7,53 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Le jeu des 7 différences</title>
+  <title>La tour du Bric à Brac</title>
 
+  <link rel="icon" type="image/png" href="./../images/png/favicons/marmotte-tete.png" />
   <link rel="stylesheet" href="./../css/difference.css"> <!-- css A remplir -->
 
 </head>
 
 <body>
   <a href="../index.html" class="Retour">Retour</a>
-  <div id="img">
+
+  <h1>La tour du Bric à Brac</h1>
+
+
+  <article class="bulle" id="bulle1">
+    <h3>Charlotte la Marmotte</h3>
+    <p>Bonjour, bonjour je suis <strong>Charlotte la Marmotte</strong></p>
+
+    <i id="preced" class="fi fi-sr-arrow-circle-left"></i>
+    <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle1','bulle2')"></i>
+  </article>
+
+  <article class="bulle" id="bulle2">
+    <h3>Charlotte la Marmotte</h3>
+    <p>Que penses-tu de ma tour ? Oui je sais il y a du rangement à faire mais tu vas m'y aider !</p>
+
+    <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle2','bulle1')"></i>
+    <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle2','bulle3')"></i>
+  </article>
+
+  <article class="bulle" id="bulle3">
+    <h3>Charlotte la Marmotte</h3>
+    <p>Tu trouveras 2 images sur la page d'après. Sur l'image de droite, il y a <strong>7 différences</strong> par
+      rapport à l'image originale (gauche).</p>
+
+    <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle3','bulle2')"></i>
+    <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle3','bulle4')"></i>
+  </article>
+
+  <article class="bulle" id="bulle4">
+    <h3>Charlotte la Marmotte</h3>
+    <p>A toi de <strong>retrouver</strong> sur l'image de droite <strong>les 7 différences</strong> en ckiquant dessus 1
+      par 1.</p>
+    <i id="preced" class="fi fi-sr-arrow-circle-left" onclick="textToBefore('bulle4','bulle3')"></i>
+    <i id="suivant" class="fi fi-sr-arrow-circle-right" onclick="textToNext('bulle4', flex('bulle5'))"></i>
+  </article>
+
+  <div id="bulle5" class="bulle">
     <div class="img1">
       <img src="./../images/jpg/jeu-7-difference-droite.jpg" alt="Jeu des 7 différences" id="diff1">
       <div class="cercle1" onclick="circleAppear('.cercle1')"></div>
@@ -37,53 +75,10 @@
       <div id="cercle7-2" class="cercle7" onclick="circleAppear('.cercle7')"></div>
     </div>
   </div>
+  <img src="./../images/png/personnages/7-Marmotte.png" alt="Charlotte la marmotte" class="Charlotte">
 
-
-
+  <script src="./../js/functions.js"></script>
   <script src="./../js/script-difference.js"></script> <!-- js A remplir -->
 </body>
 
 </html>
-
-
-
-
-
-
-<!-- <section>
-  <map name="img1">
-    <area shape="poly" coords="612,322,847,290,862,405,628,441" alt="image1" rel="nofollow noreferrer noopener"
-      onclick="circleAppear('.cercle1')" />
-    <area shape="circle" coords="334,707,53" alt="image1" rel="nofollow noreferrer noopener"
-      onclick="circleAppear('.cercle2')" />
-    <area shape="poly" coords="1012,1013,1157,762,1158,887,1092,1000" alt="image1" rel="nofollow noreferrer noopener"
-      onclick="circleAppear('.cercle3')" />
-    <area shape="poly" coords="102,642,138,648,114,748,82,738" alt="image1" rel="nofollow noreferrer noopener"
-      onclick="circleAppear('.cercle4')" />
-    <area shape="circle" coords="204,1123,53" alt="image1" rel="nofollow noreferrer noopener"
-      onclick="circleAppear('.cercle5')" />
-    <area shape="poly" coords="6,954,76,989,127,1010,135,1076,94,1076,45,1079,2,1079" alt="image1"
-      rel="nofollow noreferrer noopener" onclick="circleAppear('.cercle6')" />
-    <area shape="poly" coords="333,1141,401,1148,415,1341,318,1337" alt="image1" rel="nofollow noreferrer noopener"
-      onclick="circleAppear('.cercle7')" />
-  </map>
-</section> -->
-
-<!-- <section>
-  <map name="img2">
-    <area shape="poly" coords="612,322,847,290,862,405,628,441" alt="image2" rel="nofollow noreferrer noopener"
-      onclick="circleAppear('.cercle1')" />
-    <area shape="circle" coords="334,707,53" alt="image2" rel="nofollow noreferrer noopener"
-      onclick="circleAppear('.cercle2')" />
-    <area shape="poly" coords="1012,1013,1157,762,1158,887,1092,1000" alt="image2" rel="nofollow noreferrer noopener"
-      onclick="circleAppear('.cercle3')" />
-    <area shape="poly" coords="102,642,138,648,114,748,82,738" alt="image2" rel="nofollow noreferrer noopener"
-      onclick="circleAppear('.cercle4')" />
-    <area shape="circle" coords="204,1123,53" alt="image2" rel="nofollow noreferrer noopener"
-      onclick="circleAppear('.cercle5')" />
-    <area shape="poly" coords="6,954,76,989,127,1010,135,1076,94,1076,45,1079,2,1079" alt="image2"
-      rel="nofollow noreferrer noopener" onclick="circleAppear('.cercle6')" />
-    <area shape="poly" coords="333,1141,401,1148,415,1341,318,1337" alt="image2" rel="nofollow noreferrer noopener"
-      onclick="circleAppear('.cercle7')" />
-  </map>
-</section> -->

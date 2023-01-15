@@ -19,14 +19,17 @@ h1{
     text-align: center;
     color: white;
 }
-
+.Edouard{
+    margin-left: 15%;
+    margin-top: 20%;
+}
 #bulle4 {
     height: 200px;
-    justify-content: space-between;
+    justify-content: center;
     background-color: transparent;
     border: none;
 }
-.act-coloriages, .act-creation{
+.act-coloriages{
     width: 150px;
     background-color: #1e361c;
     border-radius: 12px;
@@ -38,5 +41,13 @@ h1{
 h4{
     text-align: center;
     bottom: 0;
-    color: white;
+    color: white; 
+    margin-top: 50%;
+    font-size: 24px;
+}
+a{
+    text-decoration: none;  
+}
+h4:hover{
+    color: red;
 }
