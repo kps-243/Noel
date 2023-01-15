@@ -142,30 +142,3 @@ function handle(evnt){
         location.reload();
     return true;
 }
-
-function OpenHF(HF){
-    if (HF == 'header'){
-        console.log("g")
-        let header = document.getElementById("header");
-        let flecheHeader = document.getElementById("fleche-header")
-        if (header.style.top == "0px"){
-            header.style.top = "-11vh";
-            flecheHeader.style.transform = "rotate(0deg)";
-        } else {
-            header.style.top = "0px";
-            flecheHeader.style.transform = "rotate(180deg)";
-        }
-    }
-    else if (HF == 'footer'){
-        console.log("f")
-        let footer = document.getElementById("footer");
-        let flechefooter = document.getElementById("fleche-footer")
-        if (footer.style.bottom == "0px"){
-            footer.style.bottom = "-11vh";
-            flechefooter.style.transform = "rotate(0deg)";
-        } else {
-            footer.style.bottom = "0px";
-            flechefooter.style.transform = "rotate(180deg)";
-        }
-    }
-}
