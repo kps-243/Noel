@@ -1,95 +1,91 @@
 @import url(./import.css);
-body #img {
-  display: flex;
+body {
+  background-image: url(./../images/jpg/2-jeu-7-difference-gauche.jpg);
+}
+body h1 {
+  text-align: center;
+  color: white;
+}
+body #bulle5 {
   justify-content: center;
   align-items: center;
-  width: 970px;
-  margin-top: 400px;
+  width: 100%;
+  margin-top: -500px;
   transform: scale(0.4);
+  bottom: auto;
+  left: auto;
+  background-color: transparent;
+  border: none;
 }
-body #img #diff1, body #img #diff2 {
+body #bulle5 #diff1, body #bulle5 #diff2 {
   position: relative;
   width: 1160px;
   height: 1506px;
+  padding: 50px;
+}
+body #bulle5 .img1, body #bulle5 .img2 {
+  position: relative;
+  display: block;
 }
 body .cercle1, body .cercle2, body .cercle3, body .cercle4, body .cercle5, body .cercle6, body .cercle7 {
   position: absolute;
   border: 6px solid red;
   opacity: 0;
+  z-index: 1;
 }
 body .cercle1 {
   height: 200px;
   width: 200px;
   border-radius: 200px;
-  left: -70px;
-  top: 250px;
-}
-body #cercle1-2 {
-  left: 1090px;
+  left: 55%;
+  top: 20%;
+  z-index: 2;
 }
 body .cercle2 {
   width: 100px;
   height: 100px;
   border-radius: 50px;
-  top: 650px;
-  left: -400px;
-}
-body #cercle2-2 {
-  left: 760px;
+  top: 42%;
+  left: 8%;
 }
 body .cercle3 {
   width: 150px;
   height: 150px;
   border-radius: 75px;
-  top: 800px;
+  top: 42%;
   left: 320px;
-}
-body #cercle3-2 {
-  left: 1480px;
 }
 body .cercle4 {
   width: 100px;
   height: 100px;
   border-radius: 50px;
-  top: 650px;
-  left: -630px;
-}
-body #cercle4-2 {
-  left: 530px;
+  top: 63%;
+  left: 7%;
 }
 body .cercle5 {
   width: 100px;
   height: 100px;
   border-radius: 50px;
-  top: 1070px;
-  left: -550px;
-}
-body #cercle5-2 {
-  left: 610px;
+  top: 70%;
+  left: 15%;
 }
 body .cercle6 {
   width: 100px;
   height: 100px;
   border-radius: 50px;
-  top: 970px;
-  left: -660px;
-}
-body #cercle6-2 {
-  left: 500px;
+  top: 80%;
+  left: 28%;
 }
 body .cercle7 {
   height: 200px;
   width: 200px;
   border-radius: 200px;
-  top: 1100px;
-  left: -400px;
-}
-body #cercle7-2 {
-  left: 760px;
+  top: 50%;
+  left: 80%;
 }
 body div {
   position: absolute;
 }
-body area {
-  position: absolute;
+body .Charlotte {
+  margin-top: 30%;
 }/*# sourceMappingURL=difference.css.map */
