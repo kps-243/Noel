@@ -50,7 +50,7 @@ html * {
     border: 1px solid black;
 
     cursor: var(--cursorPointer);
-    z-index: 100;
+    z-index: 99;
 
     transition: 0.2s;
 }
@@ -74,6 +74,7 @@ header{
   top: -11vh;
   transition: 1s;
   z-index: 100;
+  left: 0px;
 }
 .header-bar{
   background-color: #2F5635;
@@ -124,7 +125,7 @@ header .click-header{
   background-color:#FF6633;
   position: absolute;
   top:11vh;
-  left: 125px;
+  left: 6vw;
   z-index: 101;
   width: 100px;
   height: 30px;
@@ -148,6 +149,7 @@ footer{
   bottom: -11vh;
   transition: 1s;
   z-index: 100;
+  left: 0px;
 }
 .footer-bar{
   background-color: #2F5635;
@@ -197,7 +199,7 @@ footer .click-footer{
   background-color: #FF002E;
   position: absolute;
   bottom:11vh;
-  right: 125px;
+  right: 6vw;
   z-index: 101;
   width: 100px;
   height: 30px;
@@ -214,6 +216,8 @@ footer .click-footer img{
   transform: rotate(180deg);
   transition: 1s;
 }
+
+
 
 .Titre {
   font-family: 'Titres';
