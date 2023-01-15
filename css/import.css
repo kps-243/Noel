@@ -28,27 +28,191 @@ html * {
 .Victoire {
   display: none;
 }
-
+ 
 .Retour {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+    position: fixed; 
+    top: 30px;
+    left: 30px;
 
   text-decoration: none;
 
-  background-color: cadetblue;
-  border-radius: 50px;
-  padding: 20px;
-  color: white;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 25px;
+    color:black;
 
-  cursor: var(--cursorPointer);
-  z-index: 100;
+    display: flex;
+    gap:10px;
+    align-items: center;
+
+    font-family: 'Titres';
+    font-size: 18px;
+    border: 1px solid black;
+
+    cursor: var(--cursorPointer);
+    z-index: 100;
+
+    transition: 0.2s;
+}
+.Retour:focus, .Retour:hover{
+    text-decoration: none;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px #bbbbbb;
+}
+.Retour img{
+  width: 25px;
+  height: 25px;
+}
+.Retour p{
+  margin: 0px;
 }
 
-.Retour:focus,
-.Retour:hover {
+
+
+header{
+  position: fixed;
+  top: -11vh;
+  transition: 1s;
+  z-index: 100;
+}
+.header-bar{
+  background-color: #2F5635;
+  height: 11vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 102;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul{
+ display: flex;
+ padding: 0px;
+ gap:90px;
+ justify-content: center;
+ list-style: none;
+}
+header ul li{
+  padding: 10px 20px;
+  border: 2px solid white;
+  font-family: "Titres";
   color: white;
-  text-decoration: none;
+  border-radius: 10px;
+  font-size: 22px;
+
+  transition: 1.2s;
+}
+header ul li:hover{
+transform: scale(1.1);
+cursor: var(--cursorPointer);
+}
+header #logo{
+  width: 200px;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+header ul li img{
+  width: 25px;
+  padding-right: 10px;
+  vertical-align: middle;
+  transition: 1s;
+}
+header .click-header{
+  background-color:#FF6633;
+  position: absolute;
+  top:11vh;
+  left: 125px;
+  z-index: 101;
+  width: 100px;
+  height: 30px;
+  border-radius: 0px 0px 30px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+  cursor: var(--cursorPointer);
+}
+header .click-header img{
+  margin-bottom: 5px;
+  width: 30px;
+  transition: 1s;
+}
+
+
+
+footer{
+  position: fixed;
+  bottom: -11vh;
+  transition: 1s;
+  z-index: 100;
+}
+.footer-bar{
+  background-color: #2F5635;
+  height: 11vh;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 102;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer ul{
+ display: flex;
+ padding: 0px;
+ gap:90px;
+ justify-content: center;
+ list-style: none;
+}
+footer ul li{
+  padding: 10px 20px;
+  font-family: "Titres";
+  color: white;
+  border-radius: 10px;
+  font-size: 22px;
+
+  transition: 1.2s;
+}
+footer ul li:hover{
+text-decoration: underline;
+cursor: var(--cursorPointer);
+}
+footer #logo{
+  width: 200px;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+footer ul li #fleche-footer{
+  width: 25px;
+  padding-right: 10px;
+  vertical-align: middle;
+  transition: 1s;
+}
+footer .click-footer{
+  background-color: #FF002E;
+  position: absolute;
+  bottom:11vh;
+  right: 125px;
+  z-index: 101;
+  width: 100px;
+  height: 30px;
+  border-radius: 30px 30px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+  cursor: var(--cursorPointer);
+}
+footer .click-footer img{
+  margin-bottom: 5px;
+  width: 30px;
+  transform: rotate(180deg);
+  transition: 1s;
 }
 
 .Titre {
@@ -227,6 +391,15 @@ figure img {
   
 
   */
+
+
+  /* 
+  BOUTON RETOUR
+  
+  <a href="../index.html" class="Retour"><img src="./../images/png/fleche.png"><p>Retour à la carte</p></a> 
+  
+  */
+
 
 @media (orientation: portrait) and (max-width: 920px) {
 

@@ -68,14 +68,6 @@ body::after {
   cursor: var(--cursorPointer);
 }
 
-#logo{
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  width: 200px;
-  z-index: 2;
-}
-
 #allTheMap{
   height: 100vh;
   width: auto;
