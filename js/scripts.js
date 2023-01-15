@@ -162,10 +162,10 @@ function OpenHF(HF){
         let flechefooter = document.getElementById("fleche-footer")
         if (footer.style.bottom == "0px"){
             footer.style.bottom = "-11vh";
-            flechefooter.style.transform = "rotate(0deg)";
+            flechefooter.style.transform = "rotate(180deg)";
         } else {
             footer.style.bottom = "0px";
-            flechefooter.style.transform = "rotate(180deg)";
+            flechefooter.style.transform = "rotate(0deg)";
         }
     }
 }
