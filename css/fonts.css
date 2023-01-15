@@ -9,8 +9,9 @@
 @font-face {
     font-family: "Textes";
     src: url("./../fonts/Quicksand/Quicksand-Regular.woff2") format("woff2"),
-           url("./../fonts/Quicksand/Quicksand-Regular.woff") format("woff");
-    font-weight: 300;
+           url("./../fonts/Quicksand/Quicksand-Regular.woff") format("woff"),
+           url("./../fonts/CaveatBrush/Quicksand-Regular.ttf") format("ttf");
+    font-weight: 400;
     font-size: 18px;
 }
 
@@ -18,7 +19,8 @@
     @font-face {
         font-family: "Textes";
         src: url("./../fonts/Quicksand/Quicksand-Regular.woff2") format("woff2"),
-               url("./../fonts/Quicksand/Quicksand-Regular.woff") format("woff");
+               url("./../fonts/Quicksand/Quicksand-Regular.woff") format("woff")
+               url("./../fonts/CaveatBrush/Quicksand-Regular.ttf") format("ttf");
         font-weight: 300;
         font-size: 16px;
     }
