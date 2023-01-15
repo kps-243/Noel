@@ -142,3 +142,18 @@ function handle(evnt){
         location.reload();
     return true;
 }
+
+function OpenHF(HF){
+    if (HF = 'header'){
+        let header = document.getElementById("header");
+        let flecheHeader = document.getElementById("fleche-header")
+        if (header.style.top == "0px"){
+            header.style.top = "-11vh";
+            flecheHeader.style.transform = "rotate(0deg)";
+        } else {
+            header.style.top = "0px";
+            flecheHeader.style.transform = "rotate(180deg)";
+        }
+        
+    }
+}

@@ -15,7 +15,8 @@
 </head>
 
 <body>
-  <header>
+  <header id="header">
+    <div class="header-bar">
     <svg id="logo" version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 180 50"
       style="enable-background:new 0 0 180 50;" xml:space="preserve">
@@ -23,9 +24,8 @@
         .st0 {
           fill: #FF6633;
         }
-
         .st1 {
-          fill: #0066CC;
+          fill: white;
         }
       </style>
       <g>
@@ -49,6 +49,12 @@
 
       </g>
     </svg>
+    <ul>
+      <li><img src="./images/png/header-home.png">Trouver un magasin</li>
+      <li><img src="./images/png/header-book.png">Lire le catalogue</li>
+    </ul>
+  </div>
+    <div class="click-header" onClick="OpenHF('header')"><img src="images/png/fleche-header.png" id ="fleche-header"></div>
   </header>
 
   <main>
