@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var jeu = 0;
 
+    document.getElementById('rejouer').addEventListener('click', function () {
+        location.reload(true);
+    });
+
     function montrer(el) {
         document.getElementById(el).classList.remove('caché');
         console.log('lol'); 

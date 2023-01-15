@@ -199,9 +199,28 @@ html body #laby #controls #bas {
     bottom: 10px;
     rotate: 180deg;
   }
+  html body #laby #victoire {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    z-index: 11;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.2s ease;
+    padding-top: 10vh;
+    top: 0;
+  }
+  html body #laby #victoire img {
+    margin-top: 0vh;
+    max-height: 60vh;
+    pointer-events: none;
+  }
   html body #laby #victoire #btn {
-    height: 5vw;
     width: 5vw;
+    height: 5vw;
   }
   html body #laby #romain {
     height: 50vh;

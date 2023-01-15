@@ -128,11 +128,37 @@ html body #jeusapin #orgueil {
   pointer-events: none;
 }
 html body #jeusapin #victoire {
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
-  right: 10%;
+  z-index: 11;
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.2s ease;
+  padding-top: 10vh;
   top: 0;
-  z-index: 7;
+}
+html body #jeusapin #victoire img {
+  margin-top: 0vh;
+  max-height: 60vh;
+  pointer-events: none;
+}
+html body #jeusapin #victoire #rejouer {
+  background-image: url("../images/png/restart.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  border-radius: 50%;
+  cursor: var(--cursorPointer);
+  transition: transform 0.2s ease;
+  height: 10vw;
+  width: 10vw;
+}
+html body #jeusapin #victoire button:hover {
+  transform: scale(1.05);
 }
 
 @media only screen and (min-width: 1200px) {
@@ -260,10 +286,36 @@ html body #jeusapin #victoire {
     pointer-events: none;
   }
   html body #jeusapin #victoire {
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
-    right: 10%;
+    z-index: 11;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.2s ease;
+    padding-top: 10vh;
     top: 0;
-    z-index: 7;
+  }
+  html body #jeusapin #victoire img {
+    margin-top: 0vh;
+    max-height: 60vh;
+    pointer-events: none;
+  }
+  html body #jeusapin #victoire #rejouer {
+    background-image: url("../images/png/restart.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    border-radius: 50%;
+    cursor: var(--cursorPointer);
+    transition: transform 0.2s ease;
+    height: 5vw;
+    width: 5vw;
+  }
+  html body #jeusapin #victoire button:hover {
+    transform: scale(1.05);
   }
 }/*# sourceMappingURL=main-sapin.css.map */

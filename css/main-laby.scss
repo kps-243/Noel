@@ -226,9 +226,30 @@ html{
                     rotate: (180deg);
                 }
 
-                #victoire #btn{
-                    height: 5vw;
-                    width: 5vw;
+                #victoire{
+                    width: 100vw;
+                    height: 100vh;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    position: absolute;
+                    z-index: 11;
+                    display: flex;
+                    flex-flow: wrap column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    transition: all 0.2s ease;
+                    padding-top: 10vh;
+                    top: 0;
+    
+                    img{
+                        margin-top: 0vh;
+                        max-height: 60vh;
+                        pointer-events: none;
+                    }
+
+                    #btn{
+                        width: 5vw;
+                        height: 5vw;
+                    }
                 }
     
                 #romain{
