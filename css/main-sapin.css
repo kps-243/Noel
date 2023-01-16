@@ -19,21 +19,6 @@ html body #jeusapin {
   min-width: 100vw;
   max-width: 100vw;
 }
-html body #jeusapin figure {
-  z-index: 10;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-animation: Enseignes 0.5s ease 0s 1 normal none;
-          animation: Enseignes 0.5s ease 0s 1 normal none;
-}
-html body #jeusapin figure img {
-  padding: 0px;
-  margin-top: -10vh;
-  width: 30vw;
-}
 html body #jeusapin .bulle {
   z-index: 8;
   left: 35%;

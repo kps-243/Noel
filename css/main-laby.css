@@ -26,24 +26,6 @@ html body #laby {
   justify-content: center;
   align-items: center;
 }
-html body #laby figure {
-  z-index: 10;
-  width: 100%;
-  top: 0;
-  position: absolute;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-animation: Enseignes 0.5s ease 0s 1 normal none;
-          animation: Enseignes 0.5s ease 0s 1 normal none;
-}
-html body #laby figure img {
-  padding: 0px;
-  margin-top: -10vh;
-  width: 30vw;
-}
 html body #laby .bulle {
   width: -webkit-fit-content;
   width: -moz-fit-content;
