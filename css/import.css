@@ -82,7 +82,7 @@ header{
   width: 100vw;
   z-index: 102;
   display: flex;
-  justify-content: center;
+  justify-content:space-around;
   align-items: center;
 }
 header ul{
@@ -107,8 +107,7 @@ transform: scale(1.1);
 cursor: var(--cursorPointer);
 }
 header #logo{
-  width: 200px;
-  position: absolute;
+  width: 20vh;
   top: 20px;
   left: 30px;
 }

@@ -245,7 +245,7 @@ input[type="texte"]:active, select:active, input[type="texte"]:hover, select:hov
     text-align: end;
     font-size: 1.5rem;
 }
-.parfait{
+.parfait, .download{
     /* position: relative;
     top: 20px; */
     background-color: var(--primary);
@@ -262,6 +262,9 @@ input[type="texte"]:active, select:active, input[type="texte"]:hover, select:hov
     float: right;
 
     cursor: var(--cursorPointer);
+}
+.download{
+    float: left;
 }
 
 #bulle9 > .lettre{
