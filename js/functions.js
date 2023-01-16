@@ -37,7 +37,8 @@ function classe(el,classe) {
 }
 
 function capture(el, nom) {
-    html2canvas(document.getElementById(el)).then(canvas => {
+    html2canvas(document.getElementById(el),{}).then(canvas => {
+        // allowTaint: true, foreignObjectRendering: true
         let link = document.createElement('a');
         link.download = nom+'.png';
         link.href = canvas.toDataURL();

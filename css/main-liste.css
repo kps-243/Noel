@@ -267,16 +267,16 @@ input[type="texte"]:active, select:active, input[type="texte"]:hover, select:hov
     float: left;
 }
 
-#bulle9 > .lettre{
+#bulle9 #lettre9{
     background-color: var(--sage);
 }
-#bulle11 > .lettre{
+#bulle11 #lettre11{
     background-color: var(--moyenSage);
 }
-#bulle13 > .lettre{
+#bulle13 #lettre13{
     background-color: var(--pasSage);
 }
-#bulle15 > .lettre{
+#bulle15 #lettre15{
     background-color: var(--carteVoeux);
 }
 
