@@ -14,7 +14,6 @@ function circleAppear(cercle) {
   });
 
   victoire++;
-  console.log(victoire);
   if (victoire == 7) {
     montrer("victoire");
   }
