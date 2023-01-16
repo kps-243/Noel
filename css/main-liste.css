@@ -276,7 +276,7 @@ input[type="texte"]:active, select:active, input[type="texte"]:hover, select:hov
 #bulle13 #lettre13{
     background-color: var(--pasSage);
 }
-#bulle15 #lettre15{
+#bulle15 #carteVoeux{
     background-color: var(--carteVoeux);
 }
 
