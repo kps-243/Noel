@@ -48,6 +48,7 @@ html body #jeusapin #jeu {
   position: absolute;
   z-index: 5;
   border-radius: 10px;
+  bottom: 10vh;
 }
 html body #jeusapin #jeu div {
   width: 100px;
@@ -203,6 +204,7 @@ html body #jeusapin #victoire #rejouer:hover {
     flex-flow: wrap row;
     justify-content: space-between;
     margin-right: 10%;
+    bottom: 10vh;
     position: absolute;
     z-index: 5;
     border-radius: 10px;
