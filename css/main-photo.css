@@ -13,25 +13,6 @@ html, body {
   cursor: var(--cursor);
 }
 
-main figure {
-  z-index: 10;
-  width: 100%;
-  top: 0;
-  position: absolute;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-animation: Enseignes 0.5s ease 0s 1 normal none;
-          animation: Enseignes 0.5s ease 0s 1 normal none;
-  transition: top 1s ease;
-}
-main figure img {
-  padding: 0px;
-  margin-top: -15vh;
-  width: 40vw;
-}
 main .sortie {
   top: -500px;
 }
@@ -206,25 +187,6 @@ main #nico {
 @media only screen and (min-width: 1200px) {
   main .bulle {
     left: 35vw;
-  }
-  main figure {
-    z-index: 10;
-    width: 100%;
-    top: 0;
-    position: absolute;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    -webkit-animation: Enseignes 0.5s ease 0s 1 normal none;
-            animation: Enseignes 0.5s ease 0s 1 normal none;
-    transition: top 1s ease;
-  }
-  main figure img {
-    padding: 0px;
-    margin-top: -15vh;
-    width: 30vw;
   }
   main #drop {
     left: 23vw;

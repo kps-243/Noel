@@ -130,7 +130,7 @@ display: none;
     height:5vh;
     margin: auto;
     font-family: 'Titres';
-    font-size: 1.5em;
+    font-size: 3vh;
     box-sizing: content-box;
 
     /* top: 50%; 
@@ -276,7 +276,7 @@ input[type="texte"]:active, select:active, input[type="texte"]:hover, select:hov
 #bulle13 #lettre13{
     background-color: var(--pasSage);
 }
-#bulle15 #lettre15{
+#bulle15 #carteVoeux{
     background-color: var(--carteVoeux);
 }
 

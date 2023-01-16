@@ -37,24 +37,6 @@ html{
             justify-content: center;
             align-items: center;
 
-            figure{
-                z-index: 10;
-                width: 100%;
-                top: 0;
-                position: absolute;
-                padding: 0;
-                margin: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                animation: Enseignes 0.5s ease 0s 1 normal none;
-                img{
-                    padding: 0px;
-                    margin-top: -10vh;
-                    width: 30vw;
-                }
-            }
-
             .bulle{
                 width: fit-content;
                 right: 10%;
